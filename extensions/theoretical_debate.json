@@ -1,0 +1,745 @@
+{
+ "id": "theoretical_debate",
+ "kind": "alternative",
+ "title": "Replicate the extremes to separate real effects from chance",
+ "rationale": "The source ran 32 uncorrected contrasts; Message 2 lowered trust by 0.171 (p=0.0002) while Messages 15 and 20 raised it by about 0.063 (p<0.05), and only about 2 of 32 hits is what chance would give. A preregistered four-arm replication with Holm correction tests whether these extremes persist.",
+ "contribution": "Provides a confirmatory, multiplicity-corrected test of whether brief messages can move trust in science, discriminating the position that they can from the position that trust is sticky.",
+ "limitations": [
+  "Immediate outcome only; durability unknown.",
+  "US online panel only.",
+  "Detecting 0.06 needs a very large sample.",
+  "Message 2, 15, 20 and 26 media must be the original files."
+ ],
+ "design": {
+  "title": "Preregistered replication of Messages 2, 15, 20 and 26",
+  "overview": "US adults complete a pre-trust scale, are randomly assigned to control or one of four videos (Messages 2, 15, 20, 26), then complete the same post-trust scale. Analysis is an ANCOVA adjusting for pre-trust, with Holm correction across the four contrasts with control.",
+  "hypothesis": "If brief messages can move trust, Messages 15 and 20 will raise post-trust by about +0.06 and Message 2 will lower it by -0.10 or more. If the original hits were chance, all four contrasts will shrink toward zero.",
+  "primaryOutcome": "Post-treatment trust in science: mean of six items, with items 4-6 reverse-coded.",
+  "comparison": "Each of Messages 2, 15, 20 and 26 versus the fresh control, pre-trust adjusted, Holm-corrected across four tests.",
+  "population": "US adults from an online panel such as Lucid, screened for attention.",
+  "conditions": [
+   {
+    "id": "c_ctrl",
+    "title": "Control",
+    "description": "Sees 'Please continue to the next page.'",
+    "nodeId": "arm_ctrl"
+   },
+   {
+    "id": "c_m2",
+    "title": "Message 2 video",
+    "description": "Watches student-designed video 2.",
+    "nodeId": "arm_m2"
+   },
+   {
+    "id": "c_m15",
+    "title": "Message 15 video",
+    "description": "Watches student-designed video 15.",
+    "nodeId": "arm_m15"
+   },
+   {
+    "id": "c_m20",
+    "title": "Message 20 video",
+    "description": "Watches student-designed video 20.",
+    "nodeId": "arm_m20"
+   },
+   {
+    "id": "c_m26",
+    "title": "Message 26 video",
+    "description": "Watches student-designed video 26.",
+    "nodeId": "arm_m26"
+   }
+  ],
+  "blocks": [
+   {
+    "id": "b_consent",
+    "title": "Consent",
+    "questions": [
+     {
+      "id": "q_consent",
+      "type": "MC",
+      "text": "You are invited to take part in a short research survey about attitudes toward science. Participation is voluntary and you may stop at any time. Do you agree to participate?",
+      "tag": "consent",
+      "multiple": false,
+      "required": true,
+      "choices": [
+       {
+        "id": "yes",
+        "text": "I agree",
+        "recode": "1"
+       },
+       {
+        "id": "no",
+        "text": "I do not agree",
+        "recode": "0"
+       }
+      ],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_pre",
+    "title": "Pre-measure",
+    "questions": [
+     {
+      "id": "q_pre",
+      "type": "Matrix",
+      "text": "How much do you agree with each statement about science? (Items 4-6 are negatively worded.)",
+      "tag": "pre_trust_scale",
+      "multiple": false,
+      "required": true,
+      "choices": [
+       {
+        "id": "s1",
+        "text": "Strongly disagree",
+        "recode": "1"
+       },
+       {
+        "id": "s2",
+        "text": "Disagree",
+        "recode": "2"
+       },
+       {
+        "id": "s3",
+        "text": "Neutral",
+        "recode": "3"
+       },
+       {
+        "id": "s4",
+        "text": "Agree",
+        "recode": "4"
+       },
+       {
+        "id": "s5",
+        "text": "Strongly agree",
+        "recode": "5"
+       }
+      ],
+      "rows": [
+       {
+        "id": "r1",
+        "text": "I trust scientists to tell the truth about their findings."
+       },
+       {
+        "id": "r2",
+        "text": "Science benefits society."
+       },
+       {
+        "id": "r3",
+        "text": "I have confidence in the scientific community."
+       },
+       {
+        "id": "r4",
+        "text": "Scientists often twist findings to suit their own agendas."
+       },
+       {
+        "id": "r5",
+        "text": "Scientific results are often unreliable."
+       },
+       {
+        "id": "r6",
+        "text": "I do not trust what scientists say."
+       }
+      ],
+      "sourceQuestionId": "pre_science_1"
+     }
+    ]
+   },
+   {
+    "id": "b_ctrl",
+    "title": "Control",
+    "questions": [
+     {
+      "id": "q_ctrl",
+      "type": "DB",
+      "text": "Please continue to the next page.",
+      "tag": "ctrl_text",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_m2",
+    "title": "M2",
+    "questions": [
+     {
+      "id": "q_m2",
+      "type": "DB",
+      "text": "Please watch this video. {{ed:video}}",
+      "tag": "m2_video",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_m15",
+    "title": "M15",
+    "questions": [
+     {
+      "id": "q_m15",
+      "type": "DB",
+      "text": "Please watch this video. {{ed:video}}",
+      "tag": "m15_video",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_m20",
+    "title": "M20",
+    "questions": [
+     {
+      "id": "q_m20",
+      "type": "DB",
+      "text": "Please watch this video. {{ed:video}}",
+      "tag": "m20_video",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_m26",
+    "title": "M26",
+    "questions": [
+     {
+      "id": "q_m26",
+      "type": "DB",
+      "text": "Please watch this video. {{ed:video}}",
+      "tag": "m26_video",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_post",
+    "title": "Outcome",
+    "questions": [
+     {
+      "id": "q_post",
+      "type": "Matrix",
+      "text": "How much do you agree with each statement about science? (Items 4-6 are negatively worded.)",
+      "tag": "post_trust_scale",
+      "multiple": false,
+      "required": true,
+      "choices": [
+       {
+        "id": "s1",
+        "text": "Strongly disagree",
+        "recode": "1"
+       },
+       {
+        "id": "s2",
+        "text": "Disagree",
+        "recode": "2"
+       },
+       {
+        "id": "s3",
+        "text": "Neutral",
+        "recode": "3"
+       },
+       {
+        "id": "s4",
+        "text": "Agree",
+        "recode": "4"
+       },
+       {
+        "id": "s5",
+        "text": "Strongly agree",
+        "recode": "5"
+       }
+      ],
+      "rows": [
+       {
+        "id": "r1",
+        "text": "I trust scientists to tell the truth about their findings."
+       },
+       {
+        "id": "r2",
+        "text": "Science benefits society."
+       },
+       {
+        "id": "r3",
+        "text": "I have confidence in the scientific community."
+       },
+       {
+        "id": "r4",
+        "text": "Scientists often twist findings to suit their own agendas."
+       },
+       {
+        "id": "r5",
+        "text": "Scientific results are often unreliable."
+       },
+       {
+        "id": "r6",
+        "text": "I do not trust what scientists say."
+       }
+      ],
+      "sourceQuestionId": "post_science_1"
+     }
+    ]
+   },
+   {
+    "id": "b_debrief",
+    "title": "Debrief",
+    "questions": [
+     {
+      "id": "q_debrief",
+      "type": "DB",
+      "text": "Thank you. This study tested whether short messages change attitudes toward science. The messages were student-designed and not official statements. Your answers are confidential.",
+      "tag": "debrief",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_end",
+    "title": "End",
+    "questions": [
+     {
+      "id": "q_end",
+      "type": "DB",
+      "text": "Thank you for your time. You have chosen not to participate.",
+      "tag": "end_text",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   }
+  ],
+  "flow": [
+   {
+    "id": "n_consent",
+    "type": "block",
+    "label": "Consent",
+    "children": [],
+    "blockId": "b_consent",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_br",
+    "type": "branch",
+    "label": "No consent",
+    "children": [
+     "n_endblk",
+     "n_end"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "q_consent",
+    "choiceId": "no",
+    "operator": "selected"
+   },
+   {
+    "id": "n_endblk",
+    "type": "block",
+    "label": "Decline text",
+    "children": [],
+    "blockId": "b_end",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_end",
+    "type": "end",
+    "label": "End",
+    "children": [],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_pre",
+    "type": "block",
+    "label": "Pre",
+    "children": [],
+    "blockId": "b_pre",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "r1",
+    "type": "randomizer",
+    "label": "Arms",
+    "children": [
+     "arm_ctrl",
+     "arm_m2",
+     "arm_m15",
+     "arm_m20",
+     "arm_m26"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "arm_ctrl",
+    "type": "group",
+    "label": "Control",
+    "children": [
+     "set_ctrl",
+     "t_ctrl"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "set_ctrl",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "control",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "t_ctrl",
+    "type": "block",
+    "label": "Ctrl",
+    "children": [],
+    "blockId": "b_ctrl",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "arm_m2",
+    "type": "group",
+    "label": "M2",
+    "children": [
+     "set_m2",
+     "vid_m2",
+     "t_m2"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "set_m2",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "m2",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "vid_m2",
+    "type": "embedded",
+    "label": "video",
+    "children": [],
+    "blockId": "",
+    "field": "video",
+    "value": "[VIDEO: student-designed Message 2, original clip]",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "t_m2",
+    "type": "block",
+    "label": "M2",
+    "children": [],
+    "blockId": "b_m2",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "arm_m15",
+    "type": "group",
+    "label": "M15",
+    "children": [
+     "set_m15",
+     "vid_m15",
+     "t_m15"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "set_m15",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "m15",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "vid_m15",
+    "type": "embedded",
+    "label": "video",
+    "children": [],
+    "blockId": "",
+    "field": "video",
+    "value": "[VIDEO: student-designed Message 15, original clip]",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "t_m15",
+    "type": "block",
+    "label": "M15",
+    "children": [],
+    "blockId": "b_m15",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "arm_m20",
+    "type": "group",
+    "label": "M20",
+    "children": [
+     "set_m20",
+     "vid_m20",
+     "t_m20"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "set_m20",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "m20",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "vid_m20",
+    "type": "embedded",
+    "label": "video",
+    "children": [],
+    "blockId": "",
+    "field": "video",
+    "value": "[VIDEO: student-designed Message 20, original clip]",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "t_m20",
+    "type": "block",
+    "label": "M20",
+    "children": [],
+    "blockId": "b_m20",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "arm_m26",
+    "type": "group",
+    "label": "M26",
+    "children": [
+     "set_m26",
+     "vid_m26",
+     "t_m26"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "set_m26",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "m26",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "vid_m26",
+    "type": "embedded",
+    "label": "video",
+    "children": [],
+    "blockId": "",
+    "field": "video",
+    "value": "[VIDEO: student-designed Message 26, original clip]",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "t_m26",
+    "type": "block",
+    "label": "M26",
+    "children": [],
+    "blockId": "b_m26",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_post",
+    "type": "block",
+    "label": "Post",
+    "children": [],
+    "blockId": "b_post",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_debrief",
+    "type": "block",
+    "label": "Debrief",
+    "children": [],
+    "blockId": "b_debrief",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   }
+  ],
+  "roots": [
+   "n_consent",
+   "n_br",
+   "n_pre",
+   "r1",
+   "n_post",
+   "n_debrief"
+  ],
+  "assumptions": [
+   "Power: about 4400 per arm detects 0.06 at 80% power for Messages 15 and 20 (observed +0.063); Message 2 (-0.171) needs only about 550 per arm. Total about 22,000 across five arms.",
+   "Equal allocation, Holm correction across four contrasts, same pre-trust-adjusted model as the source.",
+   "Lucid panel with the source screener; compensation per panel standard.",
+   "Scale items use the source six-item wording paraphrased; exact wording should be copied from the source instrument."
+  ],
+  "unresolved": [
+   "Original video files for Messages 2, 15, 20 and 26 must be supplied by the research team.",
+   "IRB number and compensation are to be supplied.",
+   "The exact source scale item wording must be confirmed."
+  ],
+  "evidence": [
+   {
+    "id": "e1",
+    "title": "Source study package",
+    "url": "https://github.com/yrvelez/scientific-trust-messages",
+    "claim": "Message 2 -0.171; Messages 15 and 20 about +0.063 among 32 uncorrected tests",
+    "excerpt": "",
+    "origin": "web"
+   },
+   {
+    "id": "e2",
+    "title": "Pre-registration of the source study",
+    "url": "https://osf.io/5yvh9",
+    "claim": "Registered design and outcomes",
+    "excerpt": "",
+    "origin": "web"
+   },
+   {
+    "id": "e3",
+    "title": "Using social and behavioural science to support COVID-19 pandemic response",
+    "url": "https://doi.org/10.1038/s41562-020-0884-z",
+    "claim": "Position a: brief behavioural interventions can shift attitudes",
+    "excerpt": "",
+    "origin": "web"
+   },
+   {
+    "id": "e4",
+    "title": "Beyond misinformation",
+    "url": "https://doi.org/10.1016/j.jarmac.2017.07.008",
+    "claim": "Position b: misinformation and distrust are sticky",
+    "excerpt": "",
+    "origin": "web"
+   }
+  ]
+ }
+}

@@ -1,0 +1,112 @@
+{
+ "got_right": [
+  "Registered the plan on OSF, with dated amendments for the adaptive assignment algorithm and Lin covariate adjustment, and used a pure control (mean 3.685, n = 664) as a common comparator.",
+  "Tested a large, varied message set (videos, images, text, news stories, a values exercise) in one experiment, so formats can be compared on the same outcome and sample.",
+  "Reported the full arm table with confidence intervals and flagged the 32 uncorrected tests, so the five nominal hits (two negative, three about +0.06) are read as fragile rather than as findings.",
+  "Used pre-treatment trust and covariates with HC2 errors and IPW weights to handle adaptive assignment and gain precision."
+ ],
+ "why_it_did_not_land": [
+  {
+   "cause": "power",
+   "detail": "Adaptive assignment left most arms at about 120-170 respondents against a control of 664. Per-arm SEs of 0.03-0.05 cannot separate a 0.06-point effect from noise, and nothing survives multiplicity correction except possibly Message 2.",
+   "evidence": "Arm n of 116-180 for most messages; SEs 0.030-0.056; Message 12 p = 0.034 and Message 15 p = 0.012, Message 20 p = 0.009 against 32 uncorrected tests."
+  },
+  {
+   "cause": "analysis",
+   "detail": "Thirty-two uncorrected two-sided contrasts, with five nominal hits, are near the expected chance count of about 1.6 at 0.05. Message 2's p of 0.0002 is the only result that would plausibly survive Bonferroni (0.05/32 ≈ 0.0016).",
+   "evidence": "Five of 32 arms with p < 0.05. Exploratory checks gave 2 of 32 (component item) and 1 of 32 (Republican interaction) nominal hits."
+  },
+  {
+   "cause": "design",
+   "detail": "Arms differ in format, topic, length and tone at once, so a positive or negative arm cannot be traced to a mechanism. The student-designed set has no manipulated mechanism such as credibility, emotion or identity.",
+   "evidence": "Arms mix videos, images, text, news stories on a COVID-19 death and a global-warming study, and a values exercise; the three positive arms are all videos, but so are both negative ones."
+  },
+  {
+   "cause": "measurement",
+   "detail": "Trust is measured once, immediately after exposure, and a ceiling is plausible with a control mean of 3.685. Effects of at most 0.17 points say nothing about durability or behaviour.",
+   "evidence": "Limitations: outcomes measured immediately after exposure; largest effect -0.171 on the trust scale."
+  },
+  {
+   "cause": "sample",
+   "detail": "Roughly 3,000 of 11,519 respondents were lost to screening, and a further 769 to model exclusions (8,572 analysed, 7,803 modelled). This could create selection that differs by arm, and the Lucid panel limits generalisation.",
+   "evidence": "11,519 collected, 8,572 passed the screener, 7,803 entered the H1 models."
+  }
+ ],
+ "debates": [
+  {
+   "id": "D1",
+   "label": "Can brief messages move trust in science at all?",
+   "position_a": "Short, well-designed messages can shift attitudes toward science, as behavioural interventions did in pandemic response.",
+   "position_b": "Misinformation and distrust are sticky and hard to counter, so brief exposures produce little or backfiring change.",
+   "what_this_study_says": "Leans toward b. Effects are at most about 0.06 points positive, and the largest effect (Message 2) is negative at -0.171. Most arms are indistinguishable from control, and the retrieved literature does not test this directly.",
+   "works": [
+    {
+     "id": "10.1038/s41562-020-0884-z",
+     "side": "a"
+    },
+    {
+     "id": "10.1016/j.jarmac.2017.07.008",
+     "side": "b"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "id": "advance_design",
+   "kind_legacy": "mechanism",
+   "mode": "survey_experiment",
+   "title": "Format-matched message factorial with delayed follow-up",
+   "question": "Does the video format, rather than message content, produce the small trust gains, and do they persist after one to two weeks?",
+   "why_this_fixes_the_failure": "Addresses the design and power causes: it crosses format with content in a few well-powered cells, and adds a second wave to address the immediate-only outcome.",
+   "debate": "D1",
+   "addresses": [],
+   "design_sketch": "Take the best-performing content (the Message 15 and Message 20 themes) and the worst (Message 2) and deliver each as video, image and text, plus a pure control. Measure the trust scale and a behavioural outcome, a donation or sharing choice, immediately and again after 10 days. Recruit from Lucid with the same screener and the same pre-treatment trust and covariates, with equal allocation and no adaptive assignment.",
+   "moderator_or_condition": null,
+   "power_target": {
+    "n_per_arm": 4400,
+    "mde": 0.06,
+    "basis": "Observed effect of about 0.063 for Messages 12, 15 and 20, with per-observation SD near 1; two-cell contrast at 80% power, ignoring covariate gains."
+   },
+   "needs_qsf": true
+  },
+  {
+   "id": "theoretical_debate",
+   "kind_legacy": "alternative",
+   "mode": "survey_experiment",
+   "title": "Replicate the extremes to separate real effects from chance",
+   "question": "Are the Message 2 backlash and the Message 15 and 20 gains reproducible, as position a predicts for the gains and position b for the null?",
+   "why_this_fixes_the_failure": "Fixes the multiplicity and power problem: a preregistered confirmatory test of 4 arms replaces 32 exploratory contrasts, so the two positions of the debate are discriminated.",
+   "debate": "D1",
+   "addresses": [],
+   "design_sketch": "Run Messages 2, 15, 20 and 26 against a fresh control with equal allocation and a pre-specified Holm correction across the four contrasts. Use the same pre-trust-adjusted model. If the gains replicate at about +0.06 and the backlash at -0.10 or worse, brief messages can move trust. If all shrink toward zero, the original hits were chance.",
+   "moderator_or_condition": null,
+   "power_target": {
+    "n_per_arm": 4400,
+    "mde": 0.06,
+    "basis": "Observed +0.063 for Messages 15 and 20; the larger Message 2 effect (-0.171) would need only about 550 per arm."
+   },
+   "needs_qsf": true
+  },
+  {
+   "id": "generalizability_conditional",
+   "kind_legacy": "boundary",
+   "mode": "survey_experiment",
+   "title": "Partisan and platform boundary of the video effects",
+   "question": "Do the video effects on trust differ by Republican identification and by a feed-like versus forced-exposure setting?",
+   "why_this_fixes_the_failure": "Addresses the missing moderator and sample causes: the one nominal Republican interaction (Message 15, +0.165, p = 0.004) was found across 32 tests and needs a targeted confirmatory test.",
+   "debate": null,
+   "addresses": [],
+   "design_sketch": "Randomise Messages 15 and 20 and a control, crossed with forced exposure versus embedding in a social feed. Pre-register Republican identification as the moderator and stratify sampling by party. Measure trust with the same scale.",
+   "moderator_or_condition": "Republican versus non-Republican identification, and forced versus feed exposure",
+   "power_target": {
+    "n_per_arm": 3000,
+    "mde": 0.1,
+    "basis": "Observed Message 15 by Republican interaction of 0.165 (SE 0.057); interaction contrasts need about 4 times the main-effect n, sized to an MDE near 0.1."
+   },
+   "needs_qsf": true
+  }
+ ],
+ "verdict": "A follow-up is worth running, but as a narrow confirmation rather than another broad screen. Only Message 2's backlash is clearly distinguishable from noise, and the three small gains of about 0.06 points are at the level expected from 32 uncorrected tests. Run the replication of the extreme arms first, since it is cheap and resolves whether any of the gains is real. Then, if the gains replicate, run the format-by-content factorial with a delayed wave to learn about mechanism and persistence. The retrieved literature is thin on this question, so the debate is framed from the study's own question plus two loosely related works.",
+ "model": "anthropic/claude-sonnet-5.5"
+}

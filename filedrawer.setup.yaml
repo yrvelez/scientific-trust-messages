@@ -1,0 +1,17 @@
+# Written by `filedrawer configure` on 2026-10-09. `filedrawer run` reads it from this folder;
+# re-run `filedrawer configure` to change it. Hand edits are fine.
+setup:
+  where: hosted
+  models: sonnet+haiku
+  outside_review: none
+  extensions: 'yes'
+  pii: rules
+  literature: 'on'
+provider: openrouter
+models:
+  strong: anthropic/claude-sonnet-5.5
+  fast: anthropic/claude-haiku-5.5
+pii:
+  model: false
+litreview:
+  enabled: true

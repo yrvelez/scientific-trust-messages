@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 3056" width="100%" role="img" aria-labelledby="fd-title fd-desc"><title id="fd-title">Design: survey experiment</title><desc id="fd-desc">A survey experiment on online panel respondents in US (N = 8,572 analysed). Respondents are randomly assigned to 33 arms: Message 2 (video), Message 3 (education gap in confidence in science), Message 4 (what science is), Message 5 (video), Message 6 (image), Message 7 (achievements of scientific progress), Message 8 (video), Message 9 (video), Message 10 (video), Message 11 (news story on a COVID-19 death), Message 12 (video), Message 13 (image), Message 14 (news story on a global-warming study), Message 15 (video), Message 16 (video), Message 17 (why people question science), Message 18 (image), Message 19 (image), Message 20 (video), Message 21 (image), Message 22 (values exercise), Message 23 (image), Message 24 (image), Message 25 (video), Message 26 (video), Message 27 (image), Message 28 (image), Message 29 (video), Message 30 (image), Message 31 (image), Message 32 (video), Message 33 (video), against the control group Control. Message 2 (video): Video: student-designed message 2 Message 3 (education gap in confidence in science): Text: education gap in confidence in science Message 4 (what science is): Text: what science is Message 5 (video): Video: student-designed message 5 Message 6 (image): Image: student-designed message 6 Message 7 (achievements of scientific progress): Text: achievements of scientific progress Message 8 (video): Video: student-designed message 8 Message 9 (video): Video: student-designed message 9 Message 10 (video): Video: student-designed message 10 Message 11 (news story on a COVID-19 death): Text: news story on a COVID-19 death Message 12 (video): Video: student-designed message 12 Message 13 (image): Image: student-designed message 13 Message 14 (news story on a global-warming study): Text: news story on a global-warming study Message 15 (video): Video: student-designed message 15 Message 16 (video): Video: student-designed message 16 Message 17 (why people question science): Text: why people question science Message 18 (image): Image: student-designed message 18 Message 19 (image): Image: student-designed message 19 Message 20 (video): Video: student-designed message 20 Message 21 (image): Image: student-designed message 21 Message 22 (values exercise): Text: values exercise Message 23 (image): Image: student-designed message 23 Message 24 (image): Image: student-designed message 24 Message 25 (video): Video: student-designed message 25 Message 26 (video): Video: student-designed message 26 Message 27 (image): Image: student-designed message 27 Message 28 (image): Image: student-designed message 28 Message 29 (video): Video: student-designed message 29 Message 30 (image): Image: student-designed message 30 Message 31 (image): Image: student-designed message 31 Message 32 (video): Video: student-designed message 32 Message 33 (video): Video: student-designed message 33 Outcome: Trust in science after treatment.</desc><style>
+:root{--fd-ink:#1c1b19;--fd-muted:#8a877f;--fd-rule:#d9d5cc;--fd-accent:#8b1e2d;--fd-bg:#ffffff}
+@media (prefers-color-scheme: dark){:root{--fd-ink:#ecebe6;--fd-muted:#b4b1a9;--fd-rule:#4a4a52;--fd-accent:#e08a96;--fd-bg:#1d1d23}}
+.box{fill:var(--fd-bg,#fff);stroke:var(--fd-ink,#1c1b19);stroke-width:1.2}
+.arm{fill:var(--fd-bg,#fff);stroke:var(--fd-accent,#8b1e2d);stroke-width:1.4}
+.soft{fill:var(--fd-bg,#fff);stroke:var(--fd-rule,#d9d5cc);stroke-width:1.2}
+text{font-family:Inter,Helvetica,Arial,sans-serif;fill:var(--fd-ink,#1c1b19);font-size:14px}
+.cap{font-size:12px;fill:var(--fd-muted,#8a877f)}
+.kicker{font-size:11px;letter-spacing:.08em;fill:var(--fd-muted,#8a877f);text-transform:uppercase}
+.edge{stroke:var(--fd-ink,#1c1b19);stroke-width:1.2;fill:none;marker-end:url(#fd-arrow)}
+.assoc{stroke-dasharray:5 4}
+#fd-arrow path{fill:var(--fd-ink,#1c1b19)}
+</style>
+<defs><marker id="fd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs><text class="kicker" x="20" y="16">Design: survey experiment</text>
+<g>
+<rect class="box" x="20" y="1485.0" width="230" height="66" rx="6"/>
+<text class="kicker" x="32" y="1507.0">Population</text>
+<text x="32" y="1525.0">online panel, US</text>
+</g>
+<polygon class="box" points="300,1490.0 340,1518.0 300,1546.0 260,1518.0"/>
+<text class="cap" x="300" y="1522.0" text-anchor="middle">R</text>
+<path class="edge" d="M250,1518.0 L258,1518.0"/><text class="cap" x="254.0" y="1512.0" text-anchor="middle">randomized</text>
+<g id="arm-A1" data-text="Control: &#x27;Please continue to the next page.&#x27;">
+<rect class="box" x="400" y="30" width="250" height="78" rx="6"/>
+<text x="412" y="52">Control (control group)</text>
+<text class="cap" x="412" y="70">Control: &#x27;Please continue to the</text>
+<text class="cap" x="412" y="85">next page.&#x27;</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,69.0"/>
+<g id="arm-A2" data-text="Video: student-designed message 2">
+<rect class="arm" x="400" y="122" width="250" height="63" rx="6"/>
+<text x="412" y="144">Message 2 (video)</text>
+<text class="cap" x="412" y="162">Video: student-designed message 2</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,153.5"/>
+<g id="arm-A3" data-text="Text: education gap in confidence in science">
+<rect class="arm" x="400" y="199" width="250" height="96" rx="6"/>
+<text x="412" y="221">Message 3 (education gap in</text>
+<text x="412" y="239">confidence in science)</text>
+<text class="cap" x="412" y="257">Text: education gap in confidence</text>
+<text class="cap" x="412" y="272">in science</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,247.0"/>
+<g id="arm-A4" data-text="Text: what science is">
+<rect class="arm" x="400" y="309" width="250" height="63" rx="6"/>
+<text x="412" y="331">Message 4 (what science is)</text>
+<text class="cap" x="412" y="349">Text: what science is</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,340.5"/>
+<g id="arm-A5" data-text="Video: student-designed message 5">
+<rect class="arm" x="400" y="386" width="250" height="63" rx="6"/>
+<text x="412" y="408">Message 5 (video)</text>
+<text class="cap" x="412" y="426">Video: student-designed message 5</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,417.5"/>
+<g id="arm-A6" data-text="Image: student-designed message 6">
+<rect class="arm" x="400" y="463" width="250" height="63" rx="6"/>
+<text x="412" y="485">Message 6 (image)</text>
+<text class="cap" x="412" y="503">Image: student-designed message 6</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,494.5"/>
+<g id="arm-A7" data-text="Text: achievements of scientific progress">
+<rect class="arm" x="400" y="540" width="250" height="96" rx="6"/>
+<text x="412" y="562">Message 7 (achievements of</text>
+<text x="412" y="580">scientific progress)</text>
+<text class="cap" x="412" y="598">Text: achievements of scientific</text>
+<text class="cap" x="412" y="613">progress</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,588.0"/>
+<g id="arm-A8" data-text="Video: student-designed message 8">
+<rect class="arm" x="400" y="650" width="250" height="63" rx="6"/>
+<text x="412" y="672">Message 8 (video)</text>
+<text class="cap" x="412" y="690">Video: student-designed message 8</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,681.5"/>
+<g id="arm-A9" data-text="Video: student-designed message 9">
+<rect class="arm" x="400" y="727" width="250" height="63" rx="6"/>
+<text x="412" y="749">Message 9 (video)</text>
+<text class="cap" x="412" y="767">Video: student-designed message 9</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,758.5"/>
+<g id="arm-A10" data-text="Video: student-designed message 10">
+<rect class="arm" x="400" y="804" width="250" height="78" rx="6"/>
+<text x="412" y="826">Message 10 (video)</text>
+<text class="cap" x="412" y="844">Video: student-designed message</text>
+<text class="cap" x="412" y="859">10</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,843.0"/>
+<g id="arm-A11" data-text="Text: news story on a COVID-19 death">
+<rect class="arm" x="400" y="896" width="250" height="96" rx="6"/>
+<text x="412" y="918">Message 11 (news story on a</text>
+<text x="412" y="936">COVID-19 death)</text>
+<text class="cap" x="412" y="954">Text: news story on a COVID-19</text>
+<text class="cap" x="412" y="969">death</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,944.0"/>
+<g id="arm-A12" data-text="Video: student-designed message 12">
+<rect class="arm" x="400" y="1006" width="250" height="78" rx="6"/>
+<text x="412" y="1028">Message 12 (video)</text>
+<text class="cap" x="412" y="1046">Video: student-designed message</text>
+<text class="cap" x="412" y="1061">12</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,1045.0"/>
+<g id="arm-A13" data-text="Image: student-designed message 13">
+<rect class="arm" x="400" y="1098" width="250" height="78" rx="6"/>
+<text x="412" y="1120">Message 13 (image)</text>
+<text class="cap" x="412" y="1138">Image: student-designed message</text>
+<text class="cap" x="412" y="1153">13</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,1137.0"/>
+<g id="arm-A14" data-text="Text: news story on a global-warming study">
+<rect class="arm" x="400" y="1190" width="250" height="96" rx="6"/>
+<text x="412" y="1212">Message 14 (news story on a</text>
+<text x="412" y="1230">global-warming study)</text>
+<text class="cap" x="412" y="1248">Text: news story on a global-</text>
+<text class="cap" x="412" y="1263">warming study</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,1238.0"/>
+<g id="arm-A15" data-text="Video: student-designed message 15">
+<rect class="arm" x="400" y="1300" width="250" height="78" rx="6"/>
+<text x="412" y="1322">Message 15 (video)</text>
+<text class="cap" x="412" y="1340">Video: student-designed message</text>
+<text class="cap" x="412" y="1355">15</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,1339.0"/>
+<g id="arm-A16" data-text="Video: student-designed message 16">
+<rect class="arm" x="400" y="1392" width="250" height="78" rx="6"/>
+<text x="412" y="1414">Message 16 (video)</text>
+<text class="cap" x="412" y="1432">Video: student-designed message</text>
+<text class="cap" x="412" y="1447">16</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,1431.0"/>
+<g id="arm-A17" data-text="Text: why people question science">
+<rect class="arm" x="400" y="1484" width="250" height="81" rx="6"/>
+<text x="412" y="1506">Message 17 (why people</text>
+<text x="412" y="1524">question science)</text>
+<text class="cap" x="412" y="1542">Text: why people question science</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,1524.5"/>
+<g id="arm-A18" data-text="Image: student-designed message 18">
+<rect class="arm" x="400" y="1579" width="250" height="78" rx="6"/>
+<text x="412" y="1601">Message 18 (image)</text>
+<text class="cap" x="412" y="1619">Image: student-designed message</text>
+<text class="cap" x="412" y="1634">18</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,1618.0"/>
+<g id="arm-A19" data-text="Image: student-designed message 19">
+<rect class="arm" x="400" y="1671" width="250" height="78" rx="6"/>
+<text x="412" y="1693">Message 19 (image)</text>
+<text class="cap" x="412" y="1711">Image: student-designed message</text>
+<text class="cap" x="412" y="1726">19</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,1710.0"/>
+<g id="arm-A20" data-text="Video: student-designed message 20">
+<rect class="arm" x="400" y="1763" width="250" height="78" rx="6"/>
+<text x="412" y="1785">Message 20 (video)</text>
+<text class="cap" x="412" y="1803">Video: student-designed message</text>
+<text class="cap" x="412" y="1818">20</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,1802.0"/>
+<g id="arm-A21" data-text="Image: student-designed message 21">
+<rect class="arm" x="400" y="1855" width="250" height="78" rx="6"/>
+<text x="412" y="1877">Message 21 (image)</text>
+<text class="cap" x="412" y="1895">Image: student-designed message</text>
+<text class="cap" x="412" y="1910">21</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,1894.0"/>
+<g id="arm-A22" data-text="Text: values exercise">
+<rect class="arm" x="400" y="1947" width="250" height="63" rx="6"/>
+<text x="412" y="1969">Message 22 (values exercise)</text>
+<text class="cap" x="412" y="1987">Text: values exercise</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,1978.5"/>
+<g id="arm-A23" data-text="Image: student-designed message 23">
+<rect class="arm" x="400" y="2024" width="250" height="78" rx="6"/>
+<text x="412" y="2046">Message 23 (image)</text>
+<text class="cap" x="412" y="2064">Image: student-designed message</text>
+<text class="cap" x="412" y="2079">23</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,2063.0"/>
+<g id="arm-A24" data-text="Image: student-designed message 24">
+<rect class="arm" x="400" y="2116" width="250" height="78" rx="6"/>
+<text x="412" y="2138">Message 24 (image)</text>
+<text class="cap" x="412" y="2156">Image: student-designed message</text>
+<text class="cap" x="412" y="2171">24</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,2155.0"/>
+<g id="arm-A25" data-text="Video: student-designed message 25">
+<rect class="arm" x="400" y="2208" width="250" height="78" rx="6"/>
+<text x="412" y="2230">Message 25 (video)</text>
+<text class="cap" x="412" y="2248">Video: student-designed message</text>
+<text class="cap" x="412" y="2263">25</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,2247.0"/>
+<g id="arm-A26" data-text="Video: student-designed message 26">
+<rect class="arm" x="400" y="2300" width="250" height="78" rx="6"/>
+<text x="412" y="2322">Message 26 (video)</text>
+<text class="cap" x="412" y="2340">Video: student-designed message</text>
+<text class="cap" x="412" y="2355">26</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,2339.0"/>
+<g id="arm-A27" data-text="Image: student-designed message 27">
+<rect class="arm" x="400" y="2392" width="250" height="78" rx="6"/>
+<text x="412" y="2414">Message 27 (image)</text>
+<text class="cap" x="412" y="2432">Image: student-designed message</text>
+<text class="cap" x="412" y="2447">27</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,2431.0"/>
+<g id="arm-A28" data-text="Image: student-designed message 28">
+<rect class="arm" x="400" y="2484" width="250" height="78" rx="6"/>
+<text x="412" y="2506">Message 28 (image)</text>
+<text class="cap" x="412" y="2524">Image: student-designed message</text>
+<text class="cap" x="412" y="2539">28</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,2523.0"/>
+<g id="arm-A29" data-text="Video: student-designed message 29">
+<rect class="arm" x="400" y="2576" width="250" height="78" rx="6"/>
+<text x="412" y="2598">Message 29 (video)</text>
+<text class="cap" x="412" y="2616">Video: student-designed message</text>
+<text class="cap" x="412" y="2631">29</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,2615.0"/>
+<g id="arm-A30" data-text="Image: student-designed message 30">
+<rect class="arm" x="400" y="2668" width="250" height="78" rx="6"/>
+<text x="412" y="2690">Message 30 (image)</text>
+<text class="cap" x="412" y="2708">Image: student-designed message</text>
+<text class="cap" x="412" y="2723">30</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,2707.0"/>
+<g id="arm-A31" data-text="Image: student-designed message 31">
+<rect class="arm" x="400" y="2760" width="250" height="78" rx="6"/>
+<text x="412" y="2782">Message 31 (image)</text>
+<text class="cap" x="412" y="2800">Image: student-designed message</text>
+<text class="cap" x="412" y="2815">31</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,2799.0"/>
+<g id="arm-A32" data-text="Video: student-designed message 32">
+<rect class="arm" x="400" y="2852" width="250" height="78" rx="6"/>
+<text x="412" y="2874">Message 32 (video)</text>
+<text class="cap" x="412" y="2892">Video: student-designed message</text>
+<text class="cap" x="412" y="2907">32</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,2891.0"/>
+<g id="arm-A33" data-text="Video: student-designed message 33">
+<rect class="arm" x="400" y="2944" width="250" height="78" rx="6"/>
+<text x="412" y="2966">Message 33 (video)</text>
+<text class="cap" x="412" y="2984">Video: student-designed message</text>
+<text class="cap" x="412" y="2999">33</text>
+</g>
+<path class="edge" d="M342,1518.0 L396,2983.0"/>
+<g>
+<rect class="box" x="700" y="30" width="230" height="84" rx="6"/>
+<text class="kicker" x="712" y="52">Outcome</text>
+<text x="712" y="70">Trust in science after</text>
+<text x="712" y="88">treatment</text>
+</g>
+<path class="edge" d="M650,1518.0 L696,1518.0"/><text class="cap" x="673.0" y="1512.0" text-anchor="middle">effect</text></svg>

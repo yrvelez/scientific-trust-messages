@@ -1,0 +1,995 @@
+{
+ "SurveyEntry": {
+  "SurveyID": "SV_filedrawer00000",
+  "SurveyName": "Preregistered replication of Messages 2, 15, 20 and 26 (extension of: Can Trust in Science Be Improv",
+  "SurveyDescription": null,
+  "SurveyOwnerID": "UR_filedrawer00000",
+  "SurveyBrandID": "",
+  "DivisionID": null,
+  "SurveyLanguage": "EN",
+  "SurveyActiveResponseSet": "RS_filedrawer00000",
+  "SurveyStatus": "Inactive",
+  "SurveyStartDate": "0000-00-00 00:00:00",
+  "SurveyExpirationDate": "0000-00-00 00:00:00",
+  "SurveyCreationDate": "2026-10-09 12:34:21",
+  "CreatorID": "UR_filedrawer00000",
+  "LastModified": "2026-10-09 12:34:21",
+  "LastAccessed": "0000-00-00 00:00:00",
+  "LastActivated": "0000-00-00 00:00:00",
+  "Deleted": null
+ },
+ "SurveyElements": [
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "BL",
+   "PrimaryAttribute": "Survey Blocks",
+   "SecondaryAttribute": null,
+   "TertiaryAttribute": null,
+   "Payload": [
+    {
+     "Type": "Default",
+     "Description": "Consent",
+     "ID": "BL_b_consent",
+     "BlockElements": [
+      {
+       "Type": "Question",
+       "QuestionID": "QID1"
+      }
+     ]
+    },
+    {
+     "Type": "Standard",
+     "Description": "Pre-measure",
+     "ID": "BL_b_pre",
+     "BlockElements": [
+      {
+       "Type": "Question",
+       "QuestionID": "QID2"
+      }
+     ]
+    },
+    {
+     "Type": "Standard",
+     "Description": "Control",
+     "ID": "BL_b_ctrl",
+     "BlockElements": [
+      {
+       "Type": "Question",
+       "QuestionID": "QID3"
+      }
+     ]
+    },
+    {
+     "Type": "Standard",
+     "Description": "M2",
+     "ID": "BL_b_m2",
+     "BlockElements": [
+      {
+       "Type": "Question",
+       "QuestionID": "QID4"
+      }
+     ]
+    },
+    {
+     "Type": "Standard",
+     "Description": "M15",
+     "ID": "BL_b_m15",
+     "BlockElements": [
+      {
+       "Type": "Question",
+       "QuestionID": "QID5"
+      }
+     ]
+    },
+    {
+     "Type": "Standard",
+     "Description": "M20",
+     "ID": "BL_b_m20",
+     "BlockElements": [
+      {
+       "Type": "Question",
+       "QuestionID": "QID6"
+      }
+     ]
+    },
+    {
+     "Type": "Standard",
+     "Description": "M26",
+     "ID": "BL_b_m26",
+     "BlockElements": [
+      {
+       "Type": "Question",
+       "QuestionID": "QID7"
+      }
+     ]
+    },
+    {
+     "Type": "Standard",
+     "Description": "Outcome",
+     "ID": "BL_b_post",
+     "BlockElements": [
+      {
+       "Type": "Question",
+       "QuestionID": "QID8"
+      }
+     ]
+    },
+    {
+     "Type": "Standard",
+     "Description": "Debrief",
+     "ID": "BL_b_debrief",
+     "BlockElements": [
+      {
+       "Type": "Question",
+       "QuestionID": "QID9"
+      }
+     ]
+    },
+    {
+     "Type": "Standard",
+     "Description": "End",
+     "ID": "BL_b_end",
+     "BlockElements": [
+      {
+       "Type": "Question",
+       "QuestionID": "QID10"
+      }
+     ]
+    },
+    {
+     "Type": "Trash",
+     "Description": "Trash / Unused Questions",
+     "ID": "BL_trash"
+    }
+   ]
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "FL",
+   "PrimaryAttribute": "Survey Flow",
+   "SecondaryAttribute": null,
+   "TertiaryAttribute": null,
+   "Payload": {
+    "Type": "Root",
+    "FlowID": "FL_1",
+    "Flow": [
+     {
+      "Type": "Block",
+      "ID": "BL_b_consent",
+      "FlowID": "FL_2",
+      "Autofill": []
+     },
+     {
+      "Type": "Branch",
+      "FlowID": "FL_3",
+      "Description": "No consent",
+      "BranchLogic": {
+       "0": {
+        "0": {
+         "LogicType": "Question",
+         "QuestionID": "QID1",
+         "QuestionIsInLoop": "no",
+         "ChoiceLocator": "q://QID1/SelectableChoice/2",
+         "Operator": "Selected",
+         "QuestionIDFromLocator": "QID1",
+         "LeftOperand": "q://QID1/SelectableChoice/2",
+         "Type": "Expression",
+         "Description": "If QID1 choice 2 is selected"
+        },
+        "Type": "If"
+       },
+       "Type": "BooleanExpression"
+      },
+      "Flow": [
+       {
+        "Type": "Standard",
+        "ID": "BL_b_end",
+        "FlowID": "FL_4",
+        "Autofill": []
+       },
+       {
+        "Type": "EndSurvey",
+        "FlowID": "FL_5"
+       }
+      ]
+     },
+     {
+      "Type": "Standard",
+      "ID": "BL_b_pre",
+      "FlowID": "FL_6",
+      "Autofill": []
+     },
+     {
+      "Type": "BlockRandomizer",
+      "FlowID": "FL_7",
+      "SubSet": 1,
+      "EvenPresentation": true,
+      "Flow": [
+       {
+        "Type": "Group",
+        "FlowID": "FL_8",
+        "Description": "Control",
+        "Flow": [
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_9",
+          "EmbeddedData": [
+           {
+            "Description": "condition",
+            "Type": "Custom",
+            "Field": "condition",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "control"
+           }
+          ]
+         },
+         {
+          "Type": "Standard",
+          "ID": "BL_b_ctrl",
+          "FlowID": "FL_10",
+          "Autofill": []
+         }
+        ]
+       },
+       {
+        "Type": "Group",
+        "FlowID": "FL_11",
+        "Description": "M2",
+        "Flow": [
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_12",
+          "EmbeddedData": [
+           {
+            "Description": "condition",
+            "Type": "Custom",
+            "Field": "condition",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "m2"
+           }
+          ]
+         },
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_13",
+          "EmbeddedData": [
+           {
+            "Description": "video",
+            "Type": "Custom",
+            "Field": "video",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "[VIDEO TO SUPPLY: student-designed Message 2, original clip]"
+           }
+          ]
+         },
+         {
+          "Type": "Standard",
+          "ID": "BL_b_m2",
+          "FlowID": "FL_14",
+          "Autofill": []
+         }
+        ]
+       },
+       {
+        "Type": "Group",
+        "FlowID": "FL_15",
+        "Description": "M15",
+        "Flow": [
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_16",
+          "EmbeddedData": [
+           {
+            "Description": "condition",
+            "Type": "Custom",
+            "Field": "condition",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "m15"
+           }
+          ]
+         },
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_17",
+          "EmbeddedData": [
+           {
+            "Description": "video",
+            "Type": "Custom",
+            "Field": "video",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "[VIDEO TO SUPPLY: student-designed Message 15, original clip]"
+           }
+          ]
+         },
+         {
+          "Type": "Standard",
+          "ID": "BL_b_m15",
+          "FlowID": "FL_18",
+          "Autofill": []
+         }
+        ]
+       },
+       {
+        "Type": "Group",
+        "FlowID": "FL_19",
+        "Description": "M20",
+        "Flow": [
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_20",
+          "EmbeddedData": [
+           {
+            "Description": "condition",
+            "Type": "Custom",
+            "Field": "condition",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "m20"
+           }
+          ]
+         },
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_21",
+          "EmbeddedData": [
+           {
+            "Description": "video",
+            "Type": "Custom",
+            "Field": "video",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "[VIDEO TO SUPPLY: student-designed Message 20, original clip]"
+           }
+          ]
+         },
+         {
+          "Type": "Standard",
+          "ID": "BL_b_m20",
+          "FlowID": "FL_22",
+          "Autofill": []
+         }
+        ]
+       },
+       {
+        "Type": "Group",
+        "FlowID": "FL_23",
+        "Description": "M26",
+        "Flow": [
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_24",
+          "EmbeddedData": [
+           {
+            "Description": "condition",
+            "Type": "Custom",
+            "Field": "condition",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "m26"
+           }
+          ]
+         },
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_25",
+          "EmbeddedData": [
+           {
+            "Description": "video",
+            "Type": "Custom",
+            "Field": "video",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "[VIDEO TO SUPPLY: student-designed Message 26, original clip]"
+           }
+          ]
+         },
+         {
+          "Type": "Standard",
+          "ID": "BL_b_m26",
+          "FlowID": "FL_26",
+          "Autofill": []
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Type": "Standard",
+      "ID": "BL_b_post",
+      "FlowID": "FL_27",
+      "Autofill": []
+     },
+     {
+      "Type": "Standard",
+      "ID": "BL_b_debrief",
+      "FlowID": "FL_28",
+      "Autofill": []
+     }
+    ],
+    "Properties": {
+     "Count": 28,
+     "RemovedFieldsets": []
+    }
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "PL",
+   "PrimaryAttribute": "Preview Link",
+   "SecondaryAttribute": null,
+   "TertiaryAttribute": null,
+   "Payload": {
+    "PreviewType": "Brand",
+    "PreviewID": "d7ac539f-f924-45ef-a15f-8c54dbae7758"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "PROJ",
+   "PrimaryAttribute": "CORE",
+   "SecondaryAttribute": null,
+   "TertiaryAttribute": "1.1.0",
+   "Payload": {
+    "ProjectCategory": "CORE",
+    "SchemaVersion": "1.1.0"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "QC",
+   "PrimaryAttribute": "Survey Question Count",
+   "SecondaryAttribute": "10",
+   "TertiaryAttribute": null,
+   "Payload": null
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "RS",
+   "PrimaryAttribute": "RS_filedrawer00000",
+   "SecondaryAttribute": "Default Response Set",
+   "TertiaryAttribute": null,
+   "Payload": null
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SCO",
+   "PrimaryAttribute": "Scoring",
+   "SecondaryAttribute": null,
+   "TertiaryAttribute": null,
+   "Payload": {
+    "ScoringCategories": [],
+    "ScoringCategoryGroups": [],
+    "ScoringSummaryCategory": null,
+    "ScoringSummaryAfterQuestions": 0,
+    "ScoringSummaryAfterSurvey": 0,
+    "DefaultScoringCategory": null,
+    "AutoScoringCategory": null
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SO",
+   "PrimaryAttribute": "Survey Options",
+   "SecondaryAttribute": null,
+   "TertiaryAttribute": null,
+   "Payload": {
+    "BackButton": "false",
+    "SaveAndContinue": "true",
+    "SurveyProtection": "PublicSurvey",
+    "BallotBoxStuffingPrevention": "false",
+    "NoIndex": "Yes",
+    "SecureResponseFiles": "true",
+    "SurveyExpiration": "None",
+    "SurveyTermination": "DefaultMessage",
+    "Header": "",
+    "Footer": "",
+    "ProgressBarDisplay": "None",
+    "PartialData": "+1 week",
+    "ValidationMessage": null,
+    "PreviousButton": "",
+    "NextButton": "",
+    "SurveyTitle": "Preregistered replication of Messages 2, 15, 20 and 26 (extension of: Can Trust in Science Be Improv",
+    "SkinLibrary": "Qualtrics",
+    "SkinType": "templated",
+    "Skin": {
+     "brandingId": null,
+     "templateId": "*base",
+     "overrides": null
+    },
+    "NewScoring": 1,
+    "SurveyMetaDescription": "US adults complete a pre-trust scale, are randomly assigned to control or one of four videos (Mes..."
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "STAT",
+   "PrimaryAttribute": "Survey Statistics",
+   "SecondaryAttribute": null,
+   "TertiaryAttribute": null,
+   "Payload": {
+    "MobileCompatible": true,
+    "ID": "Survey Statistics"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID1",
+   "SecondaryAttribute": "You are invited to take part in a short research survey about attitudes toward s",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "You are invited to take part in a short research survey about attitudes toward science. Participation is voluntary and you may stop at any time. Do you agree to participate?",
+    "DataExportTag": "consent",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "You are invited to take part in a short research survey about attitudes toward science. Participa...",
+    "Validation": {
+     "Settings": {
+      "ForceResponse": "ON",
+      "ForceResponseType": "ON",
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID1",
+    "QuestionType": "MC",
+    "Selector": "SAVR",
+    "SubSelector": "TX",
+    "Choices": {
+     "1": {
+      "Display": "I agree"
+     },
+     "2": {
+      "Display": "I do not agree"
+     }
+    },
+    "ChoiceOrder": [
+     "1",
+     "2"
+    ],
+    "NextChoiceId": 3,
+    "NextAnswerId": 1,
+    "RecodeValues": {
+     "1": "1",
+     "2": "0"
+    }
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID2",
+   "SecondaryAttribute": "How much do you agree with each statement about science? (Items 4-6 are negative",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "How much do you agree with each statement about science? (Items 4-6 are negatively worded.)",
+    "DataExportTag": "pre_trust_scale",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText",
+     "TextPosition": "inline",
+     "ChoiceColumnWidth": 25,
+     "RepeatHeaders": "none",
+     "WhiteSpace": "OFF",
+     "MobileFirst": true
+    },
+    "QuestionDescription": "How much do you agree with each statement about science? (Items 4-6 are negatively worded.)",
+    "Validation": {
+     "Settings": {
+      "ForceResponse": "ON",
+      "ForceResponseType": "ON",
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID2",
+    "QuestionType": "Matrix",
+    "Selector": "Likert",
+    "SubSelector": "SingleAnswer",
+    "DefaultChoices": false,
+    "GradingData": [],
+    "ChoiceDataExportTags": false,
+    "Choices": {
+     "1": {
+      "Display": "I trust scientists to tell the truth about their findings."
+     },
+     "2": {
+      "Display": "Science benefits society."
+     },
+     "3": {
+      "Display": "I have confidence in the scientific community."
+     },
+     "4": {
+      "Display": "Scientists often twist findings to suit their own agendas."
+     },
+     "5": {
+      "Display": "Scientific results are often unreliable."
+     },
+     "6": {
+      "Display": "I do not trust what scientists say."
+     }
+    },
+    "ChoiceOrder": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "Answers": {
+     "1": {
+      "Display": "Strongly disagree"
+     },
+     "2": {
+      "Display": "Disagree"
+     },
+     "3": {
+      "Display": "Neutral"
+     },
+     "4": {
+      "Display": "Agree"
+     },
+     "5": {
+      "Display": "Strongly agree"
+     }
+    },
+    "AnswerOrder": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "NextChoiceId": 7,
+    "NextAnswerId": 6
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID3",
+   "SecondaryAttribute": "Please continue to the next page.",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Please continue to the next page.",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Please continue to the next page.",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID3",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_ctrl"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID4",
+   "SecondaryAttribute": "Please watch this video. {{ed:video}}",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Please watch this video. ${e://Field/video}",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Please watch this video. ${e://Field/video}",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID4",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_m2"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID5",
+   "SecondaryAttribute": "Please watch this video. {{ed:video}}",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Please watch this video. ${e://Field/video}",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Please watch this video. ${e://Field/video}",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID5",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_m15"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID6",
+   "SecondaryAttribute": "Please watch this video. {{ed:video}}",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Please watch this video. ${e://Field/video}",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Please watch this video. ${e://Field/video}",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID6",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_m20"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID7",
+   "SecondaryAttribute": "Please watch this video. {{ed:video}}",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Please watch this video. ${e://Field/video}",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Please watch this video. ${e://Field/video}",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID7",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_m26"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID8",
+   "SecondaryAttribute": "How much do you agree with each statement about science? (Items 4-6 are negative",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "How much do you agree with each statement about science? (Items 4-6 are negatively worded.)",
+    "DataExportTag": "post_trust_scale",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText",
+     "TextPosition": "inline",
+     "ChoiceColumnWidth": 25,
+     "RepeatHeaders": "none",
+     "WhiteSpace": "OFF",
+     "MobileFirst": true
+    },
+    "QuestionDescription": "How much do you agree with each statement about science? (Items 4-6 are negatively worded.)",
+    "Validation": {
+     "Settings": {
+      "ForceResponse": "ON",
+      "ForceResponseType": "ON",
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID8",
+    "QuestionType": "Matrix",
+    "Selector": "Likert",
+    "SubSelector": "SingleAnswer",
+    "DefaultChoices": false,
+    "GradingData": [],
+    "ChoiceDataExportTags": false,
+    "Choices": {
+     "1": {
+      "Display": "I trust scientists to tell the truth about their findings."
+     },
+     "2": {
+      "Display": "Science benefits society."
+     },
+     "3": {
+      "Display": "I have confidence in the scientific community."
+     },
+     "4": {
+      "Display": "Scientists often twist findings to suit their own agendas."
+     },
+     "5": {
+      "Display": "Scientific results are often unreliable."
+     },
+     "6": {
+      "Display": "I do not trust what scientists say."
+     }
+    },
+    "ChoiceOrder": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "Answers": {
+     "1": {
+      "Display": "Strongly disagree"
+     },
+     "2": {
+      "Display": "Disagree"
+     },
+     "3": {
+      "Display": "Neutral"
+     },
+     "4": {
+      "Display": "Agree"
+     },
+     "5": {
+      "Display": "Strongly agree"
+     }
+    },
+    "AnswerOrder": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "NextChoiceId": 7,
+    "NextAnswerId": 6
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID9",
+   "SecondaryAttribute": "Thank you. This study tested whether short messages change attitudes toward scie",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Thank you. This study tested whether short messages change attitudes toward science. The messages were student-designed and not official statements. Your answers are confidential.",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Thank you. This study tested whether short messages change attitudes toward science. The messages...",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID9",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_debrief"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID10",
+   "SecondaryAttribute": "Thank you for your time. You have chosen not to participate.",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Thank you for your time. You have chosen not to participate.",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Thank you for your time. You have chosen not to participate.",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID10",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_end"
+   }
+  }
+ ]
+}

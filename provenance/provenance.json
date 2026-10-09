@@ -1,0 +1,180 @@
+{
+ "mode": "fully_agentic",
+ "human_steps": [],
+ "reviewer_pass": true,
+ "models": {
+  "strong": "anthropic/claude-sonnet-5.5",
+  "fast": "anthropic/claude-haiku-5.5"
+ },
+ "provider": "openrouter",
+ "zero_retention_requested": true,
+ "cost_usd": 0.563533,
+ "tokens": {
+  "in": 197016,
+  "out": 29035
+ },
+ "tool_version": "0.1.0",
+ "created": "2026-10-09T12:31:01Z",
+ "pap_source": "author-supplied pap.json",
+ "pii": {
+  "dropped": [
+   "RecordedDate"
+  ],
+  "kept_with_override": [],
+  "allow_pii": false,
+  "flagged": {
+   "RecordedDate": "known_identifier_column"
+  },
+  "scan": "header + first data row only, local regex"
+ },
+ "degraded": [
+  "no QSF: codebook inferred from CSV header rows; arms must come from the PAP",
+  "extensions: advance_design: no proposal returned (call record_result with key 'proposal')"
+ ],
+ "inputs": {
+  "raw_csv_sha256": "0c8fa28826fd9693fa7d3d17ddd460385586cdbe80d6db9409413672b38ec683",
+  "pap_sha256": "91843344e2aa7f232bce6418001673f97f116e68b7b2d84cca05849992eaa5fb",
+  "qsf_sha256": null,
+  "pap_json_sha256": "dc4756057294fe6d242e2c68c1aacaab6f21ba6b7ccea28b3ceee79c1b7d97db"
+ },
+ "review_mode": "light",
+ "review_rounds": [
+  {
+   "round": 1,
+   "decision": "accept",
+   "k_issues": 3,
+   "revised": true,
+   "agent_addenda": []
+  }
+ ],
+ "usage_by_agent": {
+  "exploratory": {
+   "calls": 3,
+   "in": 39901,
+   "out": 2591,
+   "cost": 0.005232744,
+   "models": [
+    "anthropic/claude-haiku-5.5"
+   ]
+  },
+  "litreview": {
+   "calls": 2,
+   "in": 2453,
+   "out": 1060,
+   "cost": 0.0007675469999999999,
+   "models": [
+    "anthropic/claude-haiku-5.5"
+   ]
+  },
+  "writer": {
+   "calls": 1,
+   "in": 7681,
+   "out": 1396,
+   "cost": 0.02902878,
+   "models": [
+    "anthropic/claude-sonnet-5.5"
+   ]
+  },
+  "reviewer": {
+   "calls": 1,
+   "in": 16413,
+   "out": 823,
+   "cost": 0.04064544,
+   "models": [
+    "anthropic/claude-sonnet-5.5"
+   ]
+  },
+  "review_orchestrator": {
+   "calls": 1,
+   "in": 27470,
+   "out": 1458,
+   "cost": 0.0688248,
+   "models": [
+    "anthropic/claude-sonnet-5.5"
+   ]
+  },
+  "writer_revise": {
+   "calls": 1,
+   "in": 10696,
+   "out": 1831,
+   "cost": 0.03930498,
+   "models": [
+    "anthropic/claude-sonnet-5.5"
+   ]
+  },
+  "review_signoff": {
+   "calls": 1,
+   "in": 27164,
+   "out": 1238,
+   "cost": 0.06604092,
+   "models": [
+    "anthropic/claude-sonnet-5.5"
+   ]
+  },
+  "potential": {
+   "calls": 1,
+   "in": 18221,
+   "out": 2739,
+   "cost": 0.06319368,
+   "models": [
+    "anthropic/claude-sonnet-5.5"
+   ]
+  },
+  "extensions": {
+   "calls": 4,
+   "in": 47017,
+   "out": 15899,
+   "cost": 0.25049376,
+   "models": [
+    "anthropic/claude-sonnet-5.5"
+   ]
+  }
+ },
+ "stage_seconds": {
+  "ingest": 0.0,
+  "pii": 0.26,
+  "tidy": 0.26,
+  "pap": 0.0,
+  "clean": 0.51,
+  "registered": 13.75,
+  "tag": 0.0,
+  "exploratory": 15.85,
+  "litreview": 8.57,
+  "write": 10.81,
+  "review": 17.21,
+  "robustness": 0.0,
+  "revise": 18.13,
+  "extensions": 114.57,
+  "package": 0.0
+ },
+ "total_seconds": 199.9,
+ "log": [
+  "2026-10-09T12:31:01Z stage ingest",
+  "2026-10-09T12:31:01Z stage pii",
+  "2026-10-09T12:31:02Z PII scan (header + first 5 rows): flagged 1 column(s): RecordedDate [known_identifier_column]. Action: dropped 1, kept by whitelist 0.",
+  "2026-10-09T12:31:02Z stage tidy",
+  "2026-10-09T12:31:02Z stage pap",
+  "2026-10-09T12:31:02Z pap: loaded author-supplied inputs/pap.json (papreader agent skipped)",
+  "2026-10-09T12:31:02Z stage clean",
+  "2026-10-09T12:31:02Z wrote data/clean.csv: 8572 rows, 67 columns",
+  "2026-10-09T12:31:02Z stage registered",
+  "2026-10-09T12:31:16Z H1: post_trust ~ C(arm_code, Treatment(reference='A1')) * (pre_trust_c + age_c + education_c + white_c + latino_c + dem_c + rep_c) | 32 arms vs Control, N=7803, HC2 SEs, weights=ipw; 5 arm(s) supported",
+  "2026-10-09T12:31:16Z wrote results/registered_summary.csv (32 rows)",
+  "2026-10-09T12:31:16Z stage tag",
+  "2026-10-09T12:31:16Z stage exploratory",
+  "2026-10-09T12:31:32Z tags: H1=registered, E1=exploratory, E2=exploratory",
+  "2026-10-09T12:31:32Z stage litreview",
+  "2026-10-09T12:31:41Z stage write",
+  "2026-10-09T12:31:41Z diagram: template (figures/design.svg)",
+  "2026-10-09T12:31:51Z stage review",
+  "2026-10-09T12:32:09Z review (light): 8 issue(s); provisional decision: minor_revision",
+  "2026-10-09T12:32:09Z stage robustness",
+  "2026-10-09T12:32:09Z stage revise",
+  "2026-10-09T12:32:19Z correction pass 1: 8 note(s) from the writing agent",
+  "2026-10-09T12:32:27Z claim re-check: 10/10 claims supported on the corrected text",
+  "2026-10-09T12:32:27Z stage extensions",
+  "2026-10-09T12:32:48Z research potential: 5 cause(s), 1 debate(s), 3 brief(s)",
+  "2026-10-09T12:34:21Z extensions: 2 proposal(s) validated by autoexperiment; dropped: advance_design: no proposal returned (call record_result with key 'proposal')",
+  "2026-10-09T12:34:21Z stage package"
+ ]
+}

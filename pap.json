@@ -1,0 +1,406 @@
+{
+  "title": "Can trust in science be improved? An adaptive experiment testing student-designed messages",
+  "constructs": [
+    "persuasion",
+    "health_behavior"
+  ],
+  "keywords": [
+    "trust in science",
+    "adaptive experiment",
+    "messaging",
+    "multi-arm",
+    "COVID-19 vaccines"
+  ],
+  "registration": {
+    "status": "registered",
+    "url": "https://osf.io/5yvh9",
+    "note": "OSF Preregistration 5yvh9 (DOI 10.17605/OSF.IO/5YVH9, 2021-11-20), amended by w82xv (2021-11-28, assignment algorithm) and 5wr2k (2021-11-29, Lin covariate adjustment)."
+  },
+  "design": {
+    "type": "survey_experiment",
+    "arms": {
+      "column": "arm",
+      "treatment": [
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30",
+        "A31",
+        "A32",
+        "A33"
+      ],
+      "control": "A1",
+      "labels": {
+        "A1": "Control",
+        "A2": "Message 2 (video)",
+        "A3": "Message 3 (education gap in confidence in science)",
+        "A4": "Message 4 (what science is)",
+        "A5": "Message 5 (video)",
+        "A6": "Message 6 (image)",
+        "A7": "Message 7 (achievements of scientific progress)",
+        "A8": "Message 8 (video)",
+        "A9": "Message 9 (video)",
+        "A10": "Message 10 (video)",
+        "A11": "Message 11 (news story on a COVID-19 death)",
+        "A12": "Message 12 (video)",
+        "A13": "Message 13 (image)",
+        "A14": "Message 14 (news story on a global-warming study)",
+        "A15": "Message 15 (video)",
+        "A16": "Message 16 (video)",
+        "A17": "Message 17 (why people question science)",
+        "A18": "Message 18 (image)",
+        "A19": "Message 19 (image)",
+        "A20": "Message 20 (video)",
+        "A21": "Message 21 (image)",
+        "A22": "Message 22 (values exercise)",
+        "A23": "Message 23 (image)",
+        "A24": "Message 24 (image)",
+        "A25": "Message 25 (video)",
+        "A26": "Message 26 (video)",
+        "A27": "Message 27 (image)",
+        "A28": "Message 28 (image)",
+        "A29": "Message 29 (video)",
+        "A30": "Message 30 (image)",
+        "A31": "Message 31 (image)",
+        "A32": "Message 32 (video)",
+        "A33": "Message 33 (video)"
+      },
+      "descriptions": {
+        "A1": "Control: 'Please continue to the next page.'",
+        "A2": "Video: student-designed message 2",
+        "A3": "Text: education gap in confidence in science",
+        "A4": "Text: what science is",
+        "A5": "Video: student-designed message 5",
+        "A6": "Image: student-designed message 6",
+        "A7": "Text: achievements of scientific progress",
+        "A8": "Video: student-designed message 8",
+        "A9": "Video: student-designed message 9",
+        "A10": "Video: student-designed message 10",
+        "A11": "Text: news story on a COVID-19 death",
+        "A12": "Video: student-designed message 12",
+        "A13": "Image: student-designed message 13",
+        "A14": "Text: news story on a global-warming study",
+        "A15": "Video: student-designed message 15",
+        "A16": "Video: student-designed message 16",
+        "A17": "Text: why people question science",
+        "A18": "Image: student-designed message 18",
+        "A19": "Image: student-designed message 19",
+        "A20": "Video: student-designed message 20",
+        "A21": "Image: student-designed message 21",
+        "A22": "Text: values exercise",
+        "A23": "Image: student-designed message 23",
+        "A24": "Image: student-designed message 24",
+        "A25": "Video: student-designed message 25",
+        "A26": "Video: student-designed message 26",
+        "A27": "Image: student-designed message 27",
+        "A28": "Image: student-designed message 28",
+        "A29": "Video: student-designed message 29",
+        "A30": "Image: student-designed message 30",
+        "A31": "Image: student-designed message 31",
+        "A32": "Video: student-designed message 32",
+        "A33": "Video: student-designed message 33"
+      }
+    },
+    "population": {
+      "sample": "online_panel",
+      "country": "US",
+      "description": "US adults, Lucid"
+    }
+  },
+  "registered": {
+    "outcomes": [
+      {
+        "name": "post_trust",
+        "label": "Trust in science after treatment",
+        "kind": "single_item",
+        "columns": [
+          "post_trust"
+        ],
+        "reverse": [],
+        "scale": [
+          1,
+          5
+        ],
+        "construction": "Mean of the registered 6-item scale, items 4-6 (negatively worded) reverse-coded"
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "H1",
+        "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control.",
+        "outcome": "post_trust",
+        "treatment": {
+          "column": "arm",
+          "arms": [
+            "A2",
+            "A3",
+            "A4",
+            "A5",
+            "A6",
+            "A7",
+            "A8",
+            "A9",
+            "A10",
+            "A11",
+            "A12",
+            "A13",
+            "A14",
+            "A15",
+            "A16",
+            "A17",
+            "A18",
+            "A19",
+            "A20",
+            "A21",
+            "A22",
+            "A23",
+            "A24",
+            "A25",
+            "A26",
+            "A27",
+            "A28",
+            "A29",
+            "A30",
+            "A31",
+            "A32",
+            "A33"
+          ],
+          "control": "A1"
+        },
+        "direction": "two_sided",
+        "estimator": {
+          "kind": "lin",
+          "robust": "HC2",
+          "cluster": null,
+          "weights": "ipw",
+          "covariates": [
+            "pre_trust",
+            "age",
+            "education",
+            "white",
+            "latino",
+            "dem",
+            "rep"
+          ],
+          "continuous": [
+            "pre_trust",
+            "age",
+            "education",
+            "white",
+            "latino",
+            "dem",
+            "rep"
+          ]
+        },
+        "pooled": false,
+        "subgroup": null,
+        "exclusions": [
+          "Finished == 1",
+          "screener_pass == 1",
+          "arm.notna()",
+          "post_trust.notna() and pre_trust.notna() and age.notna() and education.notna() and white.notna() and latino.notna() and dem.notna() and rep.notna()"
+        ]
+      }
+    ],
+    "subgroups": [],
+    "sample_exclusions": [
+      "screener_pass == 1",
+      "arm.notna()"
+    ],
+    "multiple_testing": "none",
+    "alpha": 0.05
+  },
+  "implemented": {
+    "outcomes": [
+      {
+        "name": "post_trust",
+        "label": "Trust in science after treatment",
+        "kind": "single_item",
+        "columns": [
+          "post_trust"
+        ],
+        "reverse": [],
+        "scale": [
+          1,
+          5
+        ],
+        "construction": "Mean of the registered 6-item scale, items 4-6 (negatively worded) reverse-coded"
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "H1",
+        "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control.",
+        "outcome": "post_trust",
+        "treatment": {
+          "column": "arm",
+          "arms": [
+            "A2",
+            "A3",
+            "A4",
+            "A5",
+            "A6",
+            "A7",
+            "A8",
+            "A9",
+            "A10",
+            "A11",
+            "A12",
+            "A13",
+            "A14",
+            "A15",
+            "A16",
+            "A17",
+            "A18",
+            "A19",
+            "A20",
+            "A21",
+            "A22",
+            "A23",
+            "A24",
+            "A25",
+            "A26",
+            "A27",
+            "A28",
+            "A29",
+            "A30",
+            "A31",
+            "A32",
+            "A33"
+          ],
+          "control": "A1"
+        },
+        "direction": "two_sided",
+        "estimator": {
+          "kind": "lin",
+          "robust": "HC2",
+          "cluster": null,
+          "weights": "ipw",
+          "covariates": [
+            "pre_trust",
+            "age",
+            "education",
+            "white",
+            "latino",
+            "dem",
+            "rep"
+          ],
+          "continuous": [
+            "pre_trust",
+            "age",
+            "education",
+            "white",
+            "latino",
+            "dem",
+            "rep"
+          ]
+        },
+        "pooled": false,
+        "subgroup": null,
+        "exclusions": [
+          "Finished == 1",
+          "screener_pass == 1",
+          "arm.notna()",
+          "post_trust.notna() and pre_trust.notna() and age.notna() and education.notna() and white.notna() and latino.notna() and dem.notna() and rep.notna()"
+        ]
+      }
+    ],
+    "subgroups": [],
+    "sample_exclusions": [
+      "screener_pass == 1",
+      "arm.notna()"
+    ],
+    "multiple_testing": "none",
+    "alpha": 0.05
+  },
+  "ambiguities": [
+    {
+      "hypothesis": "H1",
+      "field": "estimator.weights",
+      "kind": "interpretation",
+      "pap_text": "Regression weighted to account for differential probabilities of treatment assignment.",
+      "interpretation": "ipw = 1 / the arm's share among the responses assigned in the same batch",
+      "alternatives": [
+        "1 / the probability the assignment server used"
+      ],
+      "reason": "the per-batch probabilities came from the authors' server and were not stored with the responses"
+    },
+    {
+      "hypothesis": "H1",
+      "field": "estimator.kind",
+      "kind": "interpretation",
+      "pap_text": "Covariate adjusted regression with basic demographic characteristics (5yvh9); we have chosen to adjust for covariates using the Lin (2013) estimator (amendment 5wr2k).",
+      "interpretation": "Lin (2013) estimator: arm indicators interacted with mean-centred covariates, HC2",
+      "alternatives": [
+        "OLS with additive covariates"
+      ],
+      "reason": "the amendment adopts Lin's estimator for the covariate-adjusted ATEs"
+    },
+    {
+      "hypothesis": "H1",
+      "field": "estimator.covariates",
+      "kind": "interpretation",
+      "pap_text": "age, education, race, political party, and pre-treatment trust in science",
+      "interpretation": "age and education (Lucid codes) as numbers; race as white and Hispanic indicators; party as Democrat and Republican indicators (leaners included); pre_trust",
+      "alternatives": [
+        "full categorical dummies"
+      ],
+      "reason": "the registration names the covariates but not their coding, and full dummies interacted with 32 arms would leave too few respondents per parameter"
+    },
+    {
+      "hypothesis": "H1",
+      "field": "outcome",
+      "kind": "interpretation",
+      "pap_text": "6-item trust in science scale; summative scales will be used.",
+      "interpretation": "mean of the six items with the three negatively worded items reverse-coded (a summative scale divided by six)",
+      "alternatives": [
+        "sum of the items"
+      ],
+      "reason": "three items are worded against trust; the mean keeps the 1-5 response scale"
+    },
+    {
+      "hypothesis": "H1",
+      "field": "estimator.covariates",
+      "kind": "interpretation",
+      "pap_text": "In the event of significant trends in the control group, will include batch fixed effects.",
+      "interpretation": "batch fixed effects are run as a robustness check",
+      "alternatives": [],
+      "reason": "conditional in the registration"
+    },
+    {
+      "hypothesis": "all",
+      "field": "analysis",
+      "kind": "interpretation",
+      "pap_text": "Randomization inference test of no treatment effect across all arms; posterior probability of the best-performing arm.",
+      "interpretation": "not computed by this pipeline; the arm-level estimates are reported",
+      "alternatives": [],
+      "reason": "the pipeline estimates registered regressions only"
+    }
+  ],
+  "source": "pap.md"
+}

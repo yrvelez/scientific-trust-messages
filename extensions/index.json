@@ -1,0 +1,95 @@
+[
+ {
+  "qsf": "extensions/generalizability_conditional.qsf",
+  "qsf_errors": [],
+  "media": [
+   "vid15f: video stimulus to supply (Student-designed Message 15 about science, shown alone, under 2 minutes)",
+   "feed15: video stimulus to supply (Simulated social feed of neutral posts with Message 15 embedded as one post, und)",
+   "vid20f: video stimulus to supply (Student-designed Message 20 about science, shown alone, under 2 minutes)"
+  ],
+  "id": "generalizability_conditional",
+  "kind": "boundary",
+  "title": "Partisan and platform boundary of the video effects",
+  "brief_id": "generalizability_conditional",
+  "mode": "survey_experiment",
+  "debate": null,
+  "why": "Addresses the missing moderator and sample causes: the one nominal Republican interaction (Message 15, +0.165, p = 0.004) was found across 32 tests and needs a targeted confirmatory test.",
+  "power_target": {
+   "n_per_arm": 3000,
+   "mde": 0.1,
+   "basis": "Observed Message 15 by Republican interaction of 0.165 (SE 0.057); interaction contrasts need about 4 times the main-effect n, sized to an MDE near 0.1."
+  },
+  "rationale": "In the source study, Messages 15 and 20 raised trust by about 0.06 points (p = 0.012 for Message 15), but the one nominal Republican interaction (Message 15, +0.165, SE 0.057, p = 0.004) came from 32 uncorrected tests. All exposure was forced, so it is unknown whether the effects hold in a feed. This design tests the interaction directly and crosses it with exposure setting.",
+  "contribution": "Gives a confirmatory test of whether two small positive video effects on trust in science differ by Republican identification and by forced versus feed exposure.",
+  "addresses": [],
+  "validated_by": "autoexperiment",
+  "status": "proposed",
+  "built_at": null,
+  "survey_id": null,
+  "survey_url": null,
+  "hypothesis": "Message 15 raises trust more among Republicans than non-Republicans (interaction about +0.165). Effects are smaller in the feed than under forced exposure.",
+  "primary_outcome": "Trust in science: mean of 6 items, with items 4-6 reverse-coded (post_science_1 to post_science_6).",
+  "comparison": "Message 15 and Message 20 versus control, moderated by Republican identification (pre-registered) and by exposure setting.",
+  "conditions": [
+   "Control",
+   "Message 15 forced",
+   "Message 15 feed",
+   "Message 20 forced"
+  ],
+  "unresolved": [
+   "The actual Message 15 and 20 video files and the simulated feed must be produced by the research team.",
+   "IRB number and compensation to be supplied."
+  ],
+  "label": "Generalizability",
+  "text": "extensions/generalizability_conditional.txt",
+  "svg": "extensions/generalizability_conditional.svg"
+ },
+ {
+  "qsf": "extensions/theoretical_debate.qsf",
+  "qsf_errors": [],
+  "media": [
+   "video: video stimulus to supply (student-designed Message 2, original clip)",
+   "video: video stimulus to supply (student-designed Message 15, original clip)",
+   "video: video stimulus to supply (student-designed Message 20, original clip)",
+   "video: video stimulus to supply (student-designed Message 26, original clip)"
+  ],
+  "id": "theoretical_debate",
+  "kind": "alternative",
+  "title": "Replicate the extremes to separate real effects from chance",
+  "brief_id": "theoretical_debate",
+  "mode": "survey_experiment",
+  "debate": "D1",
+  "why": "Fixes the multiplicity and power problem: a preregistered confirmatory test of 4 arms replaces 32 exploratory contrasts, so the two positions of the debate are discriminated.",
+  "power_target": {
+   "n_per_arm": 4400,
+   "mde": 0.06,
+   "basis": "Observed +0.063 for Messages 15 and 20; the larger Message 2 effect (-0.171) would need only about 550 per arm."
+  },
+  "rationale": "The source ran 32 uncorrected contrasts; Message 2 lowered trust by 0.171 (p=0.0002) while Messages 15 and 20 raised it by about 0.063 (p<0.05), and only about 2 of 32 hits is what chance would give. A preregistered four-arm replication with Holm correction tests whether these extremes persist.",
+  "contribution": "Provides a confirmatory, multiplicity-corrected test of whether brief messages can move trust in science, discriminating the position that they can from the position that trust is sticky.",
+  "addresses": [],
+  "validated_by": "autoexperiment",
+  "status": "proposed",
+  "built_at": null,
+  "survey_id": null,
+  "survey_url": null,
+  "hypothesis": "If brief messages can move trust, Messages 15 and 20 will raise post-trust by about +0.06 and Message 2 will lower it by -0.10 or more. If the original hits were chance, all four contrasts will shrink toward zero.",
+  "primary_outcome": "Post-treatment trust in science: mean of six items, with items 4-6 reverse-coded.",
+  "comparison": "Each of Messages 2, 15, 20 and 26 versus the fresh control, pre-trust adjusted, Holm-corrected across four tests.",
+  "conditions": [
+   "Control",
+   "Message 2 video",
+   "Message 15 video",
+   "Message 20 video",
+   "Message 26 video"
+  ],
+  "unresolved": [
+   "Original video files for Messages 2, 15, 20 and 26 must be supplied by the research team.",
+   "IRB number and compensation are to be supplied.",
+   "The exact source scale item wording must be confirmed."
+  ],
+  "label": "Theoretical debate",
+  "text": "extensions/theoretical_debate.txt",
+  "svg": "extensions/theoretical_debate.svg"
+ }
+]

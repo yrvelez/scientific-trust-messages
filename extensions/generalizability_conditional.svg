@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 365" width="100%" role="img" aria-labelledby="fd-title fd-desc"><title id="fd-title">Proposed follow-up: Partisan and platform boundary of the video effects</title><desc id="fd-desc">Partisan and platform boundary of the video effects. 4 conditions: Control, Message 15 forced, Message 15 feed, Message 20 forced. Primary outcome: Trust in science: mean of 6 items, with items 4-6 reverse-coded (post_science_1 to post_science_6).. Population: US adult online panel, stratified by party identification (about half Republican-identifying).</desc><style>
+:root{--fd-ink:#1c1b19;--fd-muted:#8a877f;--fd-rule:#d9d5cc;--fd-accent:#8b1e2d;--fd-bg:#ffffff}
+@media (prefers-color-scheme: dark){:root{--fd-ink:#ecebe6;--fd-muted:#b4b1a9;--fd-rule:#4a4a52;--fd-accent:#e08a96;--fd-bg:#1d1d23}}
+.box{fill:var(--fd-bg,#fff);stroke:var(--fd-ink,#1c1b19);stroke-width:1.2}
+.arm{fill:var(--fd-bg,#fff);stroke:var(--fd-accent,#8b1e2d);stroke-width:1.4}
+.soft{fill:var(--fd-bg,#fff);stroke:var(--fd-rule,#d9d5cc);stroke-width:1.2}
+text{font-family:Inter,Helvetica,Arial,sans-serif;fill:var(--fd-ink,#1c1b19);font-size:14px}
+.cap{font-size:12px;fill:var(--fd-muted,#8a877f)}
+.kicker{font-size:11px;letter-spacing:.08em;fill:var(--fd-muted,#8a877f);text-transform:uppercase}
+.edge{stroke:var(--fd-ink,#1c1b19);stroke-width:1.2;fill:none;marker-end:url(#fd-arrow)}
+.assoc{stroke-dasharray:5 4}
+#fd-arrow path{fill:var(--fd-ink,#1c1b19)}
+</style>
+<defs><marker id="fd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs><text class="kicker" x="20" y="16">Proposed follow-up: Partisan and platform boundary of the video effects</text>
+<g>
+<rect class="box" x="20" y="157.5" width="200" height="60" rx="6"/>
+<text class="kicker" x="32" y="179.5">Population</text>
+<text x="32" y="197.5">US adult online panel,</text>
+<text x="32" y="215.5">stratified by party</text>
+<text x="32" y="233.5">identification (about</text>
+<text x="32" y="251.5">half Republican-</text>
+</g>
+<polygon class="box" points="280,163.5 316,187.5 280,211.5 244,187.5"/>
+<path class="edge" d="M220,187.5 L242,187.5"/><text class="cap" x="231.0" y="181.5" text-anchor="middle">randomized</text>
+<g id="arm-c_ctrl" data-text="No message; continue page.">
+<rect class="arm" x="360" y="30" width="300" height="63" rx="6"/>
+<text x="372" y="52">Control</text>
+<text class="cap" x="372" y="70">No message; continue page.</text>
+</g>
+<path class="edge" d="M318,187.5 L356,61.5"/>
+<g id="arm-c_m15_forced" data-text="Message 15 video shown alone.">
+<rect class="arm" x="360" y="105" width="300" height="63" rx="6"/>
+<text x="372" y="127">Message 15 forced</text>
+<text class="cap" x="372" y="145">Message 15 video shown alone.</text>
+</g>
+<path class="edge" d="M318,187.5 L356,136.5"/>
+<g id="arm-c_m15_feed" data-text="Message 15 video embedded in a simulated social feed.">
+<rect class="arm" x="360" y="180" width="300" height="78" rx="6"/>
+<text x="372" y="202">Message 15 feed</text>
+<text class="cap" x="372" y="220">Message 15 video embedded in a simulated</text>
+<text class="cap" x="372" y="235">social feed.</text>
+</g>
+<path class="edge" d="M318,187.5 L356,219.0"/>
+<g id="arm-c_m20_forced" data-text="Message 20 video shown alone.">
+<rect class="arm" x="360" y="270" width="300" height="63" rx="6"/>
+<text x="372" y="292">Message 20 forced</text>
+<text class="cap" x="372" y="310">Message 20 video shown alone.</text>
+</g>
+<path class="edge" d="M318,187.5 L356,301.5"/>
+<g>
+<rect class="box" x="700" y="127.5" width="240" height="120" rx="6"/>
+<text class="kicker" x="712" y="149.5">Primary outcome</text>
+<text x="712" y="167.5">Trust in science: mean of 6</text>
+<text x="712" y="185.5">items, with items 4-6</text>
+<text x="712" y="203.5">reverse-coded</text>
+<text x="712" y="221.5">(post_science_1 to</text>
+</g>
+<path class="edge" d="M660,187.5 L696,187.5"/></svg>

@@ -1,0 +1,929 @@
+{
+ "schema_version": 1,
+ "slug": "scientific-trust-messages",
+ "title": "Can Trust in Science Be Improved? An Adaptive Experiment Testing Student-Designed Messages",
+ "authors": [
+  "Yamil R. Velez"
+ ],
+ "summary": "Can short, student-designed messages raise trust in science? We ran a registered online survey experiment with US adults recruited through Lucid. Respondents were randomly assigned to a pure control or to one of 32 messages (videos, images, text, news stories and a values exercise), and trust in science was measured afterwards. Of 11,519 raw respondents, 8,572 passed the screener and 7,803 entered the models. Message 2 (video) lowered trust in science by 0.171 scale points (95% CI [−0.262, −0.080], p = 0.0002) relative to a control mean of 3.685. Message 26 (video) also lowered it, by 0.104 points (95% CI [−0.184, −0.024], p = 0.010). Three videos, Messages 12, 15 and 20, showed small positive effects of about 0.06 points (p < 0.05). Other arms were not distinguishable from control. Becaus",
+ "created": "2026-10-09",
+ "synthetic": false,
+ "design": {
+  "type": "survey_experiment",
+  "arms": [
+   "A2",
+   "A3",
+   "A4",
+   "A5",
+   "A6",
+   "A7",
+   "A8",
+   "A9",
+   "A10",
+   "A11",
+   "A12",
+   "A13",
+   "A14",
+   "A15",
+   "A16",
+   "A17",
+   "A18",
+   "A19",
+   "A20",
+   "A21",
+   "A22",
+   "A23",
+   "A24",
+   "A25",
+   "A26",
+   "A27",
+   "A28",
+   "A29",
+   "A30",
+   "A31",
+   "A32",
+   "A33",
+   "A1"
+  ],
+  "arm_labels": {
+   "A1": "Control",
+   "A2": "Message 2 (video)",
+   "A3": "Message 3 (education gap in confidence in science)",
+   "A4": "Message 4 (what science is)",
+   "A5": "Message 5 (video)",
+   "A6": "Message 6 (image)",
+   "A7": "Message 7 (achievements of scientific progress)",
+   "A8": "Message 8 (video)",
+   "A9": "Message 9 (video)",
+   "A10": "Message 10 (video)",
+   "A11": "Message 11 (news story on a COVID-19 death)",
+   "A12": "Message 12 (video)",
+   "A13": "Message 13 (image)",
+   "A14": "Message 14 (news story on a global-warming study)",
+   "A15": "Message 15 (video)",
+   "A16": "Message 16 (video)",
+   "A17": "Message 17 (why people question science)",
+   "A18": "Message 18 (image)",
+   "A19": "Message 19 (image)",
+   "A20": "Message 20 (video)",
+   "A21": "Message 21 (image)",
+   "A22": "Message 22 (values exercise)",
+   "A23": "Message 23 (image)",
+   "A24": "Message 24 (image)",
+   "A25": "Message 25 (video)",
+   "A26": "Message 26 (video)",
+   "A27": "Message 27 (image)",
+   "A28": "Message 28 (image)",
+   "A29": "Message 29 (video)",
+   "A30": "Message 30 (image)",
+   "A31": "Message 31 (image)",
+   "A32": "Message 32 (video)",
+   "A33": "Message 33 (video)"
+  },
+  "n_raw": 11519,
+  "n_analysis": 8572,
+  "outcome_type": "",
+  "causal": true,
+  "sample_kind": "human",
+  "synthetic": null,
+  "features": null,
+  "diagram": "figures/design.svg",
+  "diagram_text": "figures/design.txt",
+  "cluster": null,
+  "weights": [
+   "ipw"
+  ]
+ },
+ "population": {
+  "sample": "online_panel",
+  "country": "US",
+  "description": "US adults, Lucid"
+ },
+ "constructs": [
+  "persuasion",
+  "health_behavior"
+ ],
+ "keywords": [
+  "trust in science",
+  "adaptive experiment",
+  "messaging",
+  "multi-arm",
+  "COVID-19 vaccines"
+ ],
+ "registration": {
+  "status": "registered",
+  "url": "https://osf.io/5yvh9",
+  "note": "OSF Preregistration 5yvh9 (DOI 10.17605/OSF.IO/5YVH9, 2021-11-20), amended by w82xv (2021-11-28, assignment algorithm) and 5wr2k (2021-11-29, Lin covariate adjustment)."
+ },
+ "hypotheses": [
+  {
+   "id": "H1:A2",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 2 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A2",
+   "arm_label": "Message 2 (video)",
+   "estimate": -0.17134665839171548,
+   "se": 0.04639678420276185,
+   "p": 0.00022156137683531434,
+   "n": 7803,
+   "n_arm": 122,
+   "supported": true
+  },
+  {
+   "id": "H1:A3",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 3 (education gap in confidence in science)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A3",
+   "arm_label": "Message 3 (education gap in confidence in science)",
+   "estimate": 0.06442107257824856,
+   "se": 0.036434541713725885,
+   "p": 0.07703886885747163,
+   "n": 7803,
+   "n_arm": 380,
+   "supported": false
+  },
+  {
+   "id": "H1:A4",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 4 (what science is)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A4",
+   "arm_label": "Message 4 (what science is)",
+   "estimate": -0.07817897479444566,
+   "se": 0.05555748570815096,
+   "p": 0.1593761973964728,
+   "n": 7803,
+   "n_arm": 118,
+   "supported": false
+  },
+  {
+   "id": "H1:A5",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 5 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A5",
+   "arm_label": "Message 5 (video)",
+   "estimate": 0.05747181524921368,
+   "se": 0.03366950169064272,
+   "p": 0.08783322697600769,
+   "n": 7803,
+   "n_arm": 217,
+   "supported": false
+  },
+  {
+   "id": "H1:A6",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 6 (image)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A6",
+   "arm_label": "Message 6 (image)",
+   "estimate": -0.010864729724975958,
+   "se": 0.03895436528699905,
+   "p": 0.7803145303590924,
+   "n": 7803,
+   "n_arm": 171,
+   "supported": false
+  },
+  {
+   "id": "H1:A7",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 7 (achievements of scientific progress)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A7",
+   "arm_label": "Message 7 (achievements of scientific progress)",
+   "estimate": -0.012828599837317545,
+   "se": 0.041251912183602,
+   "p": 0.7558143482748176,
+   "n": 7803,
+   "n_arm": 154,
+   "supported": false
+  },
+  {
+   "id": "H1:A8",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 8 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A8",
+   "arm_label": "Message 8 (video)",
+   "estimate": 0.02515439964965968,
+   "se": 0.042979686603834236,
+   "p": 0.558371212860201,
+   "n": 7803,
+   "n_arm": 157,
+   "supported": false
+  },
+  {
+   "id": "H1:A9",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 9 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A9",
+   "arm_label": "Message 9 (video)",
+   "estimate": -0.011827987238836102,
+   "se": 0.04398131576555736,
+   "p": 0.7879819409001187,
+   "n": 7803,
+   "n_arm": 130,
+   "supported": false
+  },
+  {
+   "id": "H1:A10",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 10 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A10",
+   "arm_label": "Message 10 (video)",
+   "estimate": -0.017649082504693228,
+   "se": 0.03184481508975465,
+   "p": 0.5794272376561733,
+   "n": 7803,
+   "n_arm": 169,
+   "supported": false
+  },
+  {
+   "id": "H1:A11",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 11 (news story on a COVID-19 death)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A11",
+   "arm_label": "Message 11 (news story on a COVID-19 death)",
+   "estimate": -0.04611022161732781,
+   "se": 0.04152531239883262,
+   "p": 0.2668213591777966,
+   "n": 7803,
+   "n_arm": 116,
+   "supported": false
+  },
+  {
+   "id": "H1:A12",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 12 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A12",
+   "arm_label": "Message 12 (video)",
+   "estimate": 0.06408444922461479,
+   "se": 0.030236853376635977,
+   "p": 0.03405538615600337,
+   "n": 7803,
+   "n_arm": 422,
+   "supported": true
+  },
+  {
+   "id": "H1:A13",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 13 (image)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A13",
+   "arm_label": "Message 13 (image)",
+   "estimate": -0.048680701734068854,
+   "se": 0.045370583600038344,
+   "p": 0.28329024676812287,
+   "n": 7803,
+   "n_arm": 122,
+   "supported": false
+  },
+  {
+   "id": "H1:A14",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 14 (news story on a global-warming study)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A14",
+   "arm_label": "Message 14 (news story on a global-warming study)",
+   "estimate": -0.01584267767663,
+   "se": 0.03701533287589723,
+   "p": 0.6686488544176185,
+   "n": 7803,
+   "n_arm": 241,
+   "supported": false
+  },
+  {
+   "id": "H1:A15",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 15 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A15",
+   "arm_label": "Message 15 (video)",
+   "estimate": 0.06277089048420215,
+   "se": 0.024876632474062303,
+   "p": 0.011626337495334444,
+   "n": 7803,
+   "n_arm": 853,
+   "supported": true
+  },
+  {
+   "id": "H1:A16",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 16 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A16",
+   "arm_label": "Message 16 (video)",
+   "estimate": -0.021880234860754785,
+   "se": 0.03829235150091275,
+   "p": 0.5677287907960332,
+   "n": 7803,
+   "n_arm": 134,
+   "supported": false
+  },
+  {
+   "id": "H1:A17",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 17 (why people question science)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A17",
+   "arm_label": "Message 17 (why people question science)",
+   "estimate": -0.03768618807939103,
+   "se": 0.035985128651760796,
+   "p": 0.29497452512189615,
+   "n": 7803,
+   "n_arm": 134,
+   "supported": false
+  },
+  {
+   "id": "H1:A18",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 18 (image)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A18",
+   "arm_label": "Message 18 (image)",
+   "estimate": -0.038466721388430616,
+   "se": 0.03936285947376228,
+   "p": 0.3284533597708086,
+   "n": 7803,
+   "n_arm": 129,
+   "supported": false
+  },
+  {
+   "id": "H1:A19",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 19 (image)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A19",
+   "arm_label": "Message 19 (image)",
+   "estimate": 0.02556344504037253,
+   "se": 0.04058516580057556,
+   "p": 0.5287785676265085,
+   "n": 7803,
+   "n_arm": 168,
+   "supported": false
+  },
+  {
+   "id": "H1:A20",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 20 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A20",
+   "arm_label": "Message 20 (video)",
+   "estimate": 0.06314893615334866,
+   "se": 0.02427541805267768,
+   "p": 0.009285680014791,
+   "n": 7803,
+   "n_arm": 921,
+   "supported": true
+  },
+  {
+   "id": "H1:A21",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 21 (image)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A21",
+   "arm_label": "Message 21 (image)",
+   "estimate": -0.0058487000113291165,
+   "se": 0.039793616903936194,
+   "p": 0.8831510952417323,
+   "n": 7803,
+   "n_arm": 179,
+   "supported": false
+  },
+  {
+   "id": "H1:A22",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 22 (values exercise)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A22",
+   "arm_label": "Message 22 (values exercise)",
+   "estimate": -0.03612214110810641,
+   "se": 0.03946464159454247,
+   "p": 0.36003210238015393,
+   "n": 7803,
+   "n_arm": 129,
+   "supported": false
+  },
+  {
+   "id": "H1:A23",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 23 (image)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A23",
+   "arm_label": "Message 23 (image)",
+   "estimate": -0.036731145980819405,
+   "se": 0.038036288419091346,
+   "p": 0.334200869571454,
+   "n": 7803,
+   "n_arm": 131,
+   "supported": false
+  },
+  {
+   "id": "H1:A24",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 24 (image)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A24",
+   "arm_label": "Message 24 (image)",
+   "estimate": -0.01138036679369514,
+   "se": 0.036272735191942074,
+   "p": 0.7537151914518514,
+   "n": 7803,
+   "n_arm": 128,
+   "supported": false
+  },
+  {
+   "id": "H1:A25",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 25 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A25",
+   "arm_label": "Message 25 (video)",
+   "estimate": 0.039657002647551634,
+   "se": 0.04205460369695406,
+   "p": 0.3456868461014947,
+   "n": 7803,
+   "n_arm": 169,
+   "supported": false
+  },
+  {
+   "id": "H1:A26",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 26 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A26",
+   "arm_label": "Message 26 (video)",
+   "estimate": -0.10396969075751972,
+   "se": 0.040595022696004644,
+   "p": 0.010432816293774157,
+   "n": 7803,
+   "n_arm": 123,
+   "supported": true
+  },
+  {
+   "id": "H1:A27",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 27 (image)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A27",
+   "arm_label": "Message 27 (image)",
+   "estimate": -0.04094955834415444,
+   "se": 0.034517956071594795,
+   "p": 0.23549347304674706,
+   "n": 7803,
+   "n_arm": 137,
+   "supported": false
+  },
+  {
+   "id": "H1:A28",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 28 (image)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A28",
+   "arm_label": "Message 28 (image)",
+   "estimate": -0.02336170682783513,
+   "se": 0.039930009228703205,
+   "p": 0.5585030690723102,
+   "n": 7803,
+   "n_arm": 130,
+   "supported": false
+  },
+  {
+   "id": "H1:A29",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 29 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A29",
+   "arm_label": "Message 29 (video)",
+   "estimate": 0.04408337176951106,
+   "se": 0.03684610160362242,
+   "p": 0.23153313560812838,
+   "n": 7803,
+   "n_arm": 488,
+   "supported": false
+  },
+  {
+   "id": "H1:A30",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 30 (image)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A30",
+   "arm_label": "Message 30 (image)",
+   "estimate": 0.042648455759600024,
+   "se": 0.03191890693794426,
+   "p": 0.18150016549222703,
+   "n": 7803,
+   "n_arm": 247,
+   "supported": false
+  },
+  {
+   "id": "H1:A31",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 31 (image)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A31",
+   "arm_label": "Message 31 (image)",
+   "estimate": -0.04105956181527787,
+   "se": 0.032933372337117496,
+   "p": 0.21249051718503686,
+   "n": 7803,
+   "n_arm": 125,
+   "supported": false
+  },
+  {
+   "id": "H1:A32",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 32 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A32",
+   "arm_label": "Message 32 (video)",
+   "estimate": -0.023236467799551408,
+   "se": 0.02968017124699029,
+   "p": 0.43368857344430045,
+   "n": 7803,
+   "n_arm": 165,
+   "supported": false
+  },
+  {
+   "id": "H1:A33",
+   "text": "Registered: the effect of each message (2-33) on trust in science, relative to the pure control. — Message 33 (video)",
+   "outcome": "post_trust",
+   "tag": "registered",
+   "arm": "A33",
+   "arm_label": "Message 33 (video)",
+   "estimate": -0.06754481847932889,
+   "se": 0.04425056551932723,
+   "p": 0.12690602963021996,
+   "n": 7803,
+   "n_arm": 130,
+   "supported": false
+  },
+  {
+   "id": "E1",
+   "text": "Component item post_science_1 as outcome",
+   "tag": "exploratory",
+   "estimate": null,
+   "se": null,
+   "p": null,
+   "n": null,
+   "supported": null
+  },
+  {
+   "id": "E2",
+   "text": "Heterogeneity of planned effects by Republican identification",
+   "tag": "exploratory",
+   "estimate": null,
+   "se": null,
+   "p": null,
+   "n": null,
+   "supported": null
+  }
+ ],
+ "release_status": "draft",
+ "license": {
+  "code": "MIT",
+  "content": "CC-BY-4.0"
+ },
+ "provenance": {
+  "mode": "fully_agentic",
+  "human_steps": [],
+  "reviewer_pass": true,
+  "models": {
+   "strong": "anthropic/claude-sonnet-5.5",
+   "fast": "anthropic/claude-haiku-5.5"
+  },
+  "provider": "openrouter",
+  "zero_retention_requested": true,
+  "cost_usd": 0.563533,
+  "tokens": {
+   "in": 197016,
+   "out": 29035
+  },
+  "tool_version": "0.1.0",
+  "created": "2026-10-09T12:31:01Z",
+  "pap_source": "author-supplied pap.json",
+  "pii": {
+   "dropped": [
+    "RecordedDate"
+   ],
+   "kept_with_override": [],
+   "allow_pii": false,
+   "flagged": {
+    "RecordedDate": "known_identifier_column"
+   },
+   "scan": "header + first data row only, local regex"
+  },
+  "degraded": [
+   "no QSF: codebook inferred from CSV header rows; arms must come from the PAP",
+   "extensions: advance_design: no proposal returned (call record_result with key 'proposal')"
+  ],
+  "inputs": {
+   "raw_csv_sha256": "0c8fa28826fd9693fa7d3d17ddd460385586cdbe80d6db9409413672b38ec683",
+   "pap_sha256": "91843344e2aa7f232bce6418001673f97f116e68b7b2d84cca05849992eaa5fb",
+   "qsf_sha256": null,
+   "pap_json_sha256": "dc4756057294fe6d242e2c68c1aacaab6f21ba6b7ccea28b3ceee79c1b7d97db"
+  },
+  "review_mode": "light",
+  "review_rounds": [
+   {
+    "round": 1,
+    "decision": "accept",
+    "k_issues": 3,
+    "revised": true,
+    "agent_addenda": []
+   }
+  ],
+  "usage_by_agent": {
+   "exploratory": {
+    "calls": 3,
+    "in": 39901,
+    "out": 2591,
+    "cost": 0.005232744,
+    "models": [
+     "anthropic/claude-haiku-5.5"
+    ]
+   },
+   "litreview": {
+    "calls": 2,
+    "in": 2453,
+    "out": 1060,
+    "cost": 0.0007675469999999999,
+    "models": [
+     "anthropic/claude-haiku-5.5"
+    ]
+   },
+   "writer": {
+    "calls": 1,
+    "in": 7681,
+    "out": 1396,
+    "cost": 0.02902878,
+    "models": [
+     "anthropic/claude-sonnet-5.5"
+    ]
+   },
+   "reviewer": {
+    "calls": 1,
+    "in": 16413,
+    "out": 823,
+    "cost": 0.04064544,
+    "models": [
+     "anthropic/claude-sonnet-5.5"
+    ]
+   },
+   "review_orchestrator": {
+    "calls": 1,
+    "in": 27470,
+    "out": 1458,
+    "cost": 0.0688248,
+    "models": [
+     "anthropic/claude-sonnet-5.5"
+    ]
+   },
+   "writer_revise": {
+    "calls": 1,
+    "in": 10696,
+    "out": 1831,
+    "cost": 0.03930498,
+    "models": [
+     "anthropic/claude-sonnet-5.5"
+    ]
+   },
+   "review_signoff": {
+    "calls": 1,
+    "in": 27164,
+    "out": 1238,
+    "cost": 0.06604092,
+    "models": [
+     "anthropic/claude-sonnet-5.5"
+    ]
+   },
+   "potential": {
+    "calls": 1,
+    "in": 18221,
+    "out": 2739,
+    "cost": 0.06319368,
+    "models": [
+     "anthropic/claude-sonnet-5.5"
+    ]
+   },
+   "extensions": {
+    "calls": 4,
+    "in": 47017,
+    "out": 15899,
+    "cost": 0.25049376,
+    "models": [
+     "anthropic/claude-sonnet-5.5"
+    ]
+   }
+  },
+  "stage_seconds": {
+   "ingest": 0.0,
+   "pii": 0.26,
+   "tidy": 0.26,
+   "pap": 0.0,
+   "clean": 0.51,
+   "registered": 13.75,
+   "tag": 0.0,
+   "exploratory": 15.85,
+   "litreview": 8.57,
+   "write": 10.81,
+   "review": 17.21,
+   "robustness": 0.0,
+   "revise": 18.13,
+   "extensions": 114.57,
+   "package": 0.0
+  },
+  "total_seconds": 199.9,
+  "log": [
+   "2026-10-09T12:31:01Z stage ingest",
+   "2026-10-09T12:31:01Z stage pii",
+   "2026-10-09T12:31:02Z PII scan (header + first 5 rows): flagged 1 column(s): RecordedDate [known_identifier_column]. Action: dropped 1, kept by whitelist 0.",
+   "2026-10-09T12:31:02Z stage tidy",
+   "2026-10-09T12:31:02Z stage pap",
+   "2026-10-09T12:31:02Z pap: loaded author-supplied inputs/pap.json (papreader agent skipped)",
+   "2026-10-09T12:31:02Z stage clean",
+   "2026-10-09T12:31:02Z wrote data/clean.csv: 8572 rows, 67 columns",
+   "2026-10-09T12:31:02Z stage registered",
+   "2026-10-09T12:31:16Z H1: post_trust ~ C(arm_code, Treatment(reference='A1')) * (pre_trust_c + age_c + education_c + white_c + latino_c + dem_c + rep_c) | 32 arms vs Control, N=7803, HC2 SEs, weights=ipw; 5 arm(s) supported",
+   "2026-10-09T12:31:16Z wrote results/registered_summary.csv (32 rows)",
+   "2026-10-09T12:31:16Z stage tag",
+   "2026-10-09T12:31:16Z stage exploratory",
+   "2026-10-09T12:31:32Z tags: H1=registered, E1=exploratory, E2=exploratory",
+   "2026-10-09T12:31:32Z stage litreview",
+   "2026-10-09T12:31:41Z stage write",
+   "2026-10-09T12:31:41Z diagram: template (figures/design.svg)",
+   "2026-10-09T12:31:51Z stage review",
+   "2026-10-09T12:32:09Z review (light): 8 issue(s); provisional decision: minor_revision",
+   "2026-10-09T12:32:09Z stage robustness",
+   "2026-10-09T12:32:09Z stage revise",
+   "2026-10-09T12:32:19Z correction pass 1: 8 note(s) from the writing agent",
+   "2026-10-09T12:32:27Z claim re-check: 10/10 claims supported on the corrected text",
+   "2026-10-09T12:32:27Z stage extensions",
+   "2026-10-09T12:32:48Z research potential: 5 cause(s), 1 debate(s), 3 brief(s)",
+   "2026-10-09T12:34:21Z extensions: 2 proposal(s) validated by autoexperiment; dropped: advance_design: no proposal returned (call record_result with key 'proposal')",
+   "2026-10-09T12:34:21Z stage package"
+  ]
+ },
+ "doi": null,
+ "doi_version": null,
+ "links": {
+  "folder": "https://github.com/yrvelez/scientific-trust-messages/tree/main",
+  "report": "https://github.com/yrvelez/scientific-trust-messages/blob/main/report.md",
+  "data": "https://github.com/yrvelez/scientific-trust-messages/tree/main/data"
+ },
+ "related": [],
+ "acknowledgments": "This study was carried out in collaboration with Julian Gerez.",
+ "addenda": [],
+ "responses": null,
+ "extensions": [
+  {
+   "id": "generalizability_conditional",
+   "kind": "boundary",
+   "label": "Generalizability",
+   "brief_id": "generalizability_conditional",
+   "mode": "survey_experiment",
+   "debate": null,
+   "why": "Addresses the missing moderator and sample causes: the one nominal Republican interaction (Message 15, +0.165, p = 0.004) was found across 32 tests and needs a targeted confirmatory test.",
+   "title": "Partisan and platform boundary of the video effects",
+   "hypothesis": "Message 15 raises trust more among Republicans than non-Republicans (interaction about +0.165). Effects are smaller in the feed than under forced exposure.",
+   "primary_outcome": "Trust in science: mean of 6 items, with items 4-6 reverse-coded (post_science_1 to post_science_6).",
+   "conditions": [
+    "Control",
+    "Message 15 forced",
+    "Message 15 feed",
+    "Message 20 forced"
+   ],
+   "status": "proposed",
+   "built_at": null,
+   "qsf": "extensions/generalizability_conditional.qsf",
+   "svg": "extensions/generalizability_conditional.svg",
+   "text": "extensions/generalizability_conditional.txt",
+   "addresses": []
+  },
+  {
+   "id": "theoretical_debate",
+   "kind": "alternative",
+   "label": "Theoretical debate",
+   "brief_id": "theoretical_debate",
+   "mode": "survey_experiment",
+   "debate": "D1",
+   "why": "Fixes the multiplicity and power problem: a preregistered confirmatory test of 4 arms replaces 32 exploratory contrasts, so the two positions of the debate are discriminated.",
+   "title": "Replicate the extremes to separate real effects from chance",
+   "hypothesis": "If brief messages can move trust, Messages 15 and 20 will raise post-trust by about +0.06 and Message 2 will lower it by -0.10 or more. If the original hits were chance, all four contrasts will shrink toward zero.",
+   "primary_outcome": "Post-treatment trust in science: mean of six items, with items 4-6 reverse-coded.",
+   "conditions": [
+    "Control",
+    "Message 2 video",
+    "Message 15 video",
+    "Message 20 video",
+    "Message 26 video"
+   ],
+   "status": "proposed",
+   "built_at": null,
+   "qsf": "extensions/theoretical_debate.qsf",
+   "svg": "extensions/theoretical_debate.svg",
+   "text": "extensions/theoretical_debate.txt",
+   "addresses": []
+  }
+ ],
+ "potential": {
+  "verdict": "A follow-up is worth running, but as a narrow confirmation rather than another broad screen. Only Message 2's backlash is clearly distinguishable from noise, and the three small gains of about 0.06 points are at the level expected from 32 uncorrected tests. Run the replication of the extreme arms first, since it is cheap and resolves whether any of the gains is real. Then, if the gains replicate, run the format-by-content factorial with a delayed wave to learn about mechanism and persistence. The retrieved literature is thin on this question, so the debate is framed from the study's own question plus two loosely related works.",
+  "causes": [
+   "power",
+   "analysis",
+   "design",
+   "measurement",
+   "sample"
+  ],
+  "debates": [
+   "Can brief messages move trust in science at all?"
+  ],
+  "briefs": [
+   {
+    "id": "advance_design",
+    "mode": "survey_experiment",
+    "title": "Format-matched message factorial with delayed follow-up",
+    "needs_qsf": true
+   },
+   {
+    "id": "theoretical_debate",
+    "mode": "survey_experiment",
+    "title": "Replicate the extremes to separate real effects from chance",
+    "needs_qsf": true
+   },
+   {
+    "id": "generalizability_conditional",
+    "mode": "survey_experiment",
+    "title": "Partisan and platform boundary of the video effects",
+    "needs_qsf": true
+   }
+  ]
+ },
+ "review": "review.json",
+ "review_claims": {
+  "supported": 10,
+  "total": 10,
+  "open_analytical": 0,
+  "on_revised_text": true,
+  "corrected": 3
+ },
+ "review_round": 1,
+ "review_rounds": 1,
+ "badges": [
+  {
+   "name": "provenance",
+   "label": "provenance",
+   "value": "fully agentic",
+   "color": "indigo",
+   "href": null
+  },
+  {
+   "name": "review",
+   "label": "review",
+   "value": "light pass · 3 corrected · 10/10 claims supported",
+   "color": "green",
+   "href": null
+  },
+  {
+   "name": "registration",
+   "label": "plan",
+   "value": "pre-registered",
+   "color": "green",
+   "href": "https://osf.io/5yvh9"
+  },
+  {
+   "name": "release",
+   "label": "status",
+   "value": "draft",
+   "color": "amber",
+   "href": null
+  },
+  {
+   "name": "design",
+   "label": "design",
+   "value": "survey experiment",
+   "color": "slate",
+   "href": null
+  },
+  {
+   "name": "data",
+   "label": "data",
+   "value": "open data",
+   "color": "green",
+   "href": null
+  },
+  {
+   "name": "cost",
+   "label": "model calls",
+   "value": "$0.56",
+   "color": "slate",
+   "href": null
+  }
+ ]
+}

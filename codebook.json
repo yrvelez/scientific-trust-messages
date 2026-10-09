@@ -1,0 +1,1745 @@
+{
+  "survey": {
+    "name": "",
+    "id": "",
+    "source": "csv-inferred"
+  },
+  "questions": [
+    {
+      "qid": "batch",
+      "tag": "batch",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "batch"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "screener_1",
+      "tag": "screener_1",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "screener_1"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "screener_2",
+      "tag": "screener_2",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "screener_2"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "screener_3",
+      "tag": "screener_3",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "screener_3"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "screener_4",
+      "tag": "screener_4",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "screener_4"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "screener_5",
+      "tag": "screener_5",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "screener_5"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "pre_science_1",
+      "tag": "pre_science_1",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "pre_science_1"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "pre_science_2",
+      "tag": "pre_science_2",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "pre_science_2"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "pre_science_3",
+      "tag": "pre_science_3",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "pre_science_3"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "pre_science_4",
+      "tag": "pre_science_4",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "pre_science_4"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "pre_science_5",
+      "tag": "pre_science_5",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "pre_science_5"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "pre_science_6",
+      "tag": "pre_science_6",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "pre_science_6"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "interest",
+      "tag": "interest",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "interest"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "news_trust",
+      "tag": "news_trust",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "news_trust"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "factchecks",
+      "tag": "factchecks",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "factchecks"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "Q17_First Click",
+      "tag": "Q17_First Click",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "Q17_First Click"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "Q17_Last Click",
+      "tag": "Q17_Last Click",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "Q17_Last Click"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "Q17_Page Submit",
+      "tag": "Q17_Page Submit",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "Q17_Page Submit"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "Q17_Click Count",
+      "tag": "Q17_Click Count",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "Q17_Click Count"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "pk1",
+      "tag": "pk1",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "pk1"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "pk2",
+      "tag": "pk2",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "pk2"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "pk3",
+      "tag": "pk3",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "pk3"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "Q16_First Click",
+      "tag": "Q16_First Click",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "Q16_First Click"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "Q16_Last Click",
+      "tag": "Q16_Last Click",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "Q16_Last Click"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "Q16_Page Submit",
+      "tag": "Q16_Page Submit",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "Q16_Page Submit"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "Q16_Click Count",
+      "tag": "Q16_Click Count",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "Q16_Click Count"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "Q38_First Click",
+      "tag": "Q38_First Click",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "Q38_First Click"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "Q38_Last Click",
+      "tag": "Q38_Last Click",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "Q38_Last Click"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "Q38_Page Submit",
+      "tag": "Q38_Page Submit",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "Q38_Page Submit"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "Q38_Click Count",
+      "tag": "Q38_Click Count",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "Q38_Click Count"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "post_science_1",
+      "tag": "post_science_1",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "post_science_1"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "post_science_2",
+      "tag": "post_science_2",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "post_science_2"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "post_science_3",
+      "tag": "post_science_3",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "post_science_3"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "post_science_4",
+      "tag": "post_science_4",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "post_science_4"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "post_science_5",
+      "tag": "post_science_5",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "post_science_5"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "post_science_6",
+      "tag": "post_science_6",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "post_science_6"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "vax_safe",
+      "tag": "vax_safe",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "vax_safe"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "vax_effective",
+      "tag": "vax_effective",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "vax_effective"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "vax_fear",
+      "tag": "vax_fear",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "vax_fear"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "hhi",
+      "tag": "hhi",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "hhi"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "age",
+      "tag": "age",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "age"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "gender",
+      "tag": "gender",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "gender"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "ethnicity",
+      "tag": "ethnicity",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "ethnicity"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "hispanic",
+      "tag": "hispanic",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "hispanic"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "education",
+      "tag": "education",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "education"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "political_party",
+      "tag": "political_party",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "political_party"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "region",
+      "tag": "region",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "region"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "ideology",
+      "tag": "ideology",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "ideology"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "arm",
+      "tag": "arm",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "arm"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "screener_pass",
+      "tag": "screener_pass",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "screener_pass"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "pre_trust",
+      "tag": "pre_trust",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "pre_trust"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "post_trust",
+      "tag": "post_trust",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "post_trust"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "white",
+      "tag": "white",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "white"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "latino",
+      "tag": "latino",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "latino"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "dem",
+      "tag": "dem",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "dem"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "rep",
+      "tag": "rep",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "rep"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    },
+    {
+      "qid": "ipw",
+      "tag": "ipw",
+      "type": "unknown",
+      "selector": "",
+      "text": "",
+      "block": null,
+      "in_randomizer": false,
+      "free_text": false,
+      "columns": [
+        "ipw"
+      ],
+      "choices": [],
+      "rows": [],
+      "sub_selector": null
+    }
+  ],
+  "arms": {
+    "column": "arm",
+    "values": [
+      "A1",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14",
+      "A15",
+      "A16",
+      "A17",
+      "A18",
+      "A19",
+      "A2",
+      "A20",
+      "A21",
+      "A22",
+      "A23",
+      "A24",
+      "A25",
+      "A26",
+      "A27",
+      "A28",
+      "A29",
+      "A3",
+      "A30",
+      "A31",
+      "A32",
+      "A33",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "stimuli": {},
+    "source": "pap",
+    "blocks": {}
+  },
+  "embedded_data": [],
+  "columns": [
+    {
+      "name": "batch",
+      "qid": "batch",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "StartDate",
+      "qid": "",
+      "kind": "system",
+      "dtype": "text",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "EndDate",
+      "qid": "",
+      "kind": "system",
+      "dtype": "text",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Status",
+      "qid": "",
+      "kind": "system",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Progress",
+      "qid": "",
+      "kind": "system",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Duration (in seconds)",
+      "qid": "",
+      "kind": "system",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Finished",
+      "qid": "",
+      "kind": "system",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "RecordedDate",
+      "qid": "",
+      "kind": "system",
+      "dtype": "text",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": true,
+      "pii_reason": "known_identifier_column",
+      "dropped": true
+    },
+    {
+      "name": "UserLanguage",
+      "qid": "",
+      "kind": "system",
+      "dtype": "text",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "screener_1",
+      "qid": "screener_1",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "screener_2",
+      "qid": "screener_2",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "screener_3",
+      "qid": "screener_3",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "screener_4",
+      "qid": "screener_4",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "screener_5",
+      "qid": "screener_5",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "pre_science_1",
+      "qid": "pre_science_1",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "pre_science_2",
+      "qid": "pre_science_2",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "pre_science_3",
+      "qid": "pre_science_3",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "pre_science_4",
+      "qid": "pre_science_4",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "pre_science_5",
+      "qid": "pre_science_5",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "pre_science_6",
+      "qid": "pre_science_6",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "interest",
+      "qid": "interest",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "news_trust",
+      "qid": "news_trust",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "factchecks",
+      "qid": "factchecks",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Q17_First Click",
+      "qid": "Q17_First Click",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Q17_Last Click",
+      "qid": "Q17_Last Click",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Q17_Page Submit",
+      "qid": "Q17_Page Submit",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Q17_Click Count",
+      "qid": "Q17_Click Count",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "pk1",
+      "qid": "pk1",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "pk2",
+      "qid": "pk2",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "pk3",
+      "qid": "pk3",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Q16_First Click",
+      "qid": "Q16_First Click",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Q16_Last Click",
+      "qid": "Q16_Last Click",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Q16_Page Submit",
+      "qid": "Q16_Page Submit",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Q16_Click Count",
+      "qid": "Q16_Click Count",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Q38_First Click",
+      "qid": "Q38_First Click",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Q38_Last Click",
+      "qid": "Q38_Last Click",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Q38_Page Submit",
+      "qid": "Q38_Page Submit",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "Q38_Click Count",
+      "qid": "Q38_Click Count",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "post_science_1",
+      "qid": "post_science_1",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "post_science_2",
+      "qid": "post_science_2",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "post_science_3",
+      "qid": "post_science_3",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "post_science_4",
+      "qid": "post_science_4",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "post_science_5",
+      "qid": "post_science_5",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "post_science_6",
+      "qid": "post_science_6",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "vax_safe",
+      "qid": "vax_safe",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "vax_effective",
+      "qid": "vax_effective",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "vax_fear",
+      "qid": "vax_fear",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "hhi",
+      "qid": "hhi",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "age",
+      "qid": "age",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "gender",
+      "qid": "gender",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "ethnicity",
+      "qid": "ethnicity",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "hispanic",
+      "qid": "hispanic",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "education",
+      "qid": "education",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "political_party",
+      "qid": "political_party",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "region",
+      "qid": "region",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "ideology",
+      "qid": "ideology",
+      "kind": "question",
+      "dtype": "text",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "arm",
+      "qid": "arm",
+      "kind": "question",
+      "dtype": "text",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "screener_pass",
+      "qid": "screener_pass",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "pre_trust",
+      "qid": "pre_trust",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "post_trust",
+      "qid": "post_trust",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "white",
+      "qid": "white",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "latino",
+      "qid": "latino",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "dem",
+      "qid": "dem",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "rep",
+      "qid": "rep",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    },
+    {
+      "name": "ipw",
+      "qid": "ipw",
+      "kind": "question",
+      "dtype": "numeric",
+      "label": "",
+      "values": {},
+      "free_text": false,
+      "pii_flag": false,
+      "pii_reason": "",
+      "dropped": false
+    }
+  ]
+}

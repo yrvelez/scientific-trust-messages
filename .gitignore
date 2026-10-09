@@ -1,0 +1,10 @@
+# raw exports carry identifiers and free text: never commit them
+inputs/raw/
+inputs/**/*.csv
+inputs/**/*.sav
+inputs/**/*.dta
+inputs/**/*.xlsx
+raw_export.csv
+run.log
+.mplconfig/
+__pycache__/

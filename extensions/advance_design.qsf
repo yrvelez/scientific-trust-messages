@@ -1,7 +1,7 @@
 {
  "SurveyEntry": {
   "SurveyID": "SV_filedrawer00000",
-  "SurveyName": "Preregistered replication of Messages 2, 15, 20 and 26 (extension of: Can Trust in Science Be Improv",
+  "SurveyName": "Decomposing the 'trust science too much' backfire (extension of: Can Trust in Science Be Improved? A",
   "SurveyDescription": null,
   "SurveyOwnerID": "UR_filedrawer00000",
   "SurveyBrandID": "",
@@ -11,9 +11,9 @@
   "SurveyStatus": "Inactive",
   "SurveyStartDate": "0000-00-00 00:00:00",
   "SurveyExpirationDate": "0000-00-00 00:00:00",
-  "SurveyCreationDate": "2026-10-09 12:34:21",
+  "SurveyCreationDate": "2026-10-09 12:53:04",
   "CreatorID": "UR_filedrawer00000",
-  "LastModified": "2026-10-09 12:34:21",
+  "LastModified": "2026-10-09 12:53:04",
   "LastAccessed": "0000-00-00 00:00:00",
   "LastActivated": "0000-00-00 00:00:00",
   "Deleted": null
@@ -39,7 +39,7 @@
     },
     {
      "Type": "Standard",
-     "Description": "Pre-measure",
+     "Description": "Pre-treatment",
      "ID": "BL_b_pre",
      "BlockElements": [
       {
@@ -50,8 +50,8 @@
     },
     {
      "Type": "Standard",
-     "Description": "Control",
-     "ID": "BL_b_ctrl",
+     "Description": "Original video",
+     "ID": "BL_b_video",
      "BlockElements": [
       {
        "Type": "Question",
@@ -61,8 +61,8 @@
     },
     {
      "Type": "Standard",
-     "Description": "M2",
-     "ID": "BL_b_m2",
+     "Description": "Transcript",
+     "ID": "BL_b_text",
      "BlockElements": [
       {
        "Type": "Question",
@@ -72,8 +72,8 @@
     },
     {
      "Type": "Standard",
-     "Description": "M15",
-     "ID": "BL_b_m15",
+     "Description": "No fallibility video",
+     "ID": "BL_b_nofall",
      "BlockElements": [
       {
        "Type": "Question",
@@ -83,8 +83,8 @@
     },
     {
      "Type": "Standard",
-     "Description": "M20",
-     "ID": "BL_b_m20",
+     "Description": "Neutral video",
+     "ID": "BL_b_neutral",
      "BlockElements": [
       {
        "Type": "Question",
@@ -94,8 +94,8 @@
     },
     {
      "Type": "Standard",
-     "Description": "M26",
-     "ID": "BL_b_m26",
+     "Description": "Control",
+     "ID": "BL_b_control",
      "BlockElements": [
       {
        "Type": "Question",
@@ -122,17 +122,6 @@
       {
        "Type": "Question",
        "QuestionID": "QID9"
-      }
-     ]
-    },
-    {
-     "Type": "Standard",
-     "Description": "End",
-     "ID": "BL_b_end",
-     "BlockElements": [
-      {
-       "Type": "Question",
-       "QuestionID": "QID10"
       }
      ]
     },
@@ -182,37 +171,203 @@
       },
       "Flow": [
        {
-        "Type": "Standard",
-        "ID": "BL_b_end",
-        "FlowID": "FL_4",
-        "Autofill": []
-       },
-       {
         "Type": "EndSurvey",
-        "FlowID": "FL_5"
+        "FlowID": "FL_4"
        }
       ]
      },
      {
       "Type": "Standard",
       "ID": "BL_b_pre",
-      "FlowID": "FL_6",
+      "FlowID": "FL_5",
       "Autofill": []
      },
      {
       "Type": "BlockRandomizer",
-      "FlowID": "FL_7",
+      "FlowID": "FL_6",
       "SubSet": 1,
       "EvenPresentation": true,
       "Flow": [
        {
         "Type": "Group",
-        "FlowID": "FL_8",
+        "FlowID": "FL_7",
+        "Description": "Video",
+        "Flow": [
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_8",
+          "EmbeddedData": [
+           {
+            "Description": "condition",
+            "Type": "Custom",
+            "Field": "condition",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "video"
+           }
+          ]
+         },
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_9",
+          "EmbeddedData": [
+           {
+            "Description": "vid1",
+            "Type": "Custom",
+            "Field": "vid1",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "[VIDEO TO SUPPLY: vlogbrothers 'Can You Trust Science Too Much?', full video, about 10 minutes]"
+           }
+          ]
+         },
+         {
+          "Type": "Standard",
+          "ID": "BL_b_video",
+          "FlowID": "FL_10",
+          "Autofill": []
+         }
+        ]
+       },
+       {
+        "Type": "Group",
+        "FlowID": "FL_11",
+        "Description": "Text",
+        "Flow": [
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_12",
+          "EmbeddedData": [
+           {
+            "Description": "condition",
+            "Type": "Custom",
+            "Field": "condition",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "transcript"
+           }
+          ]
+         },
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_13",
+          "EmbeddedData": [
+           {
+            "Description": "txt1",
+            "Type": "Custom",
+            "Field": "txt1",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "[IMAGE TO SUPPLY: full text transcript of the video, plain text on a white page]"
+           }
+          ]
+         },
+         {
+          "Type": "Standard",
+          "ID": "BL_b_text",
+          "FlowID": "FL_14",
+          "Autofill": []
+         }
+        ]
+       },
+       {
+        "Type": "Group",
+        "FlowID": "FL_15",
+        "Description": "No fallibility",
+        "Flow": [
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_16",
+          "EmbeddedData": [
+           {
+            "Description": "condition",
+            "Type": "Custom",
+            "Field": "condition",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "nofall"
+           }
+          ]
+         },
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_17",
+          "EmbeddedData": [
+           {
+            "Description": "vid2",
+            "Type": "Custom",
+            "Field": "vid2",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "[VIDEO TO SUPPLY: same video with the fallibility segment cut, shorter, same speaker]"
+           }
+          ]
+         },
+         {
+          "Type": "Standard",
+          "ID": "BL_b_nofall",
+          "FlowID": "FL_18",
+          "Autofill": []
+         }
+        ]
+       },
+       {
+        "Type": "Group",
+        "FlowID": "FL_19",
+        "Description": "Neutral",
+        "Flow": [
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_20",
+          "EmbeddedData": [
+           {
+            "Description": "condition",
+            "Type": "Custom",
+            "Field": "condition",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "neutral"
+           }
+          ]
+         },
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_21",
+          "EmbeddedData": [
+           {
+            "Description": "vid3",
+            "Type": "Custom",
+            "Field": "vid3",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "[VIDEO TO SUPPLY: neutral explainer about an unrelated everyday topic, length matched to the original]"
+           }
+          ]
+         },
+         {
+          "Type": "Standard",
+          "ID": "BL_b_neutral",
+          "FlowID": "FL_22",
+          "Autofill": []
+         }
+        ]
+       },
+       {
+        "Type": "Group",
+        "FlowID": "FL_23",
         "Description": "Control",
         "Flow": [
          {
           "Type": "EmbeddedData",
-          "FlowID": "FL_9",
+          "FlowID": "FL_24",
           "EmbeddedData": [
            {
             "Description": "condition",
@@ -227,180 +382,8 @@
          },
          {
           "Type": "Standard",
-          "ID": "BL_b_ctrl",
-          "FlowID": "FL_10",
-          "Autofill": []
-         }
-        ]
-       },
-       {
-        "Type": "Group",
-        "FlowID": "FL_11",
-        "Description": "M2",
-        "Flow": [
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_12",
-          "EmbeddedData": [
-           {
-            "Description": "condition",
-            "Type": "Custom",
-            "Field": "condition",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "m2"
-           }
-          ]
-         },
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_13",
-          "EmbeddedData": [
-           {
-            "Description": "video",
-            "Type": "Custom",
-            "Field": "video",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "[VIDEO TO SUPPLY: student-designed Message 2, original clip]"
-           }
-          ]
-         },
-         {
-          "Type": "Standard",
-          "ID": "BL_b_m2",
-          "FlowID": "FL_14",
-          "Autofill": []
-         }
-        ]
-       },
-       {
-        "Type": "Group",
-        "FlowID": "FL_15",
-        "Description": "M15",
-        "Flow": [
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_16",
-          "EmbeddedData": [
-           {
-            "Description": "condition",
-            "Type": "Custom",
-            "Field": "condition",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "m15"
-           }
-          ]
-         },
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_17",
-          "EmbeddedData": [
-           {
-            "Description": "video",
-            "Type": "Custom",
-            "Field": "video",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "[VIDEO TO SUPPLY: student-designed Message 15, original clip]"
-           }
-          ]
-         },
-         {
-          "Type": "Standard",
-          "ID": "BL_b_m15",
-          "FlowID": "FL_18",
-          "Autofill": []
-         }
-        ]
-       },
-       {
-        "Type": "Group",
-        "FlowID": "FL_19",
-        "Description": "M20",
-        "Flow": [
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_20",
-          "EmbeddedData": [
-           {
-            "Description": "condition",
-            "Type": "Custom",
-            "Field": "condition",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "m20"
-           }
-          ]
-         },
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_21",
-          "EmbeddedData": [
-           {
-            "Description": "video",
-            "Type": "Custom",
-            "Field": "video",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "[VIDEO TO SUPPLY: student-designed Message 20, original clip]"
-           }
-          ]
-         },
-         {
-          "Type": "Standard",
-          "ID": "BL_b_m20",
-          "FlowID": "FL_22",
-          "Autofill": []
-         }
-        ]
-       },
-       {
-        "Type": "Group",
-        "FlowID": "FL_23",
-        "Description": "M26",
-        "Flow": [
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_24",
-          "EmbeddedData": [
-           {
-            "Description": "condition",
-            "Type": "Custom",
-            "Field": "condition",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "m26"
-           }
-          ]
-         },
-         {
-          "Type": "EmbeddedData",
+          "ID": "BL_b_control",
           "FlowID": "FL_25",
-          "EmbeddedData": [
-           {
-            "Description": "video",
-            "Type": "Custom",
-            "Field": "video",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "[VIDEO TO SUPPLY: student-designed Message 26, original clip]"
-           }
-          ]
-         },
-         {
-          "Type": "Standard",
-          "ID": "BL_b_m26",
-          "FlowID": "FL_26",
           "Autofill": []
          }
         ]
@@ -410,18 +393,18 @@
      {
       "Type": "Standard",
       "ID": "BL_b_post",
-      "FlowID": "FL_27",
+      "FlowID": "FL_26",
       "Autofill": []
      },
      {
       "Type": "Standard",
       "ID": "BL_b_debrief",
-      "FlowID": "FL_28",
+      "FlowID": "FL_27",
       "Autofill": []
      }
     ],
     "Properties": {
-     "Count": 28,
+     "Count": 27,
      "RemovedFieldsets": []
     }
    }
@@ -434,7 +417,7 @@
    "TertiaryAttribute": null,
    "Payload": {
     "PreviewType": "Brand",
-    "PreviewID": "d7ac539f-f924-45ef-a15f-8c54dbae7758"
+    "PreviewID": "87d57bc2-bc9b-4bab-99fc-70ccdc8c3a12"
    }
   },
   {
@@ -452,7 +435,7 @@
    "SurveyID": "SV_filedrawer00000",
    "Element": "QC",
    "PrimaryAttribute": "Survey Question Count",
-   "SecondaryAttribute": "10",
+   "SecondaryAttribute": "9",
    "TertiaryAttribute": null,
    "Payload": null
   },
@@ -502,7 +485,7 @@
     "ValidationMessage": null,
     "PreviousButton": "",
     "NextButton": "",
-    "SurveyTitle": "Preregistered replication of Messages 2, 15, 20 and 26 (extension of: Can Trust in Science Be Improv",
+    "SurveyTitle": "Decomposing the 'trust science too much' backfire (extension of: Can Trust in Science Be Improved? A",
     "SkinLibrary": "Qualtrics",
     "SkinType": "templated",
     "Skin": {
@@ -511,7 +494,7 @@
      "overrides": null
     },
     "NewScoring": 1,
-    "SurveyMetaDescription": "US adults complete a pre-trust scale, are randomly assigned to control or one of four videos (Mes..."
+    "SurveyMetaDescription": "US adults complete pre-treatment trust items, are randomised to one of five arms, then answer the..."
    }
   },
   {
@@ -529,10 +512,10 @@
    "SurveyID": "SV_filedrawer00000",
    "Element": "SQ",
    "PrimaryAttribute": "QID1",
-   "SecondaryAttribute": "You are invited to take part in a short research survey about attitudes toward s",
+   "SecondaryAttribute": "You are invited to take part in a research survey about attitudes toward science",
    "TertiaryAttribute": null,
    "Payload": {
-    "QuestionText": "You are invited to take part in a short research survey about attitudes toward science. Participation is voluntary and you may stop at any time. Do you agree to participate?",
+    "QuestionText": "You are invited to take part in a research survey about attitudes toward science. It takes about 10 minutes and there is a short follow-up in about one week. Participation is voluntary. Do you consent to participate?",
     "DataExportTag": "consent",
     "DataVisibility": {
      "Private": false,
@@ -541,7 +524,7 @@
     "Configuration": {
      "QuestionDescriptionOption": "UseText"
     },
-    "QuestionDescription": "You are invited to take part in a short research survey about attitudes toward science. Participa...",
+    "QuestionDescription": "You are invited to take part in a research survey about attitudes toward science. It takes about...",
     "Validation": {
      "Settings": {
       "ForceResponse": "ON",
@@ -556,10 +539,10 @@
     "SubSelector": "TX",
     "Choices": {
      "1": {
-      "Display": "I agree"
+      "Display": "I consent"
      },
      "2": {
-      "Display": "I do not agree"
+      "Display": "I do not consent"
      }
     },
     "ChoiceOrder": [
@@ -578,11 +561,11 @@
    "SurveyID": "SV_filedrawer00000",
    "Element": "SQ",
    "PrimaryAttribute": "QID2",
-   "SecondaryAttribute": "How much do you agree with each statement about science? (Items 4-6 are negative",
+   "SecondaryAttribute": "How much do you agree with each statement?",
    "TertiaryAttribute": null,
    "Payload": {
-    "QuestionText": "How much do you agree with each statement about science? (Items 4-6 are negatively worded.)",
-    "DataExportTag": "pre_trust_scale",
+    "QuestionText": "How much do you agree with each statement?",
+    "DataExportTag": "pre_trust_items",
     "DataVisibility": {
      "Private": false,
      "Hidden": false
@@ -595,7 +578,7 @@
      "WhiteSpace": "OFF",
      "MobileFirst": true
     },
-    "QuestionDescription": "How much do you agree with each statement about science? (Items 4-6 are negatively worded.)",
+    "QuestionDescription": "How much do you agree with each statement?",
     "Validation": {
      "Settings": {
       "ForceResponse": "ON",
@@ -619,16 +602,16 @@
       "Display": "Science benefits society."
      },
      "3": {
-      "Display": "I have confidence in the scientific community."
+      "Display": "I have confidence in scientific research."
      },
      "4": {
-      "Display": "Scientists often twist findings to suit their own agendas."
+      "Display": "Scientists often cannot be trusted."
      },
      "5": {
-      "Display": "Scientific results are often unreliable."
+      "Display": "Science does more harm than good."
      },
      "6": {
-      "Display": "I do not trust what scientists say."
+      "Display": "I am skeptical of scientific claims."
      }
     },
     "ChoiceOrder": [
@@ -647,7 +630,7 @@
       "Display": "Disagree"
      },
      "3": {
-      "Display": "Neutral"
+      "Display": "Neither"
      },
      "4": {
       "Display": "Agree"
@@ -671,6 +654,138 @@
    "SurveyID": "SV_filedrawer00000",
    "Element": "SQ",
    "PrimaryAttribute": "QID3",
+   "SecondaryAttribute": "Please watch this video in full. {{ed:vid1}}",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Please watch this video in full. ${e://Field/vid1}",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Please watch this video in full. ${e://Field/vid1}",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID3",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_v"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID4",
+   "SecondaryAttribute": "Please read this text carefully. {{ed:txt1}}",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Please read this text carefully. ${e://Field/txt1}",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Please read this text carefully. ${e://Field/txt1}",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID4",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_t"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID5",
+   "SecondaryAttribute": "Please watch this video in full. {{ed:vid2}}",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Please watch this video in full. ${e://Field/vid2}",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Please watch this video in full. ${e://Field/vid2}",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID5",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_nf"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID6",
+   "SecondaryAttribute": "Please watch this video in full. {{ed:vid3}}",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Please watch this video in full. ${e://Field/vid3}",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Please watch this video in full. ${e://Field/vid3}",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID6",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_n"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID7",
    "SecondaryAttribute": "Please continue to the next page.",
    "TertiaryAttribute": null,
    "Payload": {
@@ -689,138 +804,6 @@
      }
     },
     "Language": [],
-    "QuestionID": "QID3",
-    "QuestionType": "DB",
-    "Selector": "TB",
-    "DefaultChoices": false,
-    "ChoiceOrder": [],
-    "GradingData": [],
-    "NextChoiceId": 1,
-    "NextAnswerId": 1,
-    "DataExportTag": "q_ctrl"
-   }
-  },
-  {
-   "SurveyID": "SV_filedrawer00000",
-   "Element": "SQ",
-   "PrimaryAttribute": "QID4",
-   "SecondaryAttribute": "Please watch this video. {{ed:video}}",
-   "TertiaryAttribute": null,
-   "Payload": {
-    "QuestionText": "Please watch this video. ${e://Field/video}",
-    "DataVisibility": {
-     "Private": false,
-     "Hidden": false
-    },
-    "Configuration": {
-     "QuestionDescriptionOption": "UseText"
-    },
-    "QuestionDescription": "Please watch this video. ${e://Field/video}",
-    "Validation": {
-     "Settings": {
-      "Type": "None"
-     }
-    },
-    "Language": [],
-    "QuestionID": "QID4",
-    "QuestionType": "DB",
-    "Selector": "TB",
-    "DefaultChoices": false,
-    "ChoiceOrder": [],
-    "GradingData": [],
-    "NextChoiceId": 1,
-    "NextAnswerId": 1,
-    "DataExportTag": "q_m2"
-   }
-  },
-  {
-   "SurveyID": "SV_filedrawer00000",
-   "Element": "SQ",
-   "PrimaryAttribute": "QID5",
-   "SecondaryAttribute": "Please watch this video. {{ed:video}}",
-   "TertiaryAttribute": null,
-   "Payload": {
-    "QuestionText": "Please watch this video. ${e://Field/video}",
-    "DataVisibility": {
-     "Private": false,
-     "Hidden": false
-    },
-    "Configuration": {
-     "QuestionDescriptionOption": "UseText"
-    },
-    "QuestionDescription": "Please watch this video. ${e://Field/video}",
-    "Validation": {
-     "Settings": {
-      "Type": "None"
-     }
-    },
-    "Language": [],
-    "QuestionID": "QID5",
-    "QuestionType": "DB",
-    "Selector": "TB",
-    "DefaultChoices": false,
-    "ChoiceOrder": [],
-    "GradingData": [],
-    "NextChoiceId": 1,
-    "NextAnswerId": 1,
-    "DataExportTag": "q_m15"
-   }
-  },
-  {
-   "SurveyID": "SV_filedrawer00000",
-   "Element": "SQ",
-   "PrimaryAttribute": "QID6",
-   "SecondaryAttribute": "Please watch this video. {{ed:video}}",
-   "TertiaryAttribute": null,
-   "Payload": {
-    "QuestionText": "Please watch this video. ${e://Field/video}",
-    "DataVisibility": {
-     "Private": false,
-     "Hidden": false
-    },
-    "Configuration": {
-     "QuestionDescriptionOption": "UseText"
-    },
-    "QuestionDescription": "Please watch this video. ${e://Field/video}",
-    "Validation": {
-     "Settings": {
-      "Type": "None"
-     }
-    },
-    "Language": [],
-    "QuestionID": "QID6",
-    "QuestionType": "DB",
-    "Selector": "TB",
-    "DefaultChoices": false,
-    "ChoiceOrder": [],
-    "GradingData": [],
-    "NextChoiceId": 1,
-    "NextAnswerId": 1,
-    "DataExportTag": "q_m20"
-   }
-  },
-  {
-   "SurveyID": "SV_filedrawer00000",
-   "Element": "SQ",
-   "PrimaryAttribute": "QID7",
-   "SecondaryAttribute": "Please watch this video. {{ed:video}}",
-   "TertiaryAttribute": null,
-   "Payload": {
-    "QuestionText": "Please watch this video. ${e://Field/video}",
-    "DataVisibility": {
-     "Private": false,
-     "Hidden": false
-    },
-    "Configuration": {
-     "QuestionDescriptionOption": "UseText"
-    },
-    "QuestionDescription": "Please watch this video. ${e://Field/video}",
-    "Validation": {
-     "Settings": {
-      "Type": "None"
-     }
-    },
-    "Language": [],
     "QuestionID": "QID7",
     "QuestionType": "DB",
     "Selector": "TB",
@@ -829,18 +812,18 @@
     "GradingData": [],
     "NextChoiceId": 1,
     "NextAnswerId": 1,
-    "DataExportTag": "q_m26"
+    "DataExportTag": "q_c"
    }
   },
   {
    "SurveyID": "SV_filedrawer00000",
    "Element": "SQ",
    "PrimaryAttribute": "QID8",
-   "SecondaryAttribute": "How much do you agree with each statement about science? (Items 4-6 are negative",
+   "SecondaryAttribute": "How much do you agree with each statement?",
    "TertiaryAttribute": null,
    "Payload": {
-    "QuestionText": "How much do you agree with each statement about science? (Items 4-6 are negatively worded.)",
-    "DataExportTag": "post_trust_scale",
+    "QuestionText": "How much do you agree with each statement?",
+    "DataExportTag": "post_trust_items",
     "DataVisibility": {
      "Private": false,
      "Hidden": false
@@ -853,7 +836,7 @@
      "WhiteSpace": "OFF",
      "MobileFirst": true
     },
-    "QuestionDescription": "How much do you agree with each statement about science? (Items 4-6 are negatively worded.)",
+    "QuestionDescription": "How much do you agree with each statement?",
     "Validation": {
      "Settings": {
       "ForceResponse": "ON",
@@ -877,16 +860,16 @@
       "Display": "Science benefits society."
      },
      "3": {
-      "Display": "I have confidence in the scientific community."
+      "Display": "I have confidence in scientific research."
      },
      "4": {
-      "Display": "Scientists often twist findings to suit their own agendas."
+      "Display": "Scientists often cannot be trusted."
      },
      "5": {
-      "Display": "Scientific results are often unreliable."
+      "Display": "Science does more harm than good."
      },
      "6": {
-      "Display": "I do not trust what scientists say."
+      "Display": "I am skeptical of scientific claims."
      }
     },
     "ChoiceOrder": [
@@ -905,7 +888,7 @@
       "Display": "Disagree"
      },
      "3": {
-      "Display": "Neutral"
+      "Display": "Neither"
      },
      "4": {
       "Display": "Agree"
@@ -929,10 +912,10 @@
    "SurveyID": "SV_filedrawer00000",
    "Element": "SQ",
    "PrimaryAttribute": "QID9",
-   "SecondaryAttribute": "Thank you. This study tested whether short messages change attitudes toward scie",
+   "SecondaryAttribute": "Thank you. This study examined how different kinds of messages affect views of s",
    "TertiaryAttribute": null,
    "Payload": {
-    "QuestionText": "Thank you. This study tested whether short messages change attitudes toward science. The messages were student-designed and not official statements. Your answers are confidential.",
+    "QuestionText": "Thank you. This study examined how different kinds of messages affect views of science. The videos and text presented real, general discussions of science; none was meant to mislead. You will be invited to a brief follow-up in about one week.",
     "DataVisibility": {
      "Private": false,
      "Hidden": false
@@ -940,7 +923,7 @@
     "Configuration": {
      "QuestionDescriptionOption": "UseText"
     },
-    "QuestionDescription": "Thank you. This study tested whether short messages change attitudes toward science. The messages...",
+    "QuestionDescription": "Thank you. This study examined how different kinds of messages affect views of science. The video...",
     "Validation": {
      "Settings": {
       "Type": "None"
@@ -956,39 +939,6 @@
     "NextChoiceId": 1,
     "NextAnswerId": 1,
     "DataExportTag": "q_debrief"
-   }
-  },
-  {
-   "SurveyID": "SV_filedrawer00000",
-   "Element": "SQ",
-   "PrimaryAttribute": "QID10",
-   "SecondaryAttribute": "Thank you for your time. You have chosen not to participate.",
-   "TertiaryAttribute": null,
-   "Payload": {
-    "QuestionText": "Thank you for your time. You have chosen not to participate.",
-    "DataVisibility": {
-     "Private": false,
-     "Hidden": false
-    },
-    "Configuration": {
-     "QuestionDescriptionOption": "UseText"
-    },
-    "QuestionDescription": "Thank you for your time. You have chosen not to participate.",
-    "Validation": {
-     "Settings": {
-      "Type": "None"
-     }
-    },
-    "Language": [],
-    "QuestionID": "QID10",
-    "QuestionType": "DB",
-    "Selector": "TB",
-    "DefaultChoices": false,
-    "ChoiceOrder": [],
-    "GradingData": [],
-    "NextChoiceId": 1,
-    "NextAnswerId": 1,
-    "DataExportTag": "q_end"
    }
   }
  ]

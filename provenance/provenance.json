@@ -8,13 +8,13 @@
  },
  "provider": "openrouter",
  "zero_retention_requested": true,
- "cost_usd": 0.563533,
+ "cost_usd": 0.778024,
  "tokens": {
-  "in": 197016,
-  "out": 29035
+  "in": 298616,
+  "out": 33791
  },
  "tool_version": "0.1.0",
- "created": "2026-10-09T12:31:01Z",
+ "created": "2026-10-09T12:49:30Z",
  "pap_source": "author-supplied pap.json",
  "pii": {
   "dropped": [
@@ -29,152 +29,164 @@
  },
  "degraded": [
   "no QSF: codebook inferred from CSV header rows; arms must come from the PAP",
-  "extensions: advance_design: no proposal returned (call record_result with key 'proposal')"
+  "extensions: data_to_collect: no proposal returned (call record_result with key 'proposal')"
  ],
  "inputs": {
   "raw_csv_sha256": "0c8fa28826fd9693fa7d3d17ddd460385586cdbe80d6db9409413672b38ec683",
-  "pap_sha256": "91843344e2aa7f232bce6418001673f97f116e68b7b2d84cca05849992eaa5fb",
+  "pap_sha256": "66dccf16eb048f4f37877fa241014518126c9e949137019d6b1a76c4b7218604",
   "qsf_sha256": null,
-  "pap_json_sha256": "dc4756057294fe6d242e2c68c1aacaab6f21ba6b7ccea28b3ceee79c1b7d97db"
+  "pap_json_sha256": "2d29bebf3db210cb0d1ed677c4d25fc3f34b6b1ee0fecf1c1b92c6f22bd115e4"
  },
  "review_mode": "light",
  "review_rounds": [
   {
    "round": 1,
-   "decision": "accept",
-   "k_issues": 3,
+   "decision": "minor_revision",
+   "k_issues": 2,
    "revised": true,
    "agent_addenda": []
   }
  ],
  "usage_by_agent": {
   "exploratory": {
-   "calls": 3,
-   "in": 39901,
-   "out": 2591,
-   "cost": 0.005232744,
+   "calls": 2,
+   "in": 27704,
+   "out": 3476,
+   "cost": 0.004463316,
    "models": [
     "anthropic/claude-haiku-5.5"
    ]
   },
   "litreview": {
    "calls": 2,
-   "in": 2453,
-   "out": 1060,
-   "cost": 0.0007675469999999999,
+   "in": 2482,
+   "out": 708,
+   "cost": 0.0005961779999999999,
    "models": [
     "anthropic/claude-haiku-5.5"
    ]
   },
   "writer": {
    "calls": 1,
-   "in": 7681,
-   "out": 1396,
-   "cost": 0.02902878,
+   "in": 9936,
+   "out": 1358,
+   "cost": 0.03311748,
    "models": [
     "anthropic/claude-sonnet-5.5"
    ]
   },
   "reviewer": {
    "calls": 1,
-   "in": 16413,
-   "out": 823,
-   "cost": 0.04064544,
+   "in": 20033,
+   "out": 730,
+   "cost": 0.04689234,
    "models": [
     "anthropic/claude-sonnet-5.5"
    ]
   },
   "review_orchestrator": {
    "calls": 1,
-   "in": 27470,
-   "out": 1458,
-   "cost": 0.0688248,
+   "in": 33512,
+   "out": 1404,
+   "cost": 0.08025336,
    "models": [
     "anthropic/claude-sonnet-5.5"
    ]
   },
   "writer_revise": {
-   "calls": 1,
-   "in": 10696,
-   "out": 1831,
-   "cost": 0.03930498,
+   "calls": 2,
+   "in": 25384,
+   "out": 3279,
+   "cost": 0.08272241999999999,
    "models": [
     "anthropic/claude-sonnet-5.5"
    ]
   },
   "review_signoff": {
-   "calls": 1,
-   "in": 27164,
-   "out": 1238,
-   "cost": 0.06604092,
+   "calls": 4,
+   "in": 133016,
+   "out": 5584,
+   "cost": 0.31865328,
    "models": [
     "anthropic/claude-sonnet-5.5"
    ]
   },
   "potential": {
    "calls": 1,
-   "in": 18221,
-   "out": 2739,
-   "cost": 0.06319368,
+   "in": 19468,
+   "out": 2386,
+   "cost": 0.06216804,
    "models": [
     "anthropic/claude-sonnet-5.5"
    ]
   },
   "extensions": {
-   "calls": 4,
-   "in": 47017,
-   "out": 15899,
-   "cost": 0.25049376,
+   "calls": 2,
+   "in": 23274,
+   "out": 10137,
+   "cost": 0.14643882,
    "models": [
     "anthropic/claude-sonnet-5.5"
+   ]
+  },
+  "extensions_obs": {
+   "calls": 2,
+   "in": 3807,
+   "out": 4729,
+   "cost": 0.002717748,
+   "models": [
+    "anthropic/claude-haiku-5.5"
    ]
   }
  },
  "stage_seconds": {
   "ingest": 0.0,
   "pii": 0.26,
-  "tidy": 0.26,
-  "pap": 0.0,
-  "clean": 0.51,
-  "registered": 13.75,
+  "tidy": 0.27,
+  "pap": 0.01,
+  "clean": 0.55,
+  "registered": 13.85,
   "tag": 0.0,
-  "exploratory": 15.85,
-  "litreview": 8.57,
-  "write": 10.81,
-  "review": 17.21,
+  "exploratory": 22.54,
+  "litreview": 6.46,
+  "write": 9.76,
+  "review": 19.23,
   "robustness": 0.0,
-  "revise": 18.13,
-  "extensions": 114.57,
+  "revise": 37.87,
+  "extensions": 103.16,
   "package": 0.0
  },
- "total_seconds": 199.9,
+ "total_seconds": 214.0,
  "log": [
-  "2026-10-09T12:31:01Z stage ingest",
-  "2026-10-09T12:31:01Z stage pii",
-  "2026-10-09T12:31:02Z PII scan (header + first 5 rows): flagged 1 column(s): RecordedDate [known_identifier_column]. Action: dropped 1, kept by whitelist 0.",
-  "2026-10-09T12:31:02Z stage tidy",
-  "2026-10-09T12:31:02Z stage pap",
-  "2026-10-09T12:31:02Z pap: loaded author-supplied inputs/pap.json (papreader agent skipped)",
-  "2026-10-09T12:31:02Z stage clean",
-  "2026-10-09T12:31:02Z wrote data/clean.csv: 8572 rows, 67 columns",
-  "2026-10-09T12:31:02Z stage registered",
-  "2026-10-09T12:31:16Z H1: post_trust ~ C(arm_code, Treatment(reference='A1')) * (pre_trust_c + age_c + education_c + white_c + latino_c + dem_c + rep_c) | 32 arms vs Control, N=7803, HC2 SEs, weights=ipw; 5 arm(s) supported",
-  "2026-10-09T12:31:16Z wrote results/registered_summary.csv (32 rows)",
-  "2026-10-09T12:31:16Z stage tag",
-  "2026-10-09T12:31:16Z stage exploratory",
-  "2026-10-09T12:31:32Z tags: H1=registered, E1=exploratory, E2=exploratory",
-  "2026-10-09T12:31:32Z stage litreview",
-  "2026-10-09T12:31:41Z stage write",
-  "2026-10-09T12:31:41Z diagram: template (figures/design.svg)",
-  "2026-10-09T12:31:51Z stage review",
-  "2026-10-09T12:32:09Z review (light): 8 issue(s); provisional decision: minor_revision",
-  "2026-10-09T12:32:09Z stage robustness",
-  "2026-10-09T12:32:09Z stage revise",
-  "2026-10-09T12:32:19Z correction pass 1: 8 note(s) from the writing agent",
-  "2026-10-09T12:32:27Z claim re-check: 10/10 claims supported on the corrected text",
-  "2026-10-09T12:32:27Z stage extensions",
-  "2026-10-09T12:32:48Z research potential: 5 cause(s), 1 debate(s), 3 brief(s)",
-  "2026-10-09T12:34:21Z extensions: 2 proposal(s) validated by autoexperiment; dropped: advance_design: no proposal returned (call record_result with key 'proposal')",
-  "2026-10-09T12:34:21Z stage package"
+  "2026-10-09T12:49:30Z stage ingest",
+  "2026-10-09T12:49:30Z stage pii",
+  "2026-10-09T12:49:30Z PII scan (header + first 5 rows): flagged 1 column(s): RecordedDate [known_identifier_column]. Action: dropped 1, kept by whitelist 0.",
+  "2026-10-09T12:49:30Z stage tidy",
+  "2026-10-09T12:49:30Z stage pap",
+  "2026-10-09T12:49:30Z pap: loaded author-supplied inputs/pap.json (papreader agent skipped)",
+  "2026-10-09T12:49:30Z cleared 40 file(s) from the previous run",
+  "2026-10-09T12:49:30Z stage clean",
+  "2026-10-09T12:49:31Z wrote data/clean.csv: 8572 rows, 67 columns",
+  "2026-10-09T12:49:31Z stage registered",
+  "2026-10-09T12:49:45Z H1: post_trust ~ C(arm_code, Treatment(reference='A1')) * (pre_trust_c + age_c + education_c + white_c + latino_c + dem_c + rep_c) | 32 arms vs Control, N=7803, HC2 SEs, weights=ipw; 5 arm(s) supported",
+  "2026-10-09T12:49:45Z wrote results/registered_summary.csv (32 rows)",
+  "2026-10-09T12:49:45Z stage tag",
+  "2026-10-09T12:49:45Z stage exploratory",
+  "2026-10-09T12:50:07Z tags: H1=registered, E1=exploratory, E2=exploratory, E3=exploratory",
+  "2026-10-09T12:50:07Z stage litreview",
+  "2026-10-09T12:50:14Z stage write",
+  "2026-10-09T12:50:14Z diagram: template (figures/design.svg)",
+  "2026-10-09T12:50:23Z stage review",
+  "2026-10-09T12:50:43Z review (light): 6 issue(s); provisional decision: minor_revision",
+  "2026-10-09T12:50:43Z stage robustness",
+  "2026-10-09T12:50:43Z stage revise",
+  "2026-10-09T12:50:54Z correction pass 1: 8 note(s) from the writing agent",
+  "2026-10-09T12:51:04Z claim re-check: 7/10 claims supported on the corrected text",
+  "2026-10-09T12:51:11Z correction pass 2: 3 note(s) from the writing agent",
+  "2026-10-09T12:51:21Z claim re-check: 9/11 claims supported on the corrected text",
+  "2026-10-09T12:51:21Z stage extensions",
+  "2026-10-09T12:51:40Z research potential: 5 cause(s), 0 debate(s), 3 brief(s)",
+  "2026-10-09T12:53:04Z extensions: 2 proposal(s) validated by autoexperiment; dropped: data_to_collect: no proposal returned (call record_result with key 'proposal')",
+  "2026-10-09T12:53:04Z stage package"
  ]
 }

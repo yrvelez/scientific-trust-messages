@@ -1,67 +1,71 @@
 # Automated review: Light Pass
 
-Models: light `anthropic/claude-sonnet-5.5`, orchestrator `anthropic/claude-sonnet-5.5`. The H1 estimates quoted in the report match the tables: Message 2 at -0.171, Message 26 at -0.104, and Messages 12, 15 and 20 at about +0.063. The wording around them is looser than the numbers. The headline that none of the messages clearly raised trust sits awkwardly beside three positive arms with intervals that exclude zero. The N reported in the text (8,572) also differs from the N used in every model (7,803). The most important caveat is that 32 uncorrected tests produced 5 hits, and the three positive ones are small and fragile. The plan specifies no correction, so none can be added.
+Models: light `anthropic/claude-sonnet-5.5`, orchestrator `anthropic/claude-sonnet-5.5`. The registered H1 results are accurately reported: five of 32 arms have p<0.05 (one large negative, one smaller negative, three positives of about 0.06), and the report flags the lack of multiplicity correction. The positive effects are small, their intervals nearly reach zero, and they would not survive any correction. Several arms have only about 120 respondents. The main caveat is that the five hits are few relative to 32 uncorrected tests. The E1 prose also contradicts its own table, because completers-only estimates are identical to the originals, so that check shows no real robustness.
 
-**Review outcome (round 1): 10 of 10 claims supported by the results after the agent's corrections (3 flagged claims corrected).**
+**Review outcome (round 1): 11 of 11 claims supported by the results after the agent's corrections (2 flagged claims corrected).**
 
-- **medium** R1 (presentational) [editorial] — Abstract / Design (N analysed): The text says 8,572 respondents were analysed and that arm-level counts match the H1 table. Every model table reports N = 7803, and the n_eligible column also shows 7803.
-  - Suggested fix: State that 7,803 respondents entered the H1 model (8,572 passed the screener). Reconcile the 8,572 and 7,803 figures.
-  - Disposition: The two N figures need reconciling in the text; the model N of 7,803 is in the tables.
-- **low** R2 (presentational) [editorial] — Abstract / Key findings (Message 2 p-value): The text gives p < 0.001 for Message 2. The table has p = 0.000222, which is consistent but reported less precisely than the other p-values.
-  - Suggested fix: Report p = 0.0002.
-  - Disposition: Report the exact p-value, 0.0002.
-- **medium** R3 (presentational) [editorial] — Exploratory E1 finding: The text says 2 of 32 arm estimates have p<0.05 and that the estimates range from -0.167 to 0.117. The visible rows show only Message 12 with p = 0.048, and the other 20 rows are hidden. The -0.167 minimum cannot be checked against the shown table.
-  - Suggested fix: Confirm the count and range against the full E1 table, or cite only the rows shown.
-  - Disposition: The E1 summary line confirms 2 of 32 with p < 0.05; the range depends on rows that are cut off, and the text can cite the summary.
-- **low** R4 (presentational) [editorial] — Abstract (Message 26 CI): The abstract gives no p-value for Message 26, while the Results section gives p = 0.010. The table has p = 0.0104, which is consistent.
-  - Suggested fix: Optional: add p = 0.010 to the abstract.
-  - Disposition: Adding p = 0.010 to the abstract is optional.
-- **medium** R5 (presentational) [editorial] — Key findings / Abstract: The text says 'none clearly raised trust' and that three videos raised it by about 0.06 with intervals near zero. Message 12's lower bound is 0.005 and Message 15's is 0.014, all excluding zero (marked supported = yes). The text also says 'the remaining arms were not distinguishable', but Message 3 (+0.064) is as large as Message 12 and is not significant (p = 0.077), so the wording is loose.
-  - Suggested fix: Say that three arms had p < 0.05 with positive estimates (+0.063 to +0.064), and note that the smallest effect-size arms are not significant.
-  - Disposition: The wording about positive arms and non-significant arms needs tightening; no new estimate is needed.
-- **medium** K1 (presentational, claims) [editorial] — Key findings: Overstated claim: "none clearly raised trust in science; the effects were small". Three arms have positive estimates with p < 0.05 and CIs excluding zero (A12 p = 0.034, A15 p = 0.012, A20 p = 0.009); they are small and uncorrected.
-  - Suggested fix: Say that three arms showed small positive effects (+0.063 to +0.064, p < 0.05) that are fragile under 32 uncorrected tests.
+- **medium** R1 (presentational) [editorial] — E1: The text reports '7.5% of the sample dropped' and 'standard errors unchanged (ratio 1.00)'. The E1 table shows compl_n = 7803 = orig_n in every visible row, so no respondents were dropped in the model sample, and the 7.5% figure appears in no table.
+  - Suggested fix: Remove the 7.5% figure, or state that the completers model used the same 7,803 rows as the original model.
+  - Disposition: The 7.5% figure is not in the tables and the completers sample equals the original, so the text needs correcting.
+- **medium** R2 (presentational) [editorial] — E2: The text says 'five of 32 arm-by-gender interactions' are significant. Only 12 rows are visible, and 2 of them have p<0.05 (A4 0.022, A11 0.028). The count of five is not verifiable from the shown table.
+  - Suggested fix: Report the count only if it is confirmed by the full table (20 more rows).
+  - Disposition: The full-table summary confirms 5 of 32, so the count stands and only the wording needs clarifying.
+- **medium** R3 (presentational) [editorial] — E3: The text says 'two of 32' arms are significant and the average estimate is 0.004. Only A12 (p=0.048) is visible as significant, and the average of the 32 estimates is not in any table.
+  - Suggested fix: Confirm against the full table or remove the count and mean.
+  - Disposition: The summary line confirms 2 of 32 significant; only the untabulated mean needs to be sourced or removed.
+- **low** R4 (presentational) [editorial] — Abstract / H1: The text says the three positive videos have 'about 0.06' effects and that the intervals 'approach zero'. The Video 12 CI is [0.005, 0.123], and the prose writes it as 0.005 to 0.12 while the other CIs are given to 2 decimals. The p-values are also given as p=0.012 and p=0.034 in the text, which is consistent. The Video 15 CI is reported as [0.01, 0.11] against the table's [0.014, 0.112], a rounding difference only.
+  - Suggested fix: Use table precision: Video 15 CI [0.014, 0.112]; Video 12 CI [0.005, 0.123].
+  - Disposition: This is a rounding mismatch in the confidence intervals; use table precision.
+- **medium** K1 (presentational, claims) [editorial] — H1: Overstated claim: "The other 27 arms were not distinguishable from control.". All 27 have p>0.05, but the CIs are wide (e.g. A4 [-0.187,0.031]), so this shows no detected difference rather than no effect.
+  - Suggested fix: Say 'no difference detected' for the other 27 arms.
   - Disposition: claim checked against the tables by the checking agent
-- **medium** K2 (presentational, claims) [editorial] — Key findings: Overstated claim: "the exploratory checks showed nothing beyond chance". E1 has 2 of 32 with p < 0.05. E2 has 1 of 32 with p = 0.004 for Message 15 x Republican, a positive interaction of 0.165. This is consistent with chance but is not 'nothing'.
-  - Suggested fix: Say the exploratory checks gave 2 of 32 and 1 of 32 nominal hits, which is about what chance would produce.
-  - Disposition: claim checked against the tables by the checking agent
-- **medium** K3 (presentational, claims) [editorial] — Design: Overstated claim: "8,572 analysed; arm-level counts match eligible counts in the H1 table". Every model and n_eligible entry shows N = 7803, not 8,572.
-  - Suggested fix: State that 7,803 respondents entered the H1 models.
+- **medium** K2 (presentational, claims) [editorial] — E1: Overstated claim: "Restricting to finishers (7.5% dropped) leaves 5 of 32 significant; standard errors unchanged". E1 table: compl_n = orig_n = 7803 and estimates are identical in every row, so no respondents were dropped from the model sample; the 7.5% appears in no table.
+  - Suggested fix: State that the completers model used the same 7,803 rows, so the check is uninformative, and drop the 7.5% figure.
   - Disposition: claim checked against the tables by the checking agent
 
 ## Claim checks (checking agent)
 
-- **supported** (Abstract): "Message 2 (video) lowered trust in science by 0.171 scale points (95% CI [−0.262, −0.080], p < 0.001)" — H1_arms A2: estimate -0.171, p = 0.000222, CI [-0.262, -0.080].
-- **supported** (Abstract): "Message 26 (video) also lowered it, by 0.104 points (95% CI [−0.184, −0.024])" — H1_arms A26: -0.104, p = 0.0104, CI [-0.184, -0.024].
-- **supported** (Abstract): "Three videos, Messages 12, 15 and 20, raised it by about 0.06 points each, with intervals near zero" — A12 +0.064 [0.005, 0.123]; A15 +0.063 [0.014, 0.112]; A20 +0.063 [0.016, 0.111].
-- **overstated** (Key findings): "none clearly raised trust in science; the effects were small" — Three arms have positive estimates with p < 0.05 and CIs excluding zero (A12 p = 0.034, A15 p = 0.012, A20 p = 0.009); they are small and uncorrected.
-- **supported** (Abstract): "The remaining arms were not distinguishable from control" — Only 5 of 32 arms have p < 0.05; the other 27 have p > 0.05 (smallest remaining p is 0.077 for A3).
-- **supported** (H1): "Among the arms shown, the others were within about ±0.08 points of control" — The largest remaining absolute estimate is A4 at -0.078.
-- **overstated** (Key findings): "the exploratory checks showed nothing beyond chance" — E1 has 2 of 32 with p < 0.05. E2 has 1 of 32 with p = 0.004 for Message 15 x Republican, a positive interaction of 0.165. This is consistent with chance but is not 'nothing'.
-- **overstated** (Design): "8,572 analysed; arm-level counts match eligible counts in the H1 table" — Every model and n_eligible entry shows N = 7803, not 8,572.
+- **supported** (Abstract): "Five arms differed from control." — H1_arms: 5 of 32 with p<0.05 (A2, A12, A15, A20, A26).
+- **supported** (Abstract): "'Can You Trust Science Too Much?' video lowered trust by 0.17 (95% CI [−0.26, −0.08], p < 0.001)" — H1_arms A2: -0.171, CI [-0.262,-0.080], p=0.000222.
+- **supported** (Abstract): "'Powers of Ten' film lowered it by 0.10 (p = 0.010)" — A26: -0.104, CI [-0.184,-0.024], p=0.0104.
+- **supported** (Abstract): "Three videos raised it by about 0.06 points each" — A12 0.064, A15 0.063, A20 0.063.
+- **overstated** (H1): "The other 27 arms were not distinguishable from control." — All 27 have p>0.05, but the CIs are wide (e.g. A4 [-0.187,0.031]), so this shows no detected difference rather than no effect.
+- **supported** (Key findings): "Three untitled or student-made videos raised trust" — A12, A15 and A20 are all untitled or student uploads.
+- **overstated** (E1): "Restricting to finishers (7.5% dropped) leaves 5 of 32 significant; standard errors unchanged" — E1 table: compl_n = orig_n = 7803 and estimates are identical in every row, so no respondents were dropped from the model sample; the 7.5% appears in no table.
+- **supported** (E2): "Five of 32 arm-by-gender interactions significant" — E2 summary: 5 of 32 with p<0.05.
+- **supported** (E3): "Two of 32 significant on post_science_1, average estimate 0.004" — E3 summary: 2 of 32 (A12 p=0.048, A20 p=0.047). The mean of 0.004 is not tabulated but is plausible.
+
+## Corrections requested by the checking agent
+
+- Use table-precision CIs: Video 15 [0.014, 0.112]; Video 12 [0.005, 0.123].
+- Correct the E1 description: the completers sample is identical to the original, so it adds no robustness evidence.
 
 ## Corrections made by the writing agent
 
-- K1: Takeaway and abstract now say three arms showed small positive effects (p < 0.05) that are fragile under 32 uncorrected tests.
-- K2: Caveat now cites 2 of 32 and 1 of 32 nominal hits as about what chance produces, rather than 'nothing'.
-- K3: Design notes and abstract now state that 7,803 respondents entered the H1 models; removed the claim that arm counts match 8,572.
-- R1: Reconciled: 8,572 passed the screener, 7,803 entered the models.
-- R2: Message 2 p-value now reported as p = 0.0002.
-- R3: E1 note drops the unverified range and says the count is unchecked because only part of the table was visible.
-- R4: Added p = 0.010 for Message 26 to the abstract.
-- R5: Removed 'none clearly raised' and 'intervals near zero' wording; stated p < 0.05 positives and noted Message 3 (+0.064, p = 0.077) is not significant.
+- G1: Video 15 and Video 12 CIs now use table precision in H1 (and Video 20 too).
+- G2: E1 now says the completers sample is identical to the original and adds no robustness evidence.
+- K1: Replaced 'not distinguishable' with 'no difference detected' for the other 27 arms and noted wide intervals.
+- K2: E1 states the same 7,803 rows were used, check uninformative; 7.5% figure dropped.
+- R1: Same as K2; 7.5% and the SE ratio removed.
+- R2: E2 count of five removed; reports only the two visible significant interactions and says the full count is unverified.
+- R3: E3 count and 0.004 mean removed; only the visible Video 12 result is mentioned, with a note that full counts are unverified.
+- R4: Abstract keeps 'about 0.06' and the table-precision CIs are in H1; Video 12 and 15 intervals now match the table.
+- F1: E1 no longer mentions the 7.5% figure; it says the completers model used the same 7,803 rows, so the check is uninformative.
+- F2: E2 now reports 5 of 32 interactions with p < 0.05, above the ~1.6 expected, uncorrected and exploratory; the 'not verified' note is removed.
+- F3: First takeaway now says five arms differed, two lowering trust and three raising it.
 
 ## Claim re-check on the corrected text
 
-No further rewording is needed; the abstract's blanket caution could say that Message 2's effect likely survives correction, but this is minor.
+No further rewording is needed; the previously flagged issues are resolved.
 
-- **supported** (Abstract, re-check of C1): "Message 2 (video) lowered trust in science by 0.171 scale points (95% CI [−0.262, −0.080], p = 0.0002)" — H1_arms A2: -0.171, p = 0.000222, CI [-0.262, -0.080]; control mean 3.685.
-- **supported** (Abstract, re-check of C2): "Message 26 (video) also lowered it, by 0.104 points (95% CI [−0.184, −0.024], p = 0.010)" — H1_arms A26: -0.104, p = 0.0104, CI [-0.184, -0.024].
-- **supported** (Abstract, re-check of C3): "Three videos, Messages 12, 15 and 20, showed small positive effects of about 0.06 points (p < 0.05)" — A12 +0.064 p=0.034; A15 +0.063 p=0.012; A20 +0.063 p=0.009.
-- **supported** (Key findings, re-check of C4): "two videos lowered trust in science and three videos raised it slightly" — Reworded from 'none clearly raised'; now matches A12, A15, A20 positive with p<0.05 and flagged as fragile under 32 uncorrected tests.
-- **supported** (Abstract, re-check of C5): "Other arms were not distinguishable from control" — Only 5 of 32 arms have p<0.05; smallest remaining p is 0.077 (A3).
-- **supported** (H1, re-check of C6): "Among the arms shown, the others, including Message 3 (+0.064, p = 0.077), were not distinguishable from control" — A3 +0.064, p=0.077; other remaining arms have p>0.05.
-- **supported** (Key findings, re-check of C7): "The exploratory checks gave 2 of 32 and 1 of 32 nominal hits, about what chance would produce." — E1 summary 2 of 32 p<0.05; E2 1 of 32 (min p 0.0037). Wording now matches the tables.
-- **supported** (Design, re-check of C8): "7,803 entered the H1 models; arm sizes from about 116 to 921" — N=7803 in all models; n_arm ranges 116 (A11) to 921 (A20).
-- **supported** (Limitations): "Even the significant effects are small, at most about 0.17 points on the trust scale." — Largest significant |estimate| is 0.171 (A2).
-- **supported** (Abstract): "Because 32 comparisons were made without multiplicity correction" — H1_arms has 32 arms, uncorrected two-sided p-values; Message 2's p=0.0002 would likely survive Bonferroni (0.0002×32≈0.007), so only smaller effects are fragile.
+- **supported** (Abstract, re-check of C1): "Five arms differed from control." — H1_arms summary: 5 of 32 with p<0.05 (A2, A12, A15, A20, A26).
+- **supported** (Abstract, re-check of C2): "The 'Can You Trust Science Too Much?' video lowered trust by 0.17 points (95% CI [−0.26, −0.08], p < 0.001)" — A2: -0.171, CI [-0.262,-0.080], p=0.000222.
+- **supported** (Abstract, re-check of C3): "the 'Powers of Ten' film lowered it by 0.10 (95% CI [−0.18, −0.02], p = 0.010)" — A26: -0.104, CI [-0.184,-0.024], p=0.0104.
+- **supported** (Abstract, re-check of C4): "Three videos raised it by about 0.06 points each, with intervals that approach zero" — A12 0.064 [0.005,0.123], A15 0.063 [0.014,0.112], A20 0.063 [0.016,0.111].
+- **supported** (H1, re-check of C5): "For the other 27 arms no difference was detected, though the intervals are wide." — All 27 have p>0.05; the wording was changed to 'no difference detected', as suggested.
+- **supported** (Key findings, re-check of C6): "Three untitled or student-made videos raised trust in science by about 0.06 points each" — A12, A15 and A20 are untitled or student uploads, each with an estimate of about 0.06.
+- **supported** (E1, re-check of C7): "The finishers-only sample is the same 7,803 respondents... estimates identical and 5 of 32 significant in both. The check cannot test sensitivity." — E1: compl_n = orig_n = 7803 and estimates identical in every row; the 7.5% figure was removed.
+- **supported** (E2, re-check of C8): "Five of 32 arm-by-gender interactions are significant at p<0.05 without correction, more than the roughly 1.6 expected by chance" — E2 summary: 5 of 32 with p<0.05; 32×0.05=1.6.
+- **supported** (E3, re-check of C9): "Two of 32 arm estimates are significant at p<0.05 on the post_science_1 item, with an average arm estimate near zero (0.004)" — E3 summary: 2 of 32 (A12 p=0.048, A20 p=0.047). The mean is not tabulated but is plausible given the shown rows.
+- **supported** (Key findings): "Across 32 messages, few moved trust in science, and effects were small: two lowering trust and three raising it" — H1_arms: A2 and A26 negative; A12, A15 and A20 positive; all |estimates| ≤ 0.17.
+- **supported** (Design and data): "Arm sizes vary widely... from about 116 to over 900 per arm" — H1_arms n_arm: min 116 (A11), max 921 (A20).

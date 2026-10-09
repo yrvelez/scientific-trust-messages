@@ -1,46 +1,52 @@
 {
  "id": "generalizability_conditional",
  "kind": "boundary",
- "title": "Partisan and platform boundary of the video effects",
- "rationale": "In the source study, Messages 15 and 20 raised trust by about 0.06 points (p = 0.012 for Message 15), but the one nominal Republican interaction (Message 15, +0.165, SE 0.057, p = 0.004) came from 32 uncorrected tests. All exposure was forced, so it is unknown whether the effects hold in a feed. This design tests the interaction directly and crosses it with exposure setting.",
- "contribution": "Gives a confirmatory test of whether two small positive video effects on trust in science differ by Republican identification and by forced versus feed exposure.",
+ "title": "Do the small positive videos replicate across samples and baseline trust?",
+ "rationale": "Videos 12, 15 and 20 raised trust by about 0.06 (Video 12 CI [0.005, 0.123]; Video 15 CI [0.014, 0.112]) among 32 uncorrected tests, with intervals near zero. A confirmatory replication in a new panel with few tests, plus moderation by baseline trust and party, tests whether the effects are real and where they hold.",
+ "contribution": "Provides a pre-registered, multiplicity-limited replication of three small positive video effects in a non-Lucid sample and tests moderation by baseline trust and party.",
  "limitations": [
-  "Message 15 and 20 videos must be supplied by the research team.",
-  "A simulated feed is not a real platform.",
-  "Immediate outcome only; durability is unknown.",
-  "Party is self-reported."
+  "Different vendors differ in sample composition, so a failure to replicate may reflect the panel, not a false positive.",
+  "Trust is measured immediately after exposure, so durability is unknown.",
+  "Moderator tests are underpowered at about 4,400 per arm for small interactions.",
+  "Video 20's title is unrecorded and coding is post hoc."
  ],
  "design": {
-  "title": "Video messages by Republican identification and exposure setting",
-  "overview": "US adults are stratified by party. They are randomized to Message 15, Message 20 or a control. Each is crossed with forced exposure (shown alone on a page) or a simulated social feed, except that the control has a single arm. Trust in science is measured with the source 6-item scale.",
-  "hypothesis": "Message 15 raises trust more among Republicans than non-Republicans (interaction about +0.165). Effects are smaller in the feed than under forced exposure.",
-  "primaryOutcome": "Trust in science: mean of 6 items, with items 4-6 reverse-coded (post_science_1 to post_science_6).",
-  "comparison": "Message 15 and Message 20 versus control, moderated by Republican identification (pre-registered) and by exposure setting.",
-  "population": "US adult online panel, stratified by party identification (about half Republican-identifying).",
+  "title": "Replication of three positive videos by baseline trust and party",
+  "overview": "US adults from a non-Lucid panel complete pre-treatment trust and party questions, then are randomised to control, Video 12, Video 15, Video 20, or the strongest-effect comparison video ('Can You Trust Science Too Much?'). Post-treatment trust is measured with the source items. Three directional tests use a single correction, with arm-by-trust and arm-by-party interactions.",
+  "hypothesis": "Videos 12, 15 and 20 each raise post-treatment trust in science relative to control by about 0.06 points; effects differ by baseline trust (low vs high) and party identification.",
+  "primaryOutcome": "Post-treatment trust in science, mean of the 6 items with items 4-6 reverse-coded, adjusted for pre-treatment trust.",
+  "comparison": "Each of Videos 12, 15 and 20 vs control (three one-sided tests, Holm-corrected); exploratory arm x baseline trust (median split) and arm x party interactions; the comparison video is a benchmark for the negative effect.",
+  "population": "US adults aged 18+ from an online panel other than Lucid, about 22,000 total (about 4,400 per arm across 5 arms).",
   "conditions": [
    {
-    "id": "c_ctrl",
+    "id": "c_control",
     "title": "Control",
-    "description": "No message; continue page.",
-    "nodeId": "arm_ctrl"
+    "description": "Pure control: continue to the next page.",
+    "nodeId": "arm_control"
    },
    {
-    "id": "c_m15_forced",
-    "title": "Message 15 forced",
-    "description": "Message 15 video shown alone.",
-    "nodeId": "arm_m15f"
+    "id": "c_v12",
+    "title": "Video 12",
+    "description": "Student video 12 (untitled upload).",
+    "nodeId": "arm_v12"
    },
    {
-    "id": "c_m15_feed",
-    "title": "Message 15 feed",
-    "description": "Message 15 video embedded in a simulated social feed.",
-    "nodeId": "arm_m15d"
+    "id": "c_v15",
+    "title": "Video 15",
+    "description": "Student video 15 (untitled upload).",
+    "nodeId": "arm_v15"
    },
    {
-    "id": "c_m20_forced",
-    "title": "Message 20 forced",
-    "description": "Message 20 video shown alone.",
-    "nodeId": "arm_m20f"
+    "id": "c_v20",
+    "title": "Video 20",
+    "description": "Student video 20 ('Experimental Research Intervention').",
+    "nodeId": "arm_v20"
+   },
+   {
+    "id": "c_cmp",
+    "title": "Comparison video",
+    "description": "'Can You Trust Science Too Much?' video, the strongest-effect comparison.",
+    "nodeId": "arm_cmp"
    }
   ],
   "blocks": [
@@ -51,19 +57,19 @@
      {
       "id": "q_consent",
       "type": "MC",
-      "text": "This survey asks you to view some content and answer questions about science. Participation is voluntary. Do you consent to participate?",
+      "text": "You are invited to a research survey about science and media lasting about 10 minutes. Participation is voluntary and you may stop at any time. Do you agree to participate?",
       "tag": "consent",
       "multiple": false,
       "required": true,
       "choices": [
        {
         "id": "yes",
-        "text": "I consent",
+        "text": "I agree",
         "recode": "1"
        },
        {
         "id": "no",
-        "text": "I do not consent",
+        "text": "I do not agree",
         "recode": "0"
        }
       ],
@@ -73,115 +79,14 @@
     ]
    },
    {
-    "id": "b_party",
-    "title": "Party",
+    "id": "b_pre",
+    "title": "Pre-treatment",
     "questions": [
      {
-      "id": "q_party",
-      "type": "MC",
-      "text": "Generally speaking, which party do you identify with?",
-      "tag": "political_party",
-      "multiple": false,
-      "required": true,
-      "choices": [
-       {
-        "id": "rep",
-        "text": "Republican",
-        "recode": "1"
-       },
-       {
-        "id": "dem",
-        "text": "Democrat",
-        "recode": "2"
-       },
-       {
-        "id": "ind",
-        "text": "Independent or other",
-        "recode": "3"
-       }
-      ],
-      "rows": [],
-      "sourceQuestionId": "political_party"
-     }
-    ]
-   },
-   {
-    "id": "b_ctrl",
-    "title": "Control",
-    "questions": [
-     {
-      "id": "q_ctrl",
-      "type": "DB",
-      "text": "Please continue to the next page.",
-      "tag": "ctrl_text",
-      "multiple": false,
-      "required": false,
-      "choices": [],
-      "rows": [],
-      "sourceQuestionId": ""
-     }
-    ]
-   },
-   {
-    "id": "b_m15f",
-    "title": "M15 forced",
-    "questions": [
-     {
-      "id": "q_m15f",
-      "type": "DB",
-      "text": "Please watch this video. {{ed:vid15f}}",
-      "tag": "m15_forced",
-      "multiple": false,
-      "required": false,
-      "choices": [],
-      "rows": [],
-      "sourceQuestionId": ""
-     }
-    ]
-   },
-   {
-    "id": "b_m15d",
-    "title": "M15 feed",
-    "questions": [
-     {
-      "id": "q_m15d",
-      "type": "DB",
-      "text": "Please scroll through this social media feed as you normally would. {{ed:feed15}}",
-      "tag": "m15_feed",
-      "multiple": false,
-      "required": false,
-      "choices": [],
-      "rows": [],
-      "sourceQuestionId": ""
-     }
-    ]
-   },
-   {
-    "id": "b_m20f",
-    "title": "M20 forced",
-    "questions": [
-     {
-      "id": "q_m20f",
-      "type": "DB",
-      "text": "Please watch this video. {{ed:vid20f}}",
-      "tag": "m20_forced",
-      "multiple": false,
-      "required": false,
-      "choices": [],
-      "rows": [],
-      "sourceQuestionId": ""
-     }
-    ]
-   },
-   {
-    "id": "b_out",
-    "title": "Outcome",
-    "questions": [
-     {
-      "id": "q_trust",
+      "id": "q_pre",
       "type": "Matrix",
       "text": "How much do you agree with each statement?",
-      "tag": "post_trust_scale",
+      "tag": "pre_trust",
       "multiple": false,
       "required": true,
       "choices": [
@@ -214,30 +119,226 @@
       "rows": [
        {
         "id": "r1",
-        "text": "Item 1: I trust scientists to act in the public interest."
+        "text": "I trust the findings of scientific research."
        },
        {
         "id": "r2",
-        "text": "Item 2: Science is a reliable source of knowledge."
+        "text": "Science is a reliable way to understand the world."
        },
        {
         "id": "r3",
-        "text": "Item 3: I have confidence in scientific institutions."
+        "text": "Scientists generally act in the public interest."
        },
        {
         "id": "r4",
-        "text": "Item 4 (reverse): Scientists often cannot be trusted."
+        "text": "Scientific claims are often unreliable."
        },
        {
         "id": "r5",
-        "text": "Item 5 (reverse): Science does more harm than good."
+        "text": "Scientists often hide the truth."
        },
        {
         "id": "r6",
-        "text": "Item 6 (reverse): Scientific findings are usually biased."
+        "text": "Science does more harm than good."
+       }
+      ],
+      "sourceQuestionId": ""
+     },
+     {
+      "id": "q_party",
+      "type": "MC",
+      "text": "Generally speaking, which best describes your political party identification?",
+      "tag": "political_party",
+      "multiple": false,
+      "required": true,
+      "choices": [
+       {
+        "id": "d",
+        "text": "Democrat",
+        "recode": "1"
+       },
+       {
+        "id": "i",
+        "text": "Independent",
+        "recode": "2"
+       },
+       {
+        "id": "r",
+        "text": "Republican",
+        "recode": "3"
+       },
+       {
+        "id": "o",
+        "text": "Other",
+        "recode": "4"
+       }
+      ],
+      "rows": [],
+      "sourceQuestionId": "political_party"
+     }
+    ]
+   },
+   {
+    "id": "b_v12",
+    "title": "Video 12",
+    "questions": [
+     {
+      "id": "q_v12",
+      "type": "DB",
+      "text": "Please watch this video: {{ed:vid12}}",
+      "tag": "video12",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_v15",
+    "title": "Video 15",
+    "questions": [
+     {
+      "id": "q_v15",
+      "type": "DB",
+      "text": "Please watch this video: {{ed:vid15}}",
+      "tag": "video15",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_v20",
+    "title": "Video 20",
+    "questions": [
+     {
+      "id": "q_v20",
+      "type": "DB",
+      "text": "Please watch this video: {{ed:vid20}}",
+      "tag": "video20",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_cmp",
+    "title": "Comparison video",
+    "questions": [
+     {
+      "id": "q_cmp",
+      "type": "DB",
+      "text": "Please watch this video: {{ed:vidcmp}}",
+      "tag": "videocmp",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_ctl",
+    "title": "Control",
+    "questions": [
+     {
+      "id": "q_ctl",
+      "type": "DB",
+      "text": "Please continue to the next page.",
+      "tag": "control_text",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_post",
+    "title": "Outcome",
+    "questions": [
+     {
+      "id": "q_post",
+      "type": "Matrix",
+      "text": "How much do you agree with each statement?",
+      "tag": "post_trust",
+      "multiple": false,
+      "required": true,
+      "choices": [
+       {
+        "id": "p1",
+        "text": "Strongly disagree",
+        "recode": "1"
+       },
+       {
+        "id": "p2",
+        "text": "Disagree",
+        "recode": "2"
+       },
+       {
+        "id": "p3",
+        "text": "Neutral",
+        "recode": "3"
+       },
+       {
+        "id": "p4",
+        "text": "Agree",
+        "recode": "4"
+       },
+       {
+        "id": "p5",
+        "text": "Strongly agree",
+        "recode": "5"
+       }
+      ],
+      "rows": [
+       {
+        "id": "r1",
+        "text": "I trust the findings of scientific research."
+       },
+       {
+        "id": "r2",
+        "text": "Science is a reliable way to understand the world."
+       },
+       {
+        "id": "r3",
+        "text": "Scientists generally act in the public interest."
+       },
+       {
+        "id": "r4",
+        "text": "Scientific claims are often unreliable."
+       },
+       {
+        "id": "r5",
+        "text": "Scientists often hide the truth."
+       },
+       {
+        "id": "r6",
+        "text": "Science does more harm than good."
        }
       ],
       "sourceQuestionId": "post_science_1"
+     },
+     {
+      "id": "q_title",
+      "type": "TE",
+      "text": "In a few words, what was the main message of the video you watched? (Skip if you saw no video.)",
+      "tag": "video_message",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
      }
     ]
    },
@@ -248,7 +349,7 @@
      {
       "id": "q_debrief",
       "type": "DB",
-      "text": "Thank you. This study examined how short messages affect views of science. Messages were created by students and may not reflect the views of the researchers.",
+      "text": "Thank you. This study examined how short videos affect views of science. Videos were selected for research purposes and do not represent endorsed claims. Contact the research team with any questions.",
       "tag": "debrief",
       "multiple": false,
       "required": false,
@@ -273,9 +374,21 @@
     "operator": "equals"
    },
    {
-    "id": "n_br",
+    "id": "n_end",
+    "type": "end",
+    "label": "End non-consent",
+    "children": [],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_branch",
     "type": "branch",
-    "label": "No consent",
+    "label": "Non-consent",
     "children": [
      "n_end"
     ],
@@ -287,23 +400,11 @@
     "operator": "selected"
    },
    {
-    "id": "n_end",
-    "type": "end",
-    "label": "End",
-    "children": [],
-    "blockId": "",
-    "field": "",
-    "value": "",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "n_party",
+    "id": "n_pre",
     "type": "block",
-    "label": "Party",
+    "label": "Pre",
     "children": [],
-    "blockId": "b_party",
+    "blockId": "b_pre",
     "field": "",
     "value": "",
     "questionId": "",
@@ -315,10 +416,11 @@
     "type": "randomizer",
     "label": "Arms",
     "children": [
-     "arm_ctrl",
-     "arm_m15f",
-     "arm_m15d",
-     "arm_m20f"
+     "arm_control",
+     "arm_v12",
+     "arm_v15",
+     "arm_v20",
+     "arm_cmp"
     ],
     "blockId": "",
     "field": "",
@@ -328,12 +430,12 @@
     "operator": "equals"
    },
    {
-    "id": "arm_ctrl",
+    "id": "arm_control",
     "type": "group",
     "label": "Control",
     "children": [
-     "e_ctrl",
-     "t_ctrl"
+     "set_control",
+     "t_control"
     ],
     "blockId": "",
     "field": "",
@@ -343,7 +445,7 @@
     "operator": "equals"
    },
    {
-    "id": "e_ctrl",
+    "id": "set_control",
     "type": "embedded",
     "label": "cond",
     "children": [],
@@ -355,11 +457,11 @@
     "operator": "equals"
    },
    {
-    "id": "t_ctrl",
+    "id": "t_control",
     "type": "block",
-    "label": "Ctrl",
+    "label": "Control",
     "children": [],
-    "blockId": "b_ctrl",
+    "blockId": "b_ctl",
     "field": "",
     "value": "",
     "questionId": "",
@@ -367,13 +469,13 @@
     "operator": "equals"
    },
    {
-    "id": "arm_m15f",
+    "id": "arm_v12",
     "type": "group",
-    "label": "M15 forced",
+    "label": "V12",
     "children": [
-     "e_m15f",
-     "e_v15f",
-     "t_m15f"
+     "set_v12",
+     "set_vid12",
+     "t_v12"
     ],
     "blockId": "",
     "field": "",
@@ -383,35 +485,35 @@
     "operator": "equals"
    },
    {
-    "id": "e_m15f",
+    "id": "set_v12",
     "type": "embedded",
     "label": "cond",
     "children": [],
     "blockId": "",
     "field": "condition",
-    "value": "m15_forced",
+    "value": "v12",
     "questionId": "",
     "choiceId": "",
     "operator": "equals"
    },
    {
-    "id": "e_v15f",
+    "id": "set_vid12",
     "type": "embedded",
-    "label": "vid",
+    "label": "vid12",
     "children": [],
     "blockId": "",
-    "field": "vid15f",
-    "value": "[VIDEO: Student-designed Message 15 about science, shown alone, under 2 minutes]",
+    "field": "vid12",
+    "value": "[VIDEO: student-made video 12 about science, hosted by research team]",
     "questionId": "",
     "choiceId": "",
     "operator": "equals"
    },
    {
-    "id": "t_m15f",
+    "id": "t_v12",
     "type": "block",
-    "label": "T",
+    "label": "V12",
     "children": [],
-    "blockId": "b_m15f",
+    "blockId": "b_v12",
     "field": "",
     "value": "",
     "questionId": "",
@@ -419,13 +521,13 @@
     "operator": "equals"
    },
    {
-    "id": "arm_m15d",
+    "id": "arm_v15",
     "type": "group",
-    "label": "M15 feed",
+    "label": "V15",
     "children": [
-     "e_m15d",
-     "e_f15",
-     "t_m15d"
+     "set_v15",
+     "set_vid15",
+     "t_v15"
     ],
     "blockId": "",
     "field": "",
@@ -435,35 +537,35 @@
     "operator": "equals"
    },
    {
-    "id": "e_m15d",
+    "id": "set_v15",
     "type": "embedded",
     "label": "cond",
     "children": [],
     "blockId": "",
     "field": "condition",
-    "value": "m15_feed",
+    "value": "v15",
     "questionId": "",
     "choiceId": "",
     "operator": "equals"
    },
    {
-    "id": "e_f15",
+    "id": "set_vid15",
     "type": "embedded",
-    "label": "feed",
+    "label": "vid15",
     "children": [],
     "blockId": "",
-    "field": "feed15",
-    "value": "[VIDEO: Simulated social feed of neutral posts with Message 15 embedded as one post, under 2 minutes]",
+    "field": "vid15",
+    "value": "[VIDEO: student-made video 15 about science, hosted by research team]",
     "questionId": "",
     "choiceId": "",
     "operator": "equals"
    },
    {
-    "id": "t_m15d",
+    "id": "t_v15",
     "type": "block",
-    "label": "T",
+    "label": "V15",
     "children": [],
-    "blockId": "b_m15d",
+    "blockId": "b_v15",
     "field": "",
     "value": "",
     "questionId": "",
@@ -471,13 +573,13 @@
     "operator": "equals"
    },
    {
-    "id": "arm_m20f",
+    "id": "arm_v20",
     "type": "group",
-    "label": "M20 forced",
+    "label": "V20",
     "children": [
-     "e_m20f",
-     "e_v20f",
-     "t_m20f"
+     "set_v20",
+     "set_vid20",
+     "t_v20"
     ],
     "blockId": "",
     "field": "",
@@ -487,35 +589,35 @@
     "operator": "equals"
    },
    {
-    "id": "e_m20f",
+    "id": "set_v20",
     "type": "embedded",
     "label": "cond",
     "children": [],
     "blockId": "",
     "field": "condition",
-    "value": "m20_forced",
+    "value": "v20",
     "questionId": "",
     "choiceId": "",
     "operator": "equals"
    },
    {
-    "id": "e_v20f",
+    "id": "set_vid20",
     "type": "embedded",
-    "label": "vid",
+    "label": "vid20",
     "children": [],
     "blockId": "",
-    "field": "vid20f",
-    "value": "[VIDEO: Student-designed Message 20 about science, shown alone, under 2 minutes]",
+    "field": "vid20",
+    "value": "[VIDEO: student-made video 20 'Experimental Research Intervention', hosted by research team]",
     "questionId": "",
     "choiceId": "",
     "operator": "equals"
    },
    {
-    "id": "t_m20f",
+    "id": "t_v20",
     "type": "block",
-    "label": "T",
+    "label": "V20",
     "children": [],
-    "blockId": "b_m20f",
+    "blockId": "b_v20",
     "field": "",
     "value": "",
     "questionId": "",
@@ -523,11 +625,15 @@
     "operator": "equals"
    },
    {
-    "id": "n_out",
-    "type": "block",
-    "label": "Outcome",
-    "children": [],
-    "blockId": "b_out",
+    "id": "arm_cmp",
+    "type": "group",
+    "label": "Comparison",
+    "children": [
+     "set_cmp",
+     "set_vidcmp",
+     "t_cmp"
+    ],
+    "blockId": "",
     "field": "",
     "value": "",
     "questionId": "",
@@ -535,7 +641,55 @@
     "operator": "equals"
    },
    {
-    "id": "n_deb",
+    "id": "set_cmp",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "cmp",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "set_vidcmp",
+    "type": "embedded",
+    "label": "vidcmp",
+    "children": [],
+    "blockId": "",
+    "field": "vidcmp",
+    "value": "[VIDEO: vlogbrothers 'Can You Trust Science Too Much?', about 10 minutes]",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "t_cmp",
+    "type": "block",
+    "label": "Comparison",
+    "children": [],
+    "blockId": "b_cmp",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_post",
+    "type": "block",
+    "label": "Post",
+    "children": [],
+    "blockId": "b_post",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_debrief",
     "type": "block",
     "label": "Debrief",
     "children": [],
@@ -549,29 +703,40 @@
   ],
   "roots": [
    "n_consent",
-   "n_br",
-   "n_party",
+   "n_branch",
+   "n_pre",
    "r1",
-   "n_out",
-   "n_deb"
+   "n_post",
+   "n_debrief"
   ],
   "assumptions": [
-   "Power target: about 3000 per arm to detect 0.1 at 80% power; the observed Message 15 by Republican interaction was 0.165 (SE 0.057), and interaction contrasts need about 4 times the main-effect n, so it is sized to an MDE near 0.1. Total N about 12000.",
-   "To keep four arms, Message 20 is tested only under forced exposure; the feed contrast is tested for Message 15 only.",
-   "Sampling is stratified by party, with Republicans at about half the sample; Lucid panel; the interaction is pre-registered as the primary test."
+   "Sample about 4,400 per arm (about 22,000 total) to detect 0.06 at 80% power with SD about 0.9 at alpha 0.05; this is expensive, so a covariate-adjusted analysis on pre-trust could reduce the requirement.",
+   "Panel: a vendor other than Lucid (e.g., Prolific or a probability panel); compensation per vendor norms.",
+   "Three directional tests are pre-registered with Holm correction; interactions are secondary.",
+   "Low vs high baseline trust is split at the sample median of pre-treatment trust.",
+   "Each student video is given a title and content coding (e.g., tone, narrator, topic, length) by two blind coders to link features to effects."
   ],
   "unresolved": [
-   "The actual Message 15 and 20 video files and the simulated feed must be produced by the research team.",
-   "IRB number and compensation to be supplied."
+   "The actual video files for videos 12, 15, 20 and the comparison video must be supplied by the research team.",
+   "IRB approval number, vendor choice and compensation amounts.",
+   "The coders' codebook and titles for the untitled student videos."
   ],
   "evidence": [
    {
     "id": "e1",
-    "title": "Source study",
+    "title": "Source study package",
     "url": "https://github.com/yrvelez/scientific-trust-messages",
-    "claim": "Message 15 Republican interaction +0.165 (SE 0.057)",
+    "claim": "the source study this extension builds on",
     "excerpt": "",
-    "origin": "web"
+    "origin": "supplied"
+   },
+   {
+    "id": "e2",
+    "title": "Pre-registration of the source study",
+    "url": "https://osf.io/5yvh9",
+    "claim": "the registered design and outcomes",
+    "excerpt": "",
+    "origin": "supplied"
    }
   ]
  }

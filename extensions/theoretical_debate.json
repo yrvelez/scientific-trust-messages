@@ -1,0 +1,727 @@
+{
+ "id": "theoretical_debate",
+ "kind": "alternative",
+ "title": "Format versus content: separating persuasion from salience",
+ "rationale": "In the source study, the 29-second student video 'Science in everyday life' raised trust by 0.063 (SE 0.025, p=0.012), but it differs from other arms in format, length and content, and 32 uncorrected tests were run. A 2x2 of content by format with a pure control tests whether such small gains come from the science framing or from an attention cue.",
+ "contribution": "Separates content from format and salience in a brief trust-in-science message, which discriminates between the brief-messages-work and beliefs-resist positions.",
+ "limitations": [
+  "Single immediate post-treatment measure; durability unknown.",
+  "Neutral content may itself carry some positive or negative affect.",
+  "Online panel sample; video attention cannot be verified exactly.",
+  "Video and text may differ in time on task, which is only partly separable from format."
+ ],
+ "design": {
+  "title": "Format versus content 2x2 with pure control",
+  "overview": "US adults are randomly assigned to one of five arms: control, science-framing video, science-framing text, neutral video, or neutral text. Messages are matched in length. Pre-trust is measured first, and post-trust is measured after exposure using the source scale.",
+  "hypothesis": "If content drives the effect (position a), only the two science-framing cells raise trust relative to control and neutral cells. If salience or format alone drives it, neutral cells also move trust. If beliefs resist (position b), all contrasts are near zero.",
+  "primaryOutcome": "Post-treatment trust in science (mean of the 6 items, items 4-6 reverse-coded), adjusted for pre-trust.",
+  "comparison": "Main effect of content (science vs neutral), main effect of format (video vs text), their interaction, and each cell vs pure control, with Holm correction.",
+  "population": "US adults recruited through an online panel, as in the source study.",
+  "conditions": [
+   {
+    "id": "c_ctrl",
+    "title": "Control",
+    "description": "Pure control: 'Please continue to the next page.'",
+    "nodeId": "arm_ctrl"
+   },
+   {
+    "id": "c_sv",
+    "title": "Science video",
+    "description": "29-second everyday-science-framing video.",
+    "nodeId": "arm_sv"
+   },
+   {
+    "id": "c_st",
+    "title": "Science text",
+    "description": "Text version of the same everyday-science message, matched in length.",
+    "nodeId": "arm_st"
+   },
+   {
+    "id": "c_nv",
+    "title": "Neutral video",
+    "description": "29-second neutral video of everyday life with no science framing.",
+    "nodeId": "arm_nv"
+   },
+   {
+    "id": "c_nt",
+    "title": "Neutral text",
+    "description": "Text of neutral everyday content, matched in length.",
+    "nodeId": "arm_nt"
+   }
+  ],
+  "blocks": [
+   {
+    "id": "b_consent",
+    "title": "Consent",
+    "questions": [
+     {
+      "id": "q_consent",
+      "type": "MC",
+      "text": "This is a short research survey about attitudes and media. Participation is voluntary and responses are anonymous. Do you consent to participate?",
+      "tag": "consent",
+      "multiple": false,
+      "required": true,
+      "choices": [
+       {
+        "id": "yes",
+        "text": "Yes, I consent",
+        "recode": "1"
+       },
+       {
+        "id": "no",
+        "text": "No",
+        "recode": "0"
+       }
+      ],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_pre",
+    "title": "Pre-treatment trust",
+    "questions": [
+     {
+      "id": "q_pre",
+      "type": "Matrix",
+      "text": "How much do you agree with each statement about science?",
+      "tag": "pre_trust_items",
+      "multiple": false,
+      "required": true,
+      "choices": [
+       {
+        "id": "p1",
+        "text": "Strongly disagree",
+        "recode": "1"
+       },
+       {
+        "id": "p2",
+        "text": "Disagree",
+        "recode": "2"
+       },
+       {
+        "id": "p3",
+        "text": "Neutral",
+        "recode": "3"
+       },
+       {
+        "id": "p4",
+        "text": "Agree",
+        "recode": "4"
+       },
+       {
+        "id": "p5",
+        "text": "Strongly agree",
+        "recode": "5"
+       }
+      ],
+      "rows": [
+       {
+        "id": "r1",
+        "text": "I trust the findings of scientific research."
+       },
+       {
+        "id": "r2",
+        "text": "Scientists generally act in the public interest."
+       },
+       {
+        "id": "r3",
+        "text": "Science improves our lives."
+       },
+       {
+        "id": "r4",
+        "text": "Scientific claims cannot be trusted. (reverse)"
+       },
+       {
+        "id": "r5",
+        "text": "Scientists often hide the truth. (reverse)"
+       },
+       {
+        "id": "r6",
+        "text": "Science is mostly opinion. (reverse)"
+       }
+      ],
+      "sourceQuestionId": "pre_science_1"
+     },
+     {
+      "id": "q_pol",
+      "type": "MC",
+      "text": "Generally, how would you describe your political views?",
+      "tag": "ideology",
+      "multiple": false,
+      "required": true,
+      "choices": [
+       {
+        "id": "i1",
+        "text": "Liberal",
+        "recode": "1"
+       },
+       {
+        "id": "i2",
+        "text": "Moderate",
+        "recode": "2"
+       },
+       {
+        "id": "i3",
+        "text": "Conservative",
+        "recode": "3"
+       }
+      ],
+      "rows": [],
+      "sourceQuestionId": "ideology"
+     }
+    ]
+   },
+   {
+    "id": "b_ctrl",
+    "title": "Control",
+    "questions": [
+     {
+      "id": "q_ctrl",
+      "type": "DB",
+      "text": "Please continue to the next page.",
+      "tag": "ctrl_text",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_sv",
+    "title": "Science video",
+    "questions": [
+     {
+      "id": "q_sv",
+      "type": "DB",
+      "text": "Please watch this clip. {{ed:sv_stim}}",
+      "tag": "sv_display",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_st",
+    "title": "Science text",
+    "questions": [
+     {
+      "id": "q_st",
+      "type": "DB",
+      "text": "Please read: Science is part of every day. When you check the weather, use your phone, or take medicine, you rely on tested ideas that scientists have checked and improved over time.",
+      "tag": "st_display",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_nv",
+    "title": "Neutral video",
+    "questions": [
+     {
+      "id": "q_nv",
+      "type": "DB",
+      "text": "Please watch this clip. {{ed:nv_stim}}",
+      "tag": "nv_display",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_nt",
+    "title": "Neutral text",
+    "questions": [
+     {
+      "id": "q_nt",
+      "type": "DB",
+      "text": "Please read: People start their day in many ways. Some make coffee, walk to a bus stop, or water plants. By evening many are cooking dinner, calling a friend, or reading a book.",
+      "tag": "nt_display",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_post",
+    "title": "Outcome",
+    "questions": [
+     {
+      "id": "q_post",
+      "type": "Matrix",
+      "text": "How much do you agree with each statement about science?",
+      "tag": "post_trust_items",
+      "multiple": false,
+      "required": true,
+      "choices": [
+       {
+        "id": "o1",
+        "text": "Strongly disagree",
+        "recode": "1"
+       },
+       {
+        "id": "o2",
+        "text": "Disagree",
+        "recode": "2"
+       },
+       {
+        "id": "o3",
+        "text": "Neutral",
+        "recode": "3"
+       },
+       {
+        "id": "o4",
+        "text": "Agree",
+        "recode": "4"
+       },
+       {
+        "id": "o5",
+        "text": "Strongly agree",
+        "recode": "5"
+       }
+      ],
+      "rows": [
+       {
+        "id": "r1",
+        "text": "I trust the findings of scientific research."
+       },
+       {
+        "id": "r2",
+        "text": "Scientists generally act in the public interest."
+       },
+       {
+        "id": "r3",
+        "text": "Science improves our lives."
+       },
+       {
+        "id": "r4",
+        "text": "Scientific claims cannot be trusted. (reverse)"
+       },
+       {
+        "id": "r5",
+        "text": "Scientists often hide the truth. (reverse)"
+       },
+       {
+        "id": "r6",
+        "text": "Science is mostly opinion. (reverse)"
+       }
+      ],
+      "sourceQuestionId": "post_science_1"
+     },
+     {
+      "id": "q_att",
+      "type": "MC",
+      "text": "How much attention did you pay to the previous page?",
+      "tag": "attention",
+      "multiple": false,
+      "required": true,
+      "choices": [
+       {
+        "id": "a1",
+        "text": "None",
+        "recode": "1"
+       },
+       {
+        "id": "a2",
+        "text": "Some",
+        "recode": "2"
+       },
+       {
+        "id": "a3",
+        "text": "A lot",
+        "recode": "3"
+       }
+      ],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_debrief",
+    "title": "Debrief",
+    "questions": [
+     {
+      "id": "q_debrief",
+      "type": "DB",
+      "text": "Thank you. This study tested how different short messages affect attitudes toward science. The neutral messages were included for comparison. No message was intended to mislead you.",
+      "tag": "debrief",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   }
+  ],
+  "flow": [
+   {
+    "id": "n_consent",
+    "type": "block",
+    "label": "Consent",
+    "children": [],
+    "blockId": "b_consent",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_end",
+    "type": "end",
+    "label": "End non-consent",
+    "children": [],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_br",
+    "type": "branch",
+    "label": "If no consent",
+    "children": [
+     "n_end"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "q_consent",
+    "choiceId": "no",
+    "operator": "selected"
+   },
+   {
+    "id": "n_pre",
+    "type": "block",
+    "label": "Pre",
+    "children": [],
+    "blockId": "b_pre",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "r1",
+    "type": "randomizer",
+    "label": "Arms",
+    "children": [
+     "arm_ctrl",
+     "arm_sv",
+     "arm_st",
+     "arm_nv",
+     "arm_nt"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "arm_ctrl",
+    "type": "group",
+    "label": "Control",
+    "children": [
+     "e_ctrl",
+     "n_ctrl"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "e_ctrl",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "control",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_ctrl",
+    "type": "block",
+    "label": "Control block",
+    "children": [],
+    "blockId": "b_ctrl",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "arm_sv",
+    "type": "group",
+    "label": "Science video",
+    "children": [
+     "e_sv",
+     "e_svs",
+     "n_sv"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "e_sv",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "science_video",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "e_svs",
+    "type": "embedded",
+    "label": "stim",
+    "children": [],
+    "blockId": "",
+    "field": "sv_stim",
+    "value": "[VIDEO: 29-second video showing everyday scenes of people relying on science and technology across a day, with narration; 29 seconds]",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_sv",
+    "type": "block",
+    "label": "Science video block",
+    "children": [],
+    "blockId": "b_sv",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "arm_st",
+    "type": "group",
+    "label": "Science text",
+    "children": [
+     "e_st",
+     "n_st"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "e_st",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "science_text",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_st",
+    "type": "block",
+    "label": "Science text block",
+    "children": [],
+    "blockId": "b_st",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "arm_nv",
+    "type": "group",
+    "label": "Neutral video",
+    "children": [
+     "e_nv",
+     "e_nvs",
+     "n_nv"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "e_nv",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "neutral_video",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "e_nvs",
+    "type": "embedded",
+    "label": "stim",
+    "children": [],
+    "blockId": "",
+    "field": "nv_stim",
+    "value": "[VIDEO: 29-second video showing everyday scenes of people making coffee, walking and cooking, with matching narration and no mention of science; 29 seconds]",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_nv",
+    "type": "block",
+    "label": "Neutral video block",
+    "children": [],
+    "blockId": "b_nv",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "arm_nt",
+    "type": "group",
+    "label": "Neutral text",
+    "children": [
+     "e_nt",
+     "n_nt"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "e_nt",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "neutral_text",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_nt",
+    "type": "block",
+    "label": "Neutral text block",
+    "children": [],
+    "blockId": "b_nt",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_post",
+    "type": "block",
+    "label": "Post",
+    "children": [],
+    "blockId": "b_post",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_deb",
+    "type": "block",
+    "label": "Debrief",
+    "children": [],
+    "blockId": "b_debrief",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   }
+  ],
+  "roots": [
+   "n_consent",
+   "n_br",
+   "n_pre",
+   "r1",
+   "n_post",
+   "n_deb"
+  ],
+  "assumptions": [
+   "Power: about 1000 per arm detects 0.063 at 80% power (observed effect 0.063, SE about 0.025 at n about 900), so about 5000 total across five arms.",
+   "Platform: online panel such as Lucid, about 8 minutes, compensation per panel standard.",
+   "Primary analysis is ANCOVA on pre-trust with Holm correction over planned contrasts.",
+   "Neutral stimuli are matched to science stimuli on length and production style."
+  ],
+  "unresolved": [
+   "The actual video files and final text wording must be produced by the research team.",
+   "IRB approval number and compensation amount.",
+   "Pre-registration of the contrasts."
+  ],
+  "evidence": [
+   {
+    "id": "e1",
+    "title": "Source study package",
+    "url": "https://github.com/yrvelez/scientific-trust-messages",
+    "claim": "the source study this extension builds on",
+    "excerpt": "",
+    "origin": "supplied"
+   },
+   {
+    "id": "e2",
+    "title": "Pre-registration of the source study",
+    "url": "https://osf.io/5yvh9",
+    "claim": "the registered design and outcomes",
+    "excerpt": "",
+    "origin": "supplied"
+   }
+  ]
+ }
+}

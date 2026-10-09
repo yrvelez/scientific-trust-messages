@@ -1,54 +1,94 @@
 {
  "got_right": [
-  "Pre-registered with documented amendments (assignment algorithm, Lin covariate adjustment), so the 32-arm comparison against one control is confirmatory, not post hoc.",
-  "Unusually broad stimulus set (videos, text, images, memes, many student-made) tested in one pool with a shared control (mean trust 3.69, n=664), which allows direct comparison of message formats.",
-  "Lin-adjusted, inverse-probability-weighted models with HC2 errors respect the adaptive assignment and gain precision from pre-treatment trust.",
-  "The strongest result, the 'Can You Trust Science Too Much?' video lowering trust by 0.17 (95% CI [-0.26,-0.08], p=0.0002), is a clear backfire signal that survives scrutiny better than the small positives."
+  "Pre-registered design with documented amendments (assignment algorithm, Lin covariate adjustment) and a pure control, so each of the 32 messages is a clean randomized contrast.",
+  "Broad stimulus set (videos, text, memes, posters, infographics), including student-made messages, with a pre-treatment trust covariate that tightens intervals (SEs of about 0.025-0.046).",
+  "Honest reporting: non-significant arms are called inconclusive, and the multiplicity and small-arm caveats are stated.",
+  "The student-made videos 'Science through the day' (n=921) and 'Science in everyday life' (n=853) were the best-powered arms and gave consistent estimates (0.063 each), so they are the most credible positive result."
  ],
  "why_it_did_not_land": [
   {
    "cause": "power",
-   "detail": "Adaptive assignment left most arms near 120-180 respondents, so per-arm intervals are about ±0.15 and cannot detect effects of the size seen (0.06). Three of the five 'significant' arms are small positives whose intervals almost reach zero.",
-   "evidence": "Arm n of 116-180 for most arms versus 853-921 for videos 15 and 20; Video 12 CI [0.005, 0.123], p=0.034."
+   "detail": "Adaptive assignment left most arms at about 116-180 respondents against a control of 664. Intervals are too wide to rule out effects of 0.1 for most arms, and the positive effects are close to the noise floor.",
+   "evidence": "Arm n of 116-180 with SEs of 0.035-0.056. The control has n=664, and the peer-review video has p=0.034."
   },
   {
    "cause": "analysis",
-   "detail": "Thirty-two uncorrected two-sided tests were run. Only the 'Can You Trust Science Too Much?' video clearly survives a Bonferroni threshold (0.05/32≈0.0016). The other four, p of 0.009 to 0.034, are consistent with chance.",
-   "evidence": "Five of 32 arms at p<0.05 against about 1.6 expected under the null; p=0.0002, 0.0093, 0.0104, 0.0116, 0.0341."
-  },
-  {
-   "cause": "design",
-   "detail": "Each arm bundles content, format, length and source, and several student videos have no recorded title. Even a real effect cannot be attributed to any feature of the message.",
-   "evidence": "Video 12, Video 15 and Student-made video (20) are untitled or minimally described uploads."
+   "detail": "Thirty-two uncorrected two-sided tests were run, and 5 reached p<0.05, roughly the 1.6 expected by chance. Only the 'Can You Trust Science Too Much?' video (p=0.0002) clearly survives a Bonferroni threshold of about 0.0016.",
+   "evidence": "H1 table: p=0.034, 0.012, 0.009 and 0.010 for the other four significant arms."
   },
   {
    "cause": "measurement",
-   "detail": "Trust is measured once, immediately after exposure, on a 5-point scale, and the single-item check shows almost no signal. The effects are small relative to the scale and durability is unknown.",
-   "evidence": "Control mean 3.685; positive effects about 0.06; the single-item outcome has only one visible arm (Video 12, p=0.048)."
+   "detail": "Trust is a single post-treatment measure with a ceiling-like control mean of 3.685. Effects of about 0.06 are tiny, and durability is unknown.",
+   "evidence": "Control mean 3.685. Largest effect -0.171. The Limitations section says only immediate trust is observed."
   },
   {
-   "cause": "analysis",
-   "detail": "The pipeline's completers robustness check reused the same 7,803 rows as the main model, so it supplies no robustness evidence. Modelling used 7,803 of 8,572 analysed rows.",
-   "evidence": "E1 shows orig_n = compl_n = 7803 with identical estimates; the checking agent's correction says the same."
+   "cause": "design",
+   "detail": "The arms vary in format, length and content at once, so no active ingredient can be identified. The positive student videos are also short and generic.",
+   "evidence": "Student videos last about 29 s. The negative arms are a limits-of-science video and a 'Powers of Ten' clip."
+  },
+  {
+   "cause": "missing_moderator",
+   "detail": "The exploratory partisan check suggests heterogeneity in at least one arm, but the study was not powered to test it.",
+   "evidence": "E2: the Science in everyday life interaction with Republican identification is 0.165 (p=0.004). Climate skeptic converts is 0.178 (p=0.053). 'Can You Trust Science Too Much?' is 0.191 (p=0.173)."
   }
  ],
- "debates": [],
+ "debates": [
+  {
+   "id": "D1",
+   "label": "Can brief messages move trust in science?",
+   "position_a": "Brief, well-designed messages and behavioural interventions can shift public attitudes toward science.",
+   "position_b": "Entrenched beliefs resist correction, so single brief messages leave trust largely unchanged relative to control.",
+   "what_this_study_says": "The evidence leans toward position b. Most of the 32 messages are inconclusive, and the significant effects are at most 0.06 points up and 0.17 down. Small positive shifts from short student videos cannot be ruled out, but they are not robust to multiplicity.",
+   "works": [
+    {
+     "id": "10.1038/s41562-020-0884-z",
+     "side": "a"
+    },
+    {
+     "id": "10.1038/s44159-021-00006-y",
+     "side": "b"
+    },
+    {
+     "id": "10.1093/pan/mpr057",
+     "side": "neutral"
+    }
+   ]
+  }
+ ],
  "briefs": [
   {
    "id": "advance_design",
    "kind_legacy": "mechanism",
    "mode": "survey_experiment",
-   "title": "Decomposing the 'trust science too much' backfire",
-   "question": "Which feature of the 'Can You Trust Science Too Much?' video (its fallibility framing, its format, or its source) lowers trust in science?",
-   "why_this_fixes_the_failure": "Addresses the design and power causes: it replaces bundled stimuli with a manipulated mechanism and concentrates sample on the one robust effect.",
-   "debate": null,
+   "title": "Replicating the short student videos with a delayed follow-up and a behavioural outcome",
+   "question": "Do short everyday-science student videos raise trust in science, and does the effect persist a week later and carry over to a behavioural choice?",
+   "why_this_fixes_the_failure": "Addresses power and measurement. It concentrates the sample on the two best-supported arms plus the peer-review video, tests them against control in a confirmatory design, and adds a delayed and a behavioural outcome.",
+   "debate": "D1",
    "addresses": [],
-   "design_sketch": "Randomise respondents to the original video, a text transcript of it, a version without the fallibility segment, a matched-length neutral video, and a pure control. Outcome is the same 5-point trust measure, with pre-treatment trust as a covariate and a delayed re-measure after about one week. Sample is US adults from an online panel, with the same exclusions as the original.",
+   "design_sketch": "Four arms: Science through the day, Science in everyday life, the peer-review video, and a pure control. Fixed equal allocation, with pre-treatment trust measured. Outcomes are immediate trust, trust at 7 days, and a behavioural choice (such as donating a bonus to a science organisation or choosing a science-based news article). Analysis is registered, with Holm correction across the three treatment contrasts.",
    "moderator_or_condition": null,
    "power_target": {
-    "n_per_arm": 560,
-    "mde": 0.12,
-    "basis": "Observed effect of -0.17 for the video; the pooled SD implied by the SEs is about 0.9. The ~0.12 MDE allows for shrinkage of the original estimate, and the power table gives no contrasts."
+    "n_per_arm": 4000,
+    "mde": 0.03,
+    "basis": "Observed effect of about 0.063 (SE 0.025 at n=853-921). The power table was empty, so the sample size is a back-of-envelope estimate of about 1,000 per arm for 80% power at 0.063. 4,000 per arm gives headroom to detect effects of about half that size and for attrition in the delayed wave."
+   },
+   "needs_qsf": true
+  },
+  {
+   "id": "theoretical_debate",
+   "kind_legacy": "alternative",
+   "mode": "survey_experiment",
+   "title": "Format versus content: separating persuasion from salience",
+   "question": "Do short messages shift trust through their content or through format and salience alone?",
+   "why_this_fixes_the_failure": "Addresses design confounding. It tests whether the small gains reflect content or merely an attention cue, which discriminates between the brief-messages-work and beliefs-resist positions.",
+   "debate": "D1",
+   "addresses": [],
+   "design_sketch": "A 2x2 factorial. One factor is content (everyday-science framing versus neutral content of the same length). The other is format (29-second video versus the same text). A pure control is included. The outcome is post-treatment trust with pre-trust covariates. If the effects are due to content, only the science-framing cells should move trust.",
+   "moderator_or_condition": null,
+   "power_target": {
+    "n_per_arm": 1000,
+    "mde": 0.063,
+    "basis": "Observed effect of 0.063 with SE about 0.025 at n of about 900. Detecting this at 80% power needs about 1,000 per cell."
    },
    "needs_qsf": true
   },
@@ -56,35 +96,21 @@
    "id": "generalizability_conditional",
    "kind_legacy": "boundary",
    "mode": "survey_experiment",
-   "title": "Do the small positive videos replicate across samples and baseline trust?",
-   "question": "Do the three small positive video effects (about +0.06) replicate in a fresh sample, and do they differ by baseline trust or partisanship?",
-   "why_this_fixes_the_failure": "Addresses the multiplicity and sample causes: a confirmatory replication of the three positive arms with a single correction, plus a test of where the effect holds.",
-   "debate": null,
+   "title": "Does partisanship moderate the student-video effect?",
+   "question": "Do everyday-science videos raise trust more among Republicans than among non-Republicans?",
+   "why_this_fixes_the_failure": "Addresses the missing moderator and the sample. The exploratory interaction of 0.165 in the Science in everyday life arm is untested confirmatory, and partisan effects bear on where the result holds.",
+   "debate": "D1",
    "addresses": [],
-   "design_sketch": "Run videos 12, 15 and 20, the strongest-effect comparison video, and a control in a new panel, preferably a different vendor from Lucid. Pre-register three directional tests, with the interaction of arm and pre-treatment trust (low versus high) and of arm and party identification. Add a title and a content coding for each student video so features can be linked to effects.",
-   "moderator_or_condition": "Baseline trust in science (low vs high) and party identification, across a different panel vendor.",
+   "design_sketch": "Run the same videos versus control, with sampling quotas on partisanship (about 50% Republican-leaning) and also on a second panel to check the Lucid sample. The interaction between arm and Republican identification is registered as the primary test.",
+   "moderator_or_condition": "Republican versus non-Republican identification, and a second sample source beyond Lucid",
    "power_target": {
-    "n_per_arm": 4400,
-    "mde": 0.06,
-    "basis": "Observed +0.06 effects for videos 12, 15 and 20, with SD about 0.9; 80% power at alpha 0.05 needs roughly 3,500-4,400 per arm. A single contrast is not computed in the power table."
+    "n_per_arm": 2500,
+    "mde": 0.1,
+    "basis": "Exploratory interaction estimate of 0.165 with SE 0.057 (E2). Interactions need roughly four times the main-effect sample, and the effect is probably inflated, so the target is set for 0.1."
    },
    "needs_qsf": true
-  },
-  {
-   "id": "data_to_collect",
-   "kind_legacy": null,
-   "mode": "data_collection",
-   "title": "Archive stimuli and arm-level assignment data",
-   "question": "Can the untitled student videos and the adaptive assignment log be documented well enough to attribute effects to content?",
-   "why_this_fixes_the_failure": "Addresses the measurement and design causes: untitled stimuli cannot be interpreted or replicated.",
-   "debate": null,
-   "addresses": [],
-   "design_sketch": "Recover the files for videos 8, 10, 12, 15, 25 and 32. Have two coders rate each on length, tone, presence of an expert, and fallibility framing, using the TIDieR checklist. Publish the assignment probabilities by wave so inverse-probability weights can be audited.",
-   "moderator_or_condition": null,
-   "power_target": null,
-   "needs_qsf": false
   }
  ],
- "verdict": "A follow-up is worth running, but narrowly. Only the 'Can You Trust Science Too Much?' video backfire (-0.17, p=0.0002) is robust to multiplicity. The three +0.06 effects are fragile, and the pipeline's completers check added no evidence. The retrieved literature is reporting-standards material, so no live empirical debate is visible and none is invented. Run the backfire decomposition first, since it has the largest effect and an explicit mechanism. Then run the larger replication of the positive videos, with stimulus documentation (the data brief) done in parallel at little cost.",
+ "verdict": "A follow-up is worth running, but a narrow one. The study's main result is that most messages do nothing detectable. Only the 'Can You Trust Science Too Much?' video survives multiplicity, and its negative effect (-0.171) is more credible than the gains of about 0.06. Run the replication of the two student videos with a delayed and a behavioural outcome first, because it tests the only consistent positive signal at adequate power. Then run the format-versus-content test and the partisanship moderation test. The literature retrieved is thin, so the debate is only loosely anchored.",
  "model": "anthropic/claude-sonnet-5.5"
 }

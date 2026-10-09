@@ -1,7 +1,7 @@
 {
  "SurveyEntry": {
   "SurveyID": "SV_filedrawer00000",
-  "SurveyName": "Decomposing the 'trust science too much' backfire (extension of: Can Trust in Science Be Improved? A",
+  "SurveyName": "Short student videos: confirmatory test with 7-day follow-up and behavioural choice (extension of: C",
   "SurveyDescription": null,
   "SurveyOwnerID": "UR_filedrawer00000",
   "SurveyBrandID": "",
@@ -11,9 +11,9 @@
   "SurveyStatus": "Inactive",
   "SurveyStartDate": "0000-00-00 00:00:00",
   "SurveyExpirationDate": "0000-00-00 00:00:00",
-  "SurveyCreationDate": "2026-10-09 12:53:04",
+  "SurveyCreationDate": "2026-10-09 13:06:26",
   "CreatorID": "UR_filedrawer00000",
-  "LastModified": "2026-10-09 12:53:04",
+  "LastModified": "2026-10-09 13:06:26",
   "LastAccessed": "0000-00-00 00:00:00",
   "LastActivated": "0000-00-00 00:00:00",
   "Deleted": null
@@ -39,7 +39,7 @@
     },
     {
      "Type": "Standard",
-     "Description": "Pre-treatment",
+     "Description": "Pre-treatment trust",
      "ID": "BL_b_pre",
      "BlockElements": [
       {
@@ -50,8 +50,8 @@
     },
     {
      "Type": "Standard",
-     "Description": "Original video",
-     "ID": "BL_b_video",
+     "Description": "Control",
+     "ID": "BL_b_control",
      "BlockElements": [
       {
        "Type": "Question",
@@ -61,8 +61,8 @@
     },
     {
      "Type": "Standard",
-     "Description": "Transcript",
-     "ID": "BL_b_text",
+     "Description": "Science through the day",
+     "ID": "BL_b_day",
      "BlockElements": [
       {
        "Type": "Question",
@@ -72,8 +72,8 @@
     },
     {
      "Type": "Standard",
-     "Description": "No fallibility video",
-     "ID": "BL_b_nofall",
+     "Description": "Science in everyday life",
+     "ID": "BL_b_everyday",
      "BlockElements": [
       {
        "Type": "Question",
@@ -83,8 +83,8 @@
     },
     {
      "Type": "Standard",
-     "Description": "Neutral video",
-     "ID": "BL_b_neutral",
+     "Description": "Peer review",
+     "ID": "BL_b_peer",
      "BlockElements": [
       {
        "Type": "Question",
@@ -94,23 +94,26 @@
     },
     {
      "Type": "Standard",
-     "Description": "Control",
-     "ID": "BL_b_control",
+     "Description": "Immediate outcomes",
+     "ID": "BL_b_out",
      "BlockElements": [
       {
        "Type": "Question",
        "QuestionID": "QID7"
-      }
-     ]
-    },
-    {
-     "Type": "Standard",
-     "Description": "Outcome",
-     "ID": "BL_b_post",
-     "BlockElements": [
+      },
+      {
+       "Type": "Page Break"
+      },
       {
        "Type": "Question",
        "QuestionID": "QID8"
+      },
+      {
+       "Type": "Page Break"
+      },
+      {
+       "Type": "Question",
+       "QuestionID": "QID9"
       }
      ]
     },
@@ -121,7 +124,18 @@
      "BlockElements": [
       {
        "Type": "Question",
-       "QuestionID": "QID9"
+       "QuestionID": "QID10"
+      }
+     ]
+    },
+    {
+     "Type": "Standard",
+     "Description": "Seven-day follow-up",
+     "ID": "BL_b_w2",
+     "BlockElements": [
+      {
+       "Type": "Question",
+       "QuestionID": "QID11"
       }
      ]
     },
@@ -191,183 +205,11 @@
        {
         "Type": "Group",
         "FlowID": "FL_7",
-        "Description": "Video",
-        "Flow": [
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_8",
-          "EmbeddedData": [
-           {
-            "Description": "condition",
-            "Type": "Custom",
-            "Field": "condition",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "video"
-           }
-          ]
-         },
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_9",
-          "EmbeddedData": [
-           {
-            "Description": "vid1",
-            "Type": "Custom",
-            "Field": "vid1",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "[VIDEO TO SUPPLY: vlogbrothers 'Can You Trust Science Too Much?', full video, about 10 minutes]"
-           }
-          ]
-         },
-         {
-          "Type": "Standard",
-          "ID": "BL_b_video",
-          "FlowID": "FL_10",
-          "Autofill": []
-         }
-        ]
-       },
-       {
-        "Type": "Group",
-        "FlowID": "FL_11",
-        "Description": "Text",
-        "Flow": [
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_12",
-          "EmbeddedData": [
-           {
-            "Description": "condition",
-            "Type": "Custom",
-            "Field": "condition",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "transcript"
-           }
-          ]
-         },
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_13",
-          "EmbeddedData": [
-           {
-            "Description": "txt1",
-            "Type": "Custom",
-            "Field": "txt1",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "[IMAGE TO SUPPLY: full text transcript of the video, plain text on a white page]"
-           }
-          ]
-         },
-         {
-          "Type": "Standard",
-          "ID": "BL_b_text",
-          "FlowID": "FL_14",
-          "Autofill": []
-         }
-        ]
-       },
-       {
-        "Type": "Group",
-        "FlowID": "FL_15",
-        "Description": "No fallibility",
-        "Flow": [
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_16",
-          "EmbeddedData": [
-           {
-            "Description": "condition",
-            "Type": "Custom",
-            "Field": "condition",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "nofall"
-           }
-          ]
-         },
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_17",
-          "EmbeddedData": [
-           {
-            "Description": "vid2",
-            "Type": "Custom",
-            "Field": "vid2",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "[VIDEO TO SUPPLY: same video with the fallibility segment cut, shorter, same speaker]"
-           }
-          ]
-         },
-         {
-          "Type": "Standard",
-          "ID": "BL_b_nofall",
-          "FlowID": "FL_18",
-          "Autofill": []
-         }
-        ]
-       },
-       {
-        "Type": "Group",
-        "FlowID": "FL_19",
-        "Description": "Neutral",
-        "Flow": [
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_20",
-          "EmbeddedData": [
-           {
-            "Description": "condition",
-            "Type": "Custom",
-            "Field": "condition",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "neutral"
-           }
-          ]
-         },
-         {
-          "Type": "EmbeddedData",
-          "FlowID": "FL_21",
-          "EmbeddedData": [
-           {
-            "Description": "vid3",
-            "Type": "Custom",
-            "Field": "vid3",
-            "VariableType": "String",
-            "DataVisibility": [],
-            "AnalyzeText": false,
-            "Value": "[VIDEO TO SUPPLY: neutral explainer about an unrelated everyday topic, length matched to the original]"
-           }
-          ]
-         },
-         {
-          "Type": "Standard",
-          "ID": "BL_b_neutral",
-          "FlowID": "FL_22",
-          "Autofill": []
-         }
-        ]
-       },
-       {
-        "Type": "Group",
-        "FlowID": "FL_23",
         "Description": "Control",
         "Flow": [
          {
           "Type": "EmbeddedData",
-          "FlowID": "FL_24",
+          "FlowID": "FL_8",
           "EmbeddedData": [
            {
             "Description": "condition",
@@ -383,7 +225,136 @@
          {
           "Type": "Standard",
           "ID": "BL_b_control",
-          "FlowID": "FL_25",
+          "FlowID": "FL_9",
+          "Autofill": []
+         }
+        ]
+       },
+       {
+        "Type": "Group",
+        "FlowID": "FL_10",
+        "Description": "Day",
+        "Flow": [
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_11",
+          "EmbeddedData": [
+           {
+            "Description": "condition",
+            "Type": "Custom",
+            "Field": "condition",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "day"
+           }
+          ]
+         },
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_12",
+          "EmbeddedData": [
+           {
+            "Description": "video_day",
+            "Type": "Custom",
+            "Field": "video_day",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "[VIDEO TO SUPPLY: student-made video showing how people interact with science and technology over the course of their day, about 30 seconds]"
+           }
+          ]
+         },
+         {
+          "Type": "Standard",
+          "ID": "BL_b_day",
+          "FlowID": "FL_13",
+          "Autofill": []
+         }
+        ]
+       },
+       {
+        "Type": "Group",
+        "FlowID": "FL_14",
+        "Description": "Everyday",
+        "Flow": [
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_15",
+          "EmbeddedData": [
+           {
+            "Description": "condition",
+            "Type": "Custom",
+            "Field": "condition",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "everyday"
+           }
+          ]
+         },
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_16",
+          "EmbeddedData": [
+           {
+            "Description": "video_everyday",
+            "Type": "Custom",
+            "Field": "video_everyday",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "[VIDEO TO SUPPLY: student-made video on science and technology always present in our lives, 29 seconds]"
+           }
+          ]
+         },
+         {
+          "Type": "Standard",
+          "ID": "BL_b_everyday",
+          "FlowID": "FL_17",
+          "Autofill": []
+         }
+        ]
+       },
+       {
+        "Type": "Group",
+        "FlowID": "FL_18",
+        "Description": "Peer",
+        "Flow": [
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_19",
+          "EmbeddedData": [
+           {
+            "Description": "condition",
+            "Type": "Custom",
+            "Field": "condition",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "peer"
+           }
+          ]
+         },
+         {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_20",
+          "EmbeddedData": [
+           {
+            "Description": "video_peer",
+            "Type": "Custom",
+            "Field": "video_peer",
+            "VariableType": "String",
+            "DataVisibility": [],
+            "AnalyzeText": false,
+            "Value": "[VIDEO TO SUPPLY: student-made video 'Why should we trust science?' on peer review and expert credentials over a PubMed screen recording, about 2 minutes]"
+           }
+          ]
+         },
+         {
+          "Type": "Standard",
+          "ID": "BL_b_peer",
+          "FlowID": "FL_21",
           "Autofill": []
          }
         ]
@@ -392,19 +363,25 @@
      },
      {
       "Type": "Standard",
-      "ID": "BL_b_post",
-      "FlowID": "FL_26",
+      "ID": "BL_b_out",
+      "FlowID": "FL_22",
       "Autofill": []
      },
      {
       "Type": "Standard",
       "ID": "BL_b_debrief",
-      "FlowID": "FL_27",
+      "FlowID": "FL_23",
+      "Autofill": []
+     },
+     {
+      "Type": "Standard",
+      "ID": "BL_b_w2",
+      "FlowID": "FL_24",
       "Autofill": []
      }
     ],
     "Properties": {
-     "Count": 27,
+     "Count": 24,
      "RemovedFieldsets": []
     }
    }
@@ -417,7 +394,7 @@
    "TertiaryAttribute": null,
    "Payload": {
     "PreviewType": "Brand",
-    "PreviewID": "87d57bc2-bc9b-4bab-99fc-70ccdc8c3a12"
+    "PreviewID": "a68105a8-f231-48e4-a89f-c4a75ca3bbe3"
    }
   },
   {
@@ -435,7 +412,7 @@
    "SurveyID": "SV_filedrawer00000",
    "Element": "QC",
    "PrimaryAttribute": "Survey Question Count",
-   "SecondaryAttribute": "9",
+   "SecondaryAttribute": "11",
    "TertiaryAttribute": null,
    "Payload": null
   },
@@ -485,7 +462,7 @@
     "ValidationMessage": null,
     "PreviousButton": "",
     "NextButton": "",
-    "SurveyTitle": "Decomposing the 'trust science too much' backfire (extension of: Can Trust in Science Be Improved? A",
+    "SurveyTitle": "Short student videos: confirmatory test with 7-day follow-up and behavioural choice (extension of: C",
     "SkinLibrary": "Qualtrics",
     "SkinType": "templated",
     "Skin": {
@@ -494,7 +471,7 @@
      "overrides": null
     },
     "NewScoring": 1,
-    "SurveyMetaDescription": "US adults complete pre-treatment trust items, are randomised to one of five arms, then answer the..."
+    "SurveyMetaDescription": "US adults complete pre-treatment trust items, are randomised to one of three videos or a control..."
    }
   },
   {
@@ -512,10 +489,10 @@
    "SurveyID": "SV_filedrawer00000",
    "Element": "SQ",
    "PrimaryAttribute": "QID1",
-   "SecondaryAttribute": "You are invited to take part in a research survey about attitudes toward science",
+   "SecondaryAttribute": "This is a research survey in two parts, today and about one week later. You will",
    "TertiaryAttribute": null,
    "Payload": {
-    "QuestionText": "You are invited to take part in a research survey about attitudes toward science. It takes about 10 minutes and there is a short follow-up in about one week. Participation is voluntary. Do you consent to participate?",
+    "QuestionText": "This is a research survey in two parts, today and about one week later. You will be invited to the second part by message. Participation is voluntary. Do you consent to take part?",
     "DataExportTag": "consent",
     "DataVisibility": {
      "Private": false,
@@ -524,7 +501,7 @@
     "Configuration": {
      "QuestionDescriptionOption": "UseText"
     },
-    "QuestionDescription": "You are invited to take part in a research survey about attitudes toward science. It takes about...",
+    "QuestionDescription": "This is a research survey in two parts, today and about one week later. You will be invited to th...",
     "Validation": {
      "Settings": {
       "ForceResponse": "ON",
@@ -561,10 +538,10 @@
    "SurveyID": "SV_filedrawer00000",
    "Element": "SQ",
    "PrimaryAttribute": "QID2",
-   "SecondaryAttribute": "How much do you agree with each statement?",
+   "SecondaryAttribute": "How much do you agree with each statement? (Items 4-6 are negatively worded and ",
    "TertiaryAttribute": null,
    "Payload": {
-    "QuestionText": "How much do you agree with each statement?",
+    "QuestionText": "How much do you agree with each statement? (Items 4-6 are negatively worded and reverse-coded in analysis.)",
     "DataExportTag": "pre_trust_items",
     "DataVisibility": {
      "Private": false,
@@ -578,7 +555,7 @@
      "WhiteSpace": "OFF",
      "MobileFirst": true
     },
-    "QuestionDescription": "How much do you agree with each statement?",
+    "QuestionDescription": "How much do you agree with each statement? (Items 4-6 are negatively worded and reverse-coded in...",
     "Validation": {
      "Settings": {
       "ForceResponse": "ON",
@@ -596,22 +573,22 @@
     "ChoiceDataExportTags": false,
     "Choices": {
      "1": {
-      "Display": "I trust scientists to tell the truth about their findings."
+      "Display": "Item 1 of the registered trust-in-science scale"
      },
      "2": {
-      "Display": "Science benefits society."
+      "Display": "Item 2 of the registered trust-in-science scale"
      },
      "3": {
-      "Display": "I have confidence in scientific research."
+      "Display": "Item 3 of the registered trust-in-science scale"
      },
      "4": {
-      "Display": "Scientists often cannot be trusted."
+      "Display": "Item 4 of the registered trust-in-science scale (negative)"
      },
      "5": {
-      "Display": "Science does more harm than good."
+      "Display": "Item 5 of the registered trust-in-science scale (negative)"
      },
      "6": {
-      "Display": "I am skeptical of scientific claims."
+      "Display": "Item 6 of the registered trust-in-science scale (negative)"
      }
     },
     "ChoiceOrder": [
@@ -654,138 +631,6 @@
    "SurveyID": "SV_filedrawer00000",
    "Element": "SQ",
    "PrimaryAttribute": "QID3",
-   "SecondaryAttribute": "Please watch this video in full. {{ed:vid1}}",
-   "TertiaryAttribute": null,
-   "Payload": {
-    "QuestionText": "Please watch this video in full. ${e://Field/vid1}",
-    "DataVisibility": {
-     "Private": false,
-     "Hidden": false
-    },
-    "Configuration": {
-     "QuestionDescriptionOption": "UseText"
-    },
-    "QuestionDescription": "Please watch this video in full. ${e://Field/vid1}",
-    "Validation": {
-     "Settings": {
-      "Type": "None"
-     }
-    },
-    "Language": [],
-    "QuestionID": "QID3",
-    "QuestionType": "DB",
-    "Selector": "TB",
-    "DefaultChoices": false,
-    "ChoiceOrder": [],
-    "GradingData": [],
-    "NextChoiceId": 1,
-    "NextAnswerId": 1,
-    "DataExportTag": "q_v"
-   }
-  },
-  {
-   "SurveyID": "SV_filedrawer00000",
-   "Element": "SQ",
-   "PrimaryAttribute": "QID4",
-   "SecondaryAttribute": "Please read this text carefully. {{ed:txt1}}",
-   "TertiaryAttribute": null,
-   "Payload": {
-    "QuestionText": "Please read this text carefully. ${e://Field/txt1}",
-    "DataVisibility": {
-     "Private": false,
-     "Hidden": false
-    },
-    "Configuration": {
-     "QuestionDescriptionOption": "UseText"
-    },
-    "QuestionDescription": "Please read this text carefully. ${e://Field/txt1}",
-    "Validation": {
-     "Settings": {
-      "Type": "None"
-     }
-    },
-    "Language": [],
-    "QuestionID": "QID4",
-    "QuestionType": "DB",
-    "Selector": "TB",
-    "DefaultChoices": false,
-    "ChoiceOrder": [],
-    "GradingData": [],
-    "NextChoiceId": 1,
-    "NextAnswerId": 1,
-    "DataExportTag": "q_t"
-   }
-  },
-  {
-   "SurveyID": "SV_filedrawer00000",
-   "Element": "SQ",
-   "PrimaryAttribute": "QID5",
-   "SecondaryAttribute": "Please watch this video in full. {{ed:vid2}}",
-   "TertiaryAttribute": null,
-   "Payload": {
-    "QuestionText": "Please watch this video in full. ${e://Field/vid2}",
-    "DataVisibility": {
-     "Private": false,
-     "Hidden": false
-    },
-    "Configuration": {
-     "QuestionDescriptionOption": "UseText"
-    },
-    "QuestionDescription": "Please watch this video in full. ${e://Field/vid2}",
-    "Validation": {
-     "Settings": {
-      "Type": "None"
-     }
-    },
-    "Language": [],
-    "QuestionID": "QID5",
-    "QuestionType": "DB",
-    "Selector": "TB",
-    "DefaultChoices": false,
-    "ChoiceOrder": [],
-    "GradingData": [],
-    "NextChoiceId": 1,
-    "NextAnswerId": 1,
-    "DataExportTag": "q_nf"
-   }
-  },
-  {
-   "SurveyID": "SV_filedrawer00000",
-   "Element": "SQ",
-   "PrimaryAttribute": "QID6",
-   "SecondaryAttribute": "Please watch this video in full. {{ed:vid3}}",
-   "TertiaryAttribute": null,
-   "Payload": {
-    "QuestionText": "Please watch this video in full. ${e://Field/vid3}",
-    "DataVisibility": {
-     "Private": false,
-     "Hidden": false
-    },
-    "Configuration": {
-     "QuestionDescriptionOption": "UseText"
-    },
-    "QuestionDescription": "Please watch this video in full. ${e://Field/vid3}",
-    "Validation": {
-     "Settings": {
-      "Type": "None"
-     }
-    },
-    "Language": [],
-    "QuestionID": "QID6",
-    "QuestionType": "DB",
-    "Selector": "TB",
-    "DefaultChoices": false,
-    "ChoiceOrder": [],
-    "GradingData": [],
-    "NextChoiceId": 1,
-    "NextAnswerId": 1,
-    "DataExportTag": "q_n"
-   }
-  },
-  {
-   "SurveyID": "SV_filedrawer00000",
-   "Element": "SQ",
-   "PrimaryAttribute": "QID7",
    "SecondaryAttribute": "Please continue to the next page.",
    "TertiaryAttribute": null,
    "Payload": {
@@ -804,7 +649,7 @@
      }
     },
     "Language": [],
-    "QuestionID": "QID7",
+    "QuestionID": "QID3",
     "QuestionType": "DB",
     "Selector": "TB",
     "DefaultChoices": false,
@@ -812,13 +657,112 @@
     "GradingData": [],
     "NextChoiceId": 1,
     "NextAnswerId": 1,
-    "DataExportTag": "q_c"
+    "DataExportTag": "q_ctrl"
    }
   },
   {
    "SurveyID": "SV_filedrawer00000",
    "Element": "SQ",
-   "PrimaryAttribute": "QID8",
+   "PrimaryAttribute": "QID4",
+   "SecondaryAttribute": "Please watch this video. {{ed:video_day}}",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Please watch this video. ${e://Field/video_day}",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Please watch this video. ${e://Field/video_day}",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID4",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_day"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID5",
+   "SecondaryAttribute": "Please watch this video. {{ed:video_everyday}}",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Please watch this video. ${e://Field/video_everyday}",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Please watch this video. ${e://Field/video_everyday}",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID5",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_everyday"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID6",
+   "SecondaryAttribute": "Please watch this video. {{ed:video_peer}}",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Please watch this video. ${e://Field/video_peer}",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Please watch this video. ${e://Field/video_peer}",
+    "Validation": {
+     "Settings": {
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID6",
+    "QuestionType": "DB",
+    "Selector": "TB",
+    "DefaultChoices": false,
+    "ChoiceOrder": [],
+    "GradingData": [],
+    "NextChoiceId": 1,
+    "NextAnswerId": 1,
+    "DataExportTag": "q_peer"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID7",
    "SecondaryAttribute": "How much do you agree with each statement?",
    "TertiaryAttribute": null,
    "Payload": {
@@ -845,7 +789,7 @@
      }
     },
     "Language": [],
-    "QuestionID": "QID8",
+    "QuestionID": "QID7",
     "QuestionType": "Matrix",
     "Selector": "Likert",
     "SubSelector": "SingleAnswer",
@@ -854,22 +798,22 @@
     "ChoiceDataExportTags": false,
     "Choices": {
      "1": {
-      "Display": "I trust scientists to tell the truth about their findings."
+      "Display": "Item 1 of the registered trust-in-science scale"
      },
      "2": {
-      "Display": "Science benefits society."
+      "Display": "Item 2 of the registered trust-in-science scale"
      },
      "3": {
-      "Display": "I have confidence in scientific research."
+      "Display": "Item 3 of the registered trust-in-science scale"
      },
      "4": {
-      "Display": "Scientists often cannot be trusted."
+      "Display": "Item 4 of the registered trust-in-science scale (negative)"
      },
      "5": {
-      "Display": "Science does more harm than good."
+      "Display": "Item 5 of the registered trust-in-science scale (negative)"
      },
      "6": {
-      "Display": "I am skeptical of scientific claims."
+      "Display": "Item 6 of the registered trust-in-science scale (negative)"
      }
     },
     "ChoiceOrder": [
@@ -911,11 +855,12 @@
   {
    "SurveyID": "SV_filedrawer00000",
    "Element": "SQ",
-   "PrimaryAttribute": "QID9",
-   "SecondaryAttribute": "Thank you. This study examined how different kinds of messages affect views of s",
+   "PrimaryAttribute": "QID8",
+   "SecondaryAttribute": "You will receive a bonus of $1 for finishing. Would you like to donate it to a s",
    "TertiaryAttribute": null,
    "Payload": {
-    "QuestionText": "Thank you. This study examined how different kinds of messages affect views of science. The videos and text presented real, general discussions of science; none was meant to mislead. You will be invited to a brief follow-up in about one week.",
+    "QuestionText": "You will receive a bonus of $1 for finishing. Would you like to donate it to a science organisation that supports science education, or keep it?",
+    "DataExportTag": "behaviour_donate",
     "DataVisibility": {
      "Private": false,
      "Hidden": false
@@ -923,14 +868,111 @@
     "Configuration": {
      "QuestionDescriptionOption": "UseText"
     },
-    "QuestionDescription": "Thank you. This study examined how different kinds of messages affect views of science. The video...",
+    "QuestionDescription": "You will receive a bonus of $1 for finishing. Would you like to donate it to a science organisati...",
+    "Validation": {
+     "Settings": {
+      "ForceResponse": "ON",
+      "ForceResponseType": "ON",
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID8",
+    "QuestionType": "MC",
+    "Selector": "SAVR",
+    "SubSelector": "TX",
+    "Choices": {
+     "1": {
+      "Display": "Donate the $1"
+     },
+     "2": {
+      "Display": "Keep the $1"
+     }
+    },
+    "ChoiceOrder": [
+     "1",
+     "2"
+    ],
+    "NextChoiceId": 3,
+    "NextAnswerId": 1,
+    "RecodeValues": {
+     "1": "1",
+     "2": "0"
+    }
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID9",
+   "SecondaryAttribute": "Which article would you like to read next?",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Which article would you like to read next?",
+    "DataExportTag": "behaviour_article",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Which article would you like to read next?",
+    "Validation": {
+     "Settings": {
+      "ForceResponse": "ON",
+      "ForceResponseType": "ON",
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID9",
+    "QuestionType": "MC",
+    "Selector": "SAVR",
+    "SubSelector": "TX",
+    "Choices": {
+     "1": {
+      "Display": "A science-based news article"
+     },
+     "2": {
+      "Display": "A sports or entertainment article"
+     }
+    },
+    "ChoiceOrder": [
+     "1",
+     "2"
+    ],
+    "NextChoiceId": 3,
+    "NextAnswerId": 1,
+    "RecodeValues": {
+     "1": "1",
+     "2": "0"
+    }
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID10",
+   "SecondaryAttribute": "Thank you. This study tested whether short videos affect trust in science. The c",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "Thank you. This study tested whether short videos affect trust in science. The control group saw no video. We will invite you to a short follow-up in about one week. Donations will be made as described.",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText"
+    },
+    "QuestionDescription": "Thank you. This study tested whether short videos affect trust in science. The control group saw...",
     "Validation": {
      "Settings": {
       "Type": "None"
      }
     },
     "Language": [],
-    "QuestionID": "QID9",
+    "QuestionID": "QID10",
     "QuestionType": "DB",
     "Selector": "TB",
     "DefaultChoices": false,
@@ -939,6 +981,99 @@
     "NextChoiceId": 1,
     "NextAnswerId": 1,
     "DataExportTag": "q_debrief"
+   }
+  },
+  {
+   "SurveyID": "SV_filedrawer00000",
+   "Element": "SQ",
+   "PrimaryAttribute": "QID11",
+   "SecondaryAttribute": "How much do you agree with each statement?",
+   "TertiaryAttribute": null,
+   "Payload": {
+    "QuestionText": "How much do you agree with each statement?",
+    "DataExportTag": "trust_day7_items",
+    "DataVisibility": {
+     "Private": false,
+     "Hidden": false
+    },
+    "Configuration": {
+     "QuestionDescriptionOption": "UseText",
+     "TextPosition": "inline",
+     "ChoiceColumnWidth": 25,
+     "RepeatHeaders": "none",
+     "WhiteSpace": "OFF",
+     "MobileFirst": true
+    },
+    "QuestionDescription": "How much do you agree with each statement?",
+    "Validation": {
+     "Settings": {
+      "ForceResponse": "ON",
+      "ForceResponseType": "ON",
+      "Type": "None"
+     }
+    },
+    "Language": [],
+    "QuestionID": "QID11",
+    "QuestionType": "Matrix",
+    "Selector": "Likert",
+    "SubSelector": "SingleAnswer",
+    "DefaultChoices": false,
+    "GradingData": [],
+    "ChoiceDataExportTags": false,
+    "Choices": {
+     "1": {
+      "Display": "Item 1 of the registered trust-in-science scale"
+     },
+     "2": {
+      "Display": "Item 2 of the registered trust-in-science scale"
+     },
+     "3": {
+      "Display": "Item 3 of the registered trust-in-science scale"
+     },
+     "4": {
+      "Display": "Item 4 of the registered trust-in-science scale (negative)"
+     },
+     "5": {
+      "Display": "Item 5 of the registered trust-in-science scale (negative)"
+     },
+     "6": {
+      "Display": "Item 6 of the registered trust-in-science scale (negative)"
+     }
+    },
+    "ChoiceOrder": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "Answers": {
+     "1": {
+      "Display": "Strongly disagree"
+     },
+     "2": {
+      "Display": "Disagree"
+     },
+     "3": {
+      "Display": "Neither"
+     },
+     "4": {
+      "Display": "Agree"
+     },
+     "5": {
+      "Display": "Strongly agree"
+     }
+    },
+    "AnswerOrder": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "NextChoiceId": 7,
+    "NextAnswerId": 6
    }
   }
  ]

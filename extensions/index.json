@@ -3,45 +3,43 @@
   "qsf": "extensions/advance_design.qsf",
   "qsf_errors": [],
   "media": [
-   "vid1: video stimulus to supply (vlogbrothers 'Can You Trust Science Too Much?', full video, about 10 minutes)",
-   "txt1: image stimulus to supply (full text transcript of the video, plain text on a white page)",
-   "vid2: video stimulus to supply (same video with the fallibility segment cut, shorter, same speaker)",
-   "vid3: video stimulus to supply (neutral explainer about an unrelated everyday topic, length matched to the origi)"
+   "video_day: video stimulus to supply (student-made video showing how people interact with science and technology over )",
+   "video_everyday: video stimulus to supply (student-made video on science and technology always present in our lives, 29 sec)",
+   "video_peer: video stimulus to supply (student-made video 'Why should we trust science?' on peer review and expert cred)"
   ],
   "id": "advance_design",
   "kind": "mechanism",
-  "title": "Decomposing the 'trust science too much' backfire",
+  "title": "Replicating the short student videos with a delayed follow-up and a behavioural outcome",
   "brief_id": "advance_design",
   "mode": "survey_experiment",
-  "debate": null,
-  "why": "Addresses the design and power causes: it replaces bundled stimuli with a manipulated mechanism and concentrates sample on the one robust effect.",
+  "debate": "D1",
+  "why": "Addresses power and measurement. It concentrates the sample on the two best-supported arms plus the peer-review video, tests them against control in a confirmatory design, and adds a delayed and a behavioural outcome.",
   "power_target": {
-   "n_per_arm": 560,
-   "mde": 0.12,
-   "basis": "Observed effect of -0.17 for the video; the pooled SD implied by the SEs is about 0.9. The ~0.12 MDE allows for shrinkage of the original estimate, and the power table gives no contrasts."
+   "n_per_arm": 4000,
+   "mde": 0.03,
+   "basis": "Observed effect of about 0.063 (SE 0.025 at n=853-921). The power table was empty, so the sample size is a back-of-envelope estimate of about 1,000 per arm for 80% power at 0.063. 4,000 per arm gives headroom to detect effects of about half that size and for attrition in the delayed wave."
   },
-  "rationale": "In the source study the 'Can You Trust Science Too Much?' video lowered trust by 0.17 points (SE 0.046, p<0.001), but it bundles fallibility framing, video format and a particular source (vlogbrothers). Other arms were small (about 120 respondents in some), so the cause of the drop cannot be isolated. This design manipulates each feature directly and adds a one-week re-measure.",
-  "contribution": "Identifies whether fallibility content, video format or source drives the one robust negative effect on trust in science, and whether it persists.",
+  "rationale": "In the source study, Science through the day (about 0.06, SE 0.025) and Science in everyday life (0.063, SE 0.025) were near the threshold among 32 uncorrected tests. The peer-review video had 0.064 (p=0.034). Only immediate trust was measured, so durability and behavioural carry-over are unknown. This confirmatory test concentrates the sample on those three videos plus control and adds a 7-day and a behavioural outcome.",
+  "contribution": "Provides a Holm-corrected confirmatory test of whether short science videos raise trust, whether any effect lasts 7 days, and whether it changes a behavioural choice.",
   "addresses": [],
   "validated_by": "autoexperiment",
   "status": "proposed",
   "built_at": null,
   "survey_id": null,
   "survey_url": null,
-  "hypothesis": "The original video lowers trust relative to control, and the drop is mainly due to the fallibility segment: the no-fallibility video and the neutral video will not lower trust, and the transcript will lower trust by a similar amount to the video.",
-  "primary_outcome": "Post-treatment trust in science: mean of the 6-item scale (items 4-6 reverse-coded), 5-point.",
-  "comparison": "Each arm versus pure control, adjusting for pre-treatment trust; original video versus no-fallibility video (fallibility effect); original video versus transcript (format effect); no-fallibility video versus neutral video (source/other content); one-week outcome analysed the same way.",
+  "hypothesis": "Each video raises immediate trust relative to control (position a). Under position b, contrasts are near zero after Holm correction. Effects at 7 days are smaller than or equal to immediate effects.",
+  "primary_outcome": "Immediate post-treatment trust in science (mean of 6 items, items 4-6 reverse-coded), with 7-day trust and the behavioural choice as secondary outcomes.",
+  "comparison": "Each of the three videos against control, with Holm correction across the three contrasts, covariate-adjusted for pre-treatment trust.",
   "conditions": [
-   "Original video",
-   "Transcript",
-   "No fallibility segment",
-   "Neutral video",
-   "Control"
+   "Control",
+   "Science through the day",
+   "Science in everyday life",
+   "Peer review video"
   ],
   "unresolved": [
-   "Actual video files, edited no-fallibility cut, transcript and neutral video must be supplied by the research team.",
-   "Delayed one-week follow-up wave must be fielded separately; its instrument repeats the post-trust items.",
-   "IRB number and compensation."
+   "Video files and hosting must be supplied by the research team.",
+   "IRB number, compensation and bonus funding are to be set by the research team.",
+   "Choice of donation recipient organisation."
   ],
   "label": "Design advance",
   "text": "extensions/advance_design.txt",
@@ -51,48 +49,88 @@
   "qsf": "extensions/generalizability_conditional.qsf",
   "qsf_errors": [],
   "media": [
-   "vid12: video stimulus to supply (student-made video 12 about science, hosted by research team)",
-   "vid15: video stimulus to supply (student-made video 15 about science, hosted by research team)",
-   "vid20: video stimulus to supply (student-made video 20 'Experimental Research Intervention', hosted by research t)",
-   "vidcmp: video stimulus to supply (vlogbrothers 'Can You Trust Science Too Much?', about 10 minutes)"
+   "video1: video stimulus to supply (student-made clip showing how science and technology are present in everyday lif)"
   ],
   "id": "generalizability_conditional",
   "kind": "boundary",
-  "title": "Do the small positive videos replicate across samples and baseline trust?",
+  "title": "Does partisanship moderate the student-video effect?",
   "brief_id": "generalizability_conditional",
   "mode": "survey_experiment",
-  "debate": null,
-  "why": "Addresses the multiplicity and sample causes: a confirmatory replication of the three positive arms with a single correction, plus a test of where the effect holds.",
+  "debate": "D1",
+  "why": "Addresses the missing moderator and the sample. The exploratory interaction of 0.165 in the Science in everyday life arm is untested confirmatory, and partisan effects bear on where the result holds.",
   "power_target": {
-   "n_per_arm": 4400,
-   "mde": 0.06,
-   "basis": "Observed +0.06 effects for videos 12, 15 and 20, with SD about 0.9; 80% power at alpha 0.05 needs roughly 3,500-4,400 per arm. A single contrast is not computed in the power table."
+   "n_per_arm": 2500,
+   "mde": 0.1,
+   "basis": "Exploratory interaction estimate of 0.165 with SE 0.057 (E2). Interactions need roughly four times the main-effect sample, and the effect is probably inflated, so the target is set for 0.1."
   },
-  "rationale": "Videos 12, 15 and 20 raised trust by about 0.06 (Video 12 CI [0.005, 0.123]; Video 15 CI [0.014, 0.112]) among 32 uncorrected tests, with intervals near zero. A confirmatory replication in a new panel with few tests, plus moderation by baseline trust and party, tests whether the effects are real and where they hold.",
-  "contribution": "Provides a pre-registered, multiplicity-limited replication of three small positive video effects in a non-Lucid sample and tests moderation by baseline trust and party.",
+  "rationale": "In the source study, the student video 'Science in everyday life' raised trust by 0.063 (SE 0.025, p=0.012), and an exploratory arm-by-Republican interaction of 0.165 (SE 0.057) was found but never confirmed. All data came from Lucid, so we do not know whether the effect holds for Republicans or on another panel.",
+  "contribution": "Provides a confirmatory, quota-sampled test of whether a short student science video raises trust more among Republicans, replicated across two panels.",
   "addresses": [],
   "validated_by": "autoexperiment",
   "status": "proposed",
   "built_at": null,
   "survey_id": null,
   "survey_url": null,
-  "hypothesis": "Videos 12, 15 and 20 each raise post-treatment trust in science relative to control by about 0.06 points; effects differ by baseline trust (low vs high) and party identification.",
-  "primary_outcome": "Post-treatment trust in science, mean of the 6 items with items 4-6 reverse-coded, adjusted for pre-treatment trust.",
-  "comparison": "Each of Videos 12, 15 and 20 vs control (three one-sided tests, Holm-corrected); exploratory arm x baseline trust (median split) and arm x party interactions; the comparison video is a benchmark for the negative effect.",
+  "hypothesis": "The video raises trust more among Republican-leaning respondents than among non-Republicans (positive interaction). Under the null (position b) the interaction and the main effect are near zero.",
+  "primary_outcome": "Trust in science: mean of the 6 post-treatment items, items 4-6 reverse-coded.",
+  "comparison": "Arm (video vs control) by Republican identification interaction on post-treatment trust, controlling for pre-trust and panel; secondary: effect within each party group and each panel.",
   "conditions": [
    "Control",
-   "Video 12",
-   "Video 15",
-   "Video 20",
-   "Comparison video"
+   "Science in everyday life video"
   ],
   "unresolved": [
-   "The actual video files for videos 12, 15, 20 and the comparison video must be supplied by the research team.",
-   "IRB approval number, vendor choice and compensation amounts.",
-   "The coders' codebook and titles for the untitled student videos."
+   "The student video file must be supplied by the research team.",
+   "The second panel provider, compensation and IRB number are to be decided by the research team.",
+   "The exact wording of the six trust items should be copied from the source instrument."
   ],
   "label": "Generalizability",
   "text": "extensions/generalizability_conditional.txt",
   "svg": "extensions/generalizability_conditional.svg"
+ },
+ {
+  "qsf": "extensions/theoretical_debate.qsf",
+  "qsf_errors": [],
+  "media": [
+   "sv_stim: video stimulus to supply (29-second video showing everyday scenes of people relying on science and technol)",
+   "nv_stim: video stimulus to supply (29-second video showing everyday scenes of people making coffee, walking and coo)"
+  ],
+  "id": "theoretical_debate",
+  "kind": "alternative",
+  "title": "Format versus content: separating persuasion from salience",
+  "brief_id": "theoretical_debate",
+  "mode": "survey_experiment",
+  "debate": "D1",
+  "why": "Addresses design confounding. It tests whether the small gains reflect content or merely an attention cue, which discriminates between the brief-messages-work and beliefs-resist positions.",
+  "power_target": {
+   "n_per_arm": 1000,
+   "mde": 0.063,
+   "basis": "Observed effect of 0.063 with SE about 0.025 at n of about 900. Detecting this at 80% power needs about 1,000 per cell."
+  },
+  "rationale": "In the source study, the 29-second student video 'Science in everyday life' raised trust by 0.063 (SE 0.025, p=0.012), but it differs from other arms in format, length and content, and 32 uncorrected tests were run. A 2x2 of content by format with a pure control tests whether such small gains come from the science framing or from an attention cue.",
+  "contribution": "Separates content from format and salience in a brief trust-in-science message, which discriminates between the brief-messages-work and beliefs-resist positions.",
+  "addresses": [],
+  "validated_by": "autoexperiment",
+  "status": "proposed",
+  "built_at": null,
+  "survey_id": null,
+  "survey_url": null,
+  "hypothesis": "If content drives the effect (position a), only the two science-framing cells raise trust relative to control and neutral cells. If salience or format alone drives it, neutral cells also move trust. If beliefs resist (position b), all contrasts are near zero.",
+  "primary_outcome": "Post-treatment trust in science (mean of the 6 items, items 4-6 reverse-coded), adjusted for pre-trust.",
+  "comparison": "Main effect of content (science vs neutral), main effect of format (video vs text), their interaction, and each cell vs pure control, with Holm correction.",
+  "conditions": [
+   "Control",
+   "Science video",
+   "Science text",
+   "Neutral video",
+   "Neutral text"
+  ],
+  "unresolved": [
+   "The actual video files and final text wording must be produced by the research team.",
+   "IRB approval number and compensation amount.",
+   "Pre-registration of the contrasts."
+  ],
+  "label": "Theoretical debate",
+  "text": "extensions/theoretical_debate.txt",
+  "svg": "extensions/theoretical_debate.svg"
  }
 ]

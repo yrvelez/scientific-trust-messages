@@ -5,7 +5,7 @@
  "authors": [
   "Yamil R. Velez"
  ],
- "summary": "Can short messages raise trust in science? This registered adaptive survey experiment randomly assigned US adults recruited through Lucid to a pure control or one of 32 messages, including videos, texts, images and memes, many made by students. The outcome was trust in science after treatment, measured on a five-point scale. Of the 11,519 respondents, 8,572 were analysed. Five arms differed from control. The 'Can You Trust Science Too Much?' video lowered trust by 0.17 points (95% CI [−0.26, −0.08], p < 0.001), and the 'Powers of Ten' film lowered it by 0.10 (95% CI [−0.18, −0.02], p = 0.010). Three videos raised it by about 0.06 points each, with intervals that approach zero. For the other arms no difference was detected. Because 32 tests were left uncorrected and several arms are small, ",
+ "summary": "Can brief, student-designed messages raise trust in science? We ran a registered online survey experiment with US adults recruited through Lucid, randomly assigning respondents to one of 32 messages (videos, texts, memes, posters and infographics) or a pure control that only asked them to continue. Of 11,519 raw responses, 8,572 were analysed. Trust in science was measured after treatment on a scale where the control mean was 3.685. One video, 'Can You Trust Science Too Much?', lowered trust by 0.171 points (95% CI [−0.262, −0.080], p < 0.001), and the 'Powers of Ten' clip lowered it by 0.104 points. Three videos raised trust by roughly 0.06 points each: the peer-review video and two student-made videos. For the other arms the results were inconclusive; their intervals were wide and do not",
  "created": "2026-10-09",
  "synthetic": false,
  "design": {
@@ -53,31 +53,31 @@
    "A5": "Scientific method in 3 minutes (video)",
    "A6": "Biden vaccination photo",
    "A7": "Achievements of science (text)",
-   "A8": "Video 8 (Google Drive)",
+   "A8": "'Facts don't care about your feelings' meme",
    "A9": "NYC Health doctors PSA (video)",
-   "A10": "Video 10 (untitled upload)",
+   "A10": "TED talk on trusting scientists (video)",
    "A11": "COVID-19 death news story (text)",
-   "A12": "Video 12 (untitled upload)",
+   "A12": "Why trust science: peer review (video)",
    "A13": "6-step scientific method infographic",
    "A14": "Climate skeptic converts (text)",
-   "A15": "Video 15 (untitled upload)",
+   "A15": "Science in everyday life (student video)",
    "A16": "'How Do Vaccines Work?' video",
    "A17": "Why people question science (text)",
    "A18": "Old-time medicine meme",
    "A19": "'Roll up your sleeve' poster",
-   "A20": "Student-made video (20)",
+   "A20": "Science through the day (student video)",
    "A21": "Vaccine-development tweet thread",
    "A22": "Values affirmation (text)",
    "A23": "Constitution science clause",
    "A24": "Smallpox eradication poster",
-   "A25": "Video 25 (Google Drive)",
-   "A26": "'Powers of Ten' film",
+   "A25": "Kizzmekia Corbett profile",
+   "A26": "'Powers of Ten' film (clip)",
    "A27": "Flat-earth and anti-vax memes",
    "A28": "Vaccination dialogue image",
    "A29": "Ron Howard on science (video)",
    "A30": "Dictionary definition of science",
    "A31": "School-science meme",
-   "A32": "Video 32 (Google Drive)",
+   "A32": "'Why we should trust science' infographic",
    "A33": "'Sleeves Up, NOLA!' PSA"
   },
   "n_raw": 11519,
@@ -202,11 +202,11 @@
   },
   {
    "id": "H1:A8",
-   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — Video 8 (Google Drive)",
+   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — 'Facts don't care about your feelings' meme",
    "outcome": "post_trust",
    "tag": "registered",
    "arm": "A8",
-   "arm_label": "Video 8 (Google Drive)",
+   "arm_label": "'Facts don't care about your feelings' meme",
    "estimate": 0.02515439964965968,
    "se": 0.042979686603834236,
    "p": 0.558371212860201,
@@ -230,11 +230,11 @@
   },
   {
    "id": "H1:A10",
-   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — Video 10 (untitled upload)",
+   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — TED talk on trusting scientists (video)",
    "outcome": "post_trust",
    "tag": "registered",
    "arm": "A10",
-   "arm_label": "Video 10 (untitled upload)",
+   "arm_label": "TED talk on trusting scientists (video)",
    "estimate": -0.017649082504693228,
    "se": 0.03184481508975465,
    "p": 0.5794272376561733,
@@ -258,11 +258,11 @@
   },
   {
    "id": "H1:A12",
-   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — Video 12 (untitled upload)",
+   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — Why trust science: peer review (video)",
    "outcome": "post_trust",
    "tag": "registered",
    "arm": "A12",
-   "arm_label": "Video 12 (untitled upload)",
+   "arm_label": "Why trust science: peer review (video)",
    "estimate": 0.06408444922461479,
    "se": 0.030236853376635977,
    "p": 0.03405538615600337,
@@ -300,11 +300,11 @@
   },
   {
    "id": "H1:A15",
-   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — Video 15 (untitled upload)",
+   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — Science in everyday life (student video)",
    "outcome": "post_trust",
    "tag": "registered",
    "arm": "A15",
-   "arm_label": "Video 15 (untitled upload)",
+   "arm_label": "Science in everyday life (student video)",
    "estimate": 0.06277089048420215,
    "se": 0.024876632474062303,
    "p": 0.011626337495334444,
@@ -370,11 +370,11 @@
   },
   {
    "id": "H1:A20",
-   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — Student-made video (20)",
+   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — Science through the day (student video)",
    "outcome": "post_trust",
    "tag": "registered",
    "arm": "A20",
-   "arm_label": "Student-made video (20)",
+   "arm_label": "Science through the day (student video)",
    "estimate": 0.06314893615334866,
    "se": 0.02427541805267768,
    "p": 0.009285680014791,
@@ -440,11 +440,11 @@
   },
   {
    "id": "H1:A25",
-   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — Video 25 (Google Drive)",
+   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — Kizzmekia Corbett profile",
    "outcome": "post_trust",
    "tag": "registered",
    "arm": "A25",
-   "arm_label": "Video 25 (Google Drive)",
+   "arm_label": "Kizzmekia Corbett profile",
    "estimate": 0.039657002647551634,
    "se": 0.04205460369695406,
    "p": 0.3456868461014947,
@@ -454,11 +454,11 @@
   },
   {
    "id": "H1:A26",
-   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — 'Powers of Ten' film",
+   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — 'Powers of Ten' film (clip)",
    "outcome": "post_trust",
    "tag": "registered",
    "arm": "A26",
-   "arm_label": "'Powers of Ten' film",
+   "arm_label": "'Powers of Ten' film (clip)",
    "estimate": -0.10396969075751972,
    "se": 0.040595022696004644,
    "p": 0.010432816293774157,
@@ -538,11 +538,11 @@
   },
   {
    "id": "H1:A32",
-   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — Video 32 (Google Drive)",
+   "text": "Registered: the effect of each of the 32 messages on trust in science, relative to the pure control. — 'Why we should trust science' infographic",
    "outcome": "post_trust",
    "tag": "registered",
    "arm": "A32",
-   "arm_label": "Video 32 (Google Drive)",
+   "arm_label": "'Why we should trust science' infographic",
    "estimate": -0.023236467799551408,
    "se": 0.02968017124699029,
    "p": 0.43368857344430045,
@@ -566,7 +566,7 @@
   },
   {
    "id": "E1",
-   "text": "Robustness to finishers-only sample",
+   "text": "Planned H1 estimates restricted to finished responses",
    "tag": "exploratory",
    "estimate": null,
    "se": null,
@@ -576,17 +576,7 @@
   },
   {
    "id": "E2",
-   "text": "Heterogeneity by the gender column",
-   "tag": "exploratory",
-   "estimate": null,
-   "se": null,
-   "p": null,
-   "n": null,
-   "supported": null
-  },
-  {
-   "id": "E3",
-   "text": "Component item post_science_1 as outcome",
+   "text": "Heterogeneity of planned H1 arm effects by Republican identification",
    "tag": "exploratory",
    "estimate": null,
    "se": null,
@@ -610,13 +600,13 @@
   },
   "provider": "openrouter",
   "zero_retention_requested": true,
-  "cost_usd": 0.778024,
+  "cost_usd": 0.705761,
   "tokens": {
-   "in": 298616,
-   "out": 33791
+   "in": 245021,
+   "out": 32694
   },
   "tool_version": "0.1.0",
-  "created": "2026-10-09T12:49:30Z",
+  "created": "2026-10-09T13:02:58Z",
   "pap_source": "author-supplied pap.json",
   "pii": {
    "dropped": [
@@ -630,21 +620,20 @@
    "scan": "header + first data row only, local regex"
   },
   "degraded": [
-   "no QSF: codebook inferred from CSV header rows; arms must come from the PAP",
-   "extensions: data_to_collect: no proposal returned (call record_result with key 'proposal')"
+   "no QSF: codebook inferred from CSV header rows; arms must come from the PAP"
   ],
   "inputs": {
    "raw_csv_sha256": "0c8fa28826fd9693fa7d3d17ddd460385586cdbe80d6db9409413672b38ec683",
    "pap_sha256": "66dccf16eb048f4f37877fa241014518126c9e949137019d6b1a76c4b7218604",
    "qsf_sha256": null,
-   "pap_json_sha256": "2d29bebf3db210cb0d1ed677c4d25fc3f34b6b1ee0fecf1c1b92c6f22bd115e4"
+   "pap_json_sha256": "47b5aabc9bd0caca315465bde9444feb72ea0f2c839e6ca622ec17d8d37fec31"
   },
   "review_mode": "light",
   "review_rounds": [
    {
     "round": 1,
-    "decision": "minor_revision",
-    "k_issues": 2,
+    "decision": "major_revision",
+    "k_issues": 4,
     "revised": true,
     "agent_addenda": []
    }
@@ -652,144 +641,135 @@
   "usage_by_agent": {
    "exploratory": {
     "calls": 2,
-    "in": 27704,
-    "out": 3476,
-    "cost": 0.004463316,
+    "in": 27855,
+    "out": 3534,
+    "cost": 0.004506975,
     "models": [
      "anthropic/claude-haiku-5.5"
     ]
    },
    "litreview": {
     "calls": 2,
-    "in": 2482,
-    "out": 708,
-    "cost": 0.0005961779999999999,
+    "in": 2365,
+    "out": 1379,
+    "cost": 0.0009167400000000001,
     "models": [
      "anthropic/claude-haiku-5.5"
     ]
    },
    "writer": {
     "calls": 1,
-    "in": 9936,
-    "out": 1358,
-    "cost": 0.03311748,
+    "in": 8862,
+    "out": 1351,
+    "cost": 0.03092166,
     "models": [
      "anthropic/claude-sonnet-5.5"
     ]
    },
    "reviewer": {
     "calls": 1,
-    "in": 20033,
-    "out": 730,
-    "cost": 0.04689234,
+    "in": 17069,
+    "out": 654,
+    "cost": 0.04027122,
     "models": [
      "anthropic/claude-sonnet-5.5"
     ]
    },
    "review_orchestrator": {
     "calls": 1,
-    "in": 33512,
-    "out": 1404,
-    "cost": 0.08025336,
+    "in": 28331,
+    "out": 1394,
+    "cost": 0.06989598,
     "models": [
      "anthropic/claude-sonnet-5.5"
     ]
    },
    "writer_revise": {
     "calls": 2,
-    "in": 25384,
-    "out": 3279,
-    "cost": 0.08272241999999999,
+    "in": 22985,
+    "out": 3136,
+    "cost": 0.0765567,
     "models": [
      "anthropic/claude-sonnet-5.5"
     ]
    },
    "review_signoff": {
-    "calls": 4,
-    "in": 133016,
-    "out": 5584,
-    "cost": 0.31865328,
+    "calls": 3,
+    "in": 84623,
+    "out": 4086,
+    "cost": 0.20800493999999997,
     "models": [
      "anthropic/claude-sonnet-5.5"
     ]
    },
    "potential": {
     "calls": 1,
-    "in": 19468,
-    "out": 2386,
-    "cost": 0.06216804,
+    "in": 17705,
+    "out": 2676,
+    "cost": 0.0615483,
     "models": [
      "anthropic/claude-sonnet-5.5"
     ]
    },
    "extensions": {
-    "calls": 2,
-    "in": 23274,
-    "out": 10137,
-    "cost": 0.14643882,
+    "calls": 3,
+    "in": 35226,
+    "out": 14484,
+    "cost": 0.21313907999999998,
     "models": [
      "anthropic/claude-sonnet-5.5"
-    ]
-   },
-   "extensions_obs": {
-    "calls": 2,
-    "in": 3807,
-    "out": 4729,
-    "cost": 0.002717748,
-    "models": [
-     "anthropic/claude-haiku-5.5"
     ]
    }
   },
   "stage_seconds": {
    "ingest": 0.0,
-   "pii": 0.26,
-   "tidy": 0.27,
+   "pii": 0.27,
+   "tidy": 0.26,
    "pap": 0.01,
-   "clean": 0.55,
-   "registered": 13.85,
+   "clean": 0.51,
+   "registered": 12.27,
    "tag": 0.0,
-   "exploratory": 22.54,
-   "litreview": 6.46,
-   "write": 9.76,
-   "review": 19.23,
+   "exploratory": 21.7,
+   "litreview": 10.57,
+   "write": 10.09,
+   "review": 16.46,
    "robustness": 0.0,
-   "revise": 37.87,
-   "extensions": 103.16,
+   "revise": 33.0,
+   "extensions": 103.64,
    "package": 0.0
   },
-  "total_seconds": 214.0,
+  "total_seconds": 208.8,
   "log": [
-   "2026-10-09T12:49:30Z stage ingest",
-   "2026-10-09T12:49:30Z stage pii",
-   "2026-10-09T12:49:30Z PII scan (header + first 5 rows): flagged 1 column(s): RecordedDate [known_identifier_column]. Action: dropped 1, kept by whitelist 0.",
-   "2026-10-09T12:49:30Z stage tidy",
-   "2026-10-09T12:49:30Z stage pap",
-   "2026-10-09T12:49:30Z pap: loaded author-supplied inputs/pap.json (papreader agent skipped)",
-   "2026-10-09T12:49:30Z cleared 40 file(s) from the previous run",
-   "2026-10-09T12:49:30Z stage clean",
-   "2026-10-09T12:49:31Z wrote data/clean.csv: 8572 rows, 67 columns",
-   "2026-10-09T12:49:31Z stage registered",
-   "2026-10-09T12:49:45Z H1: post_trust ~ C(arm_code, Treatment(reference='A1')) * (pre_trust_c + age_c + education_c + white_c + latino_c + dem_c + rep_c) | 32 arms vs Control, N=7803, HC2 SEs, weights=ipw; 5 arm(s) supported",
-   "2026-10-09T12:49:45Z wrote results/registered_summary.csv (32 rows)",
-   "2026-10-09T12:49:45Z stage tag",
-   "2026-10-09T12:49:45Z stage exploratory",
-   "2026-10-09T12:50:07Z tags: H1=registered, E1=exploratory, E2=exploratory, E3=exploratory",
-   "2026-10-09T12:50:07Z stage litreview",
-   "2026-10-09T12:50:14Z stage write",
-   "2026-10-09T12:50:14Z diagram: template (figures/design.svg)",
-   "2026-10-09T12:50:23Z stage review",
-   "2026-10-09T12:50:43Z review (light): 6 issue(s); provisional decision: minor_revision",
-   "2026-10-09T12:50:43Z stage robustness",
-   "2026-10-09T12:50:43Z stage revise",
-   "2026-10-09T12:50:54Z correction pass 1: 8 note(s) from the writing agent",
-   "2026-10-09T12:51:04Z claim re-check: 7/10 claims supported on the corrected text",
-   "2026-10-09T12:51:11Z correction pass 2: 3 note(s) from the writing agent",
-   "2026-10-09T12:51:21Z claim re-check: 9/11 claims supported on the corrected text",
-   "2026-10-09T12:51:21Z stage extensions",
-   "2026-10-09T12:51:40Z research potential: 5 cause(s), 0 debate(s), 3 brief(s)",
-   "2026-10-09T12:53:04Z extensions: 2 proposal(s) validated by autoexperiment; dropped: data_to_collect: no proposal returned (call record_result with key 'proposal')",
-   "2026-10-09T12:53:04Z stage package"
+   "2026-10-09T13:02:58Z stage ingest",
+   "2026-10-09T13:02:58Z stage pii",
+   "2026-10-09T13:02:58Z PII scan (header + first 5 rows): flagged 1 column(s): RecordedDate [known_identifier_column]. Action: dropped 1, kept by whitelist 0.",
+   "2026-10-09T13:02:58Z stage tidy",
+   "2026-10-09T13:02:58Z stage pap",
+   "2026-10-09T13:02:58Z pap: loaded author-supplied inputs/pap.json (papreader agent skipped)",
+   "2026-10-09T13:02:58Z cleared 40 file(s) from the previous run",
+   "2026-10-09T13:02:58Z stage clean",
+   "2026-10-09T13:02:59Z wrote data/clean.csv: 8572 rows, 67 columns",
+   "2026-10-09T13:02:59Z stage registered",
+   "2026-10-09T13:03:11Z H1: post_trust ~ C(arm_code, Treatment(reference='A1')) * (pre_trust_c + age_c + education_c + white_c + latino_c + dem_c + rep_c) | 32 arms vs Control, N=7803, HC2 SEs, weights=ipw; 5 arm(s) supported",
+   "2026-10-09T13:03:11Z wrote results/registered_summary.csv (32 rows)",
+   "2026-10-09T13:03:11Z stage tag",
+   "2026-10-09T13:03:11Z stage exploratory",
+   "2026-10-09T13:03:33Z tags: H1=registered, E1=exploratory, E2=exploratory",
+   "2026-10-09T13:03:33Z stage litreview",
+   "2026-10-09T13:03:43Z stage write",
+   "2026-10-09T13:03:43Z diagram: template (figures/design.svg)",
+   "2026-10-09T13:03:53Z stage review",
+   "2026-10-09T13:04:10Z review (light): 8 issue(s); provisional decision: major_revision",
+   "2026-10-09T13:04:10Z stage robustness",
+   "2026-10-09T13:04:10Z stage revise",
+   "2026-10-09T13:04:19Z correction pass 1: 8 note(s) from the writing agent",
+   "2026-10-09T13:04:27Z claim re-check: 7/9 claims supported on the corrected text",
+   "2026-10-09T13:04:35Z correction pass 2: 3 note(s) from the writing agent",
+   "2026-10-09T13:04:43Z claim re-check: 8/10 claims supported on the corrected text",
+   "2026-10-09T13:04:43Z stage extensions",
+   "2026-10-09T13:05:03Z research potential: 5 cause(s), 1 debate(s), 3 brief(s)",
+   "2026-10-09T13:06:26Z extensions: 3 proposal(s) validated by autoexperiment",
+   "2026-10-09T13:06:26Z stage package"
   ]
  },
  "doi": null,
@@ -810,17 +790,16 @@
    "label": "Design advance",
    "brief_id": "advance_design",
    "mode": "survey_experiment",
-   "debate": null,
-   "why": "Addresses the design and power causes: it replaces bundled stimuli with a manipulated mechanism and concentrates sample on the one robust effect.",
-   "title": "Decomposing the 'trust science too much' backfire",
-   "hypothesis": "The original video lowers trust relative to control, and the drop is mainly due to the fallibility segment: the no-fallibility video and the neutral video will not lower trust, and the transcript will lower trust by a similar amount to the video.",
-   "primary_outcome": "Post-treatment trust in science: mean of the 6-item scale (items 4-6 reverse-coded), 5-point.",
+   "debate": "D1",
+   "why": "Addresses power and measurement. It concentrates the sample on the two best-supported arms plus the peer-review video, tests them against control in a confirmatory design, and adds a delayed and a behavioural outcome.",
+   "title": "Replicating the short student videos with a delayed follow-up and a behavioural outcome",
+   "hypothesis": "Each video raises immediate trust relative to control (position a). Under position b, contrasts are near zero after Holm correction. Effects at 7 days are smaller than or equal to immediate effects.",
+   "primary_outcome": "Immediate post-treatment trust in science (mean of 6 items, items 4-6 reverse-coded), with 7-day trust and the behavioural choice as secondary outcomes.",
    "conditions": [
-    "Original video",
-    "Transcript",
-    "No fallibility segment",
-    "Neutral video",
-    "Control"
+    "Control",
+    "Science through the day",
+    "Science in everyday life",
+    "Peer review video"
    ],
    "status": "proposed",
    "built_at": null,
@@ -835,17 +814,14 @@
    "label": "Generalizability",
    "brief_id": "generalizability_conditional",
    "mode": "survey_experiment",
-   "debate": null,
-   "why": "Addresses the multiplicity and sample causes: a confirmatory replication of the three positive arms with a single correction, plus a test of where the effect holds.",
-   "title": "Do the small positive videos replicate across samples and baseline trust?",
-   "hypothesis": "Videos 12, 15 and 20 each raise post-treatment trust in science relative to control by about 0.06 points; effects differ by baseline trust (low vs high) and party identification.",
-   "primary_outcome": "Post-treatment trust in science, mean of the 6 items with items 4-6 reverse-coded, adjusted for pre-treatment trust.",
+   "debate": "D1",
+   "why": "Addresses the missing moderator and the sample. The exploratory interaction of 0.165 in the Science in everyday life arm is untested confirmatory, and partisan effects bear on where the result holds.",
+   "title": "Does partisanship moderate the student-video effect?",
+   "hypothesis": "The video raises trust more among Republican-leaning respondents than among non-Republicans (positive interaction). Under the null (position b) the interaction and the main effect are near zero.",
+   "primary_outcome": "Trust in science: mean of the 6 post-treatment items, items 4-6 reverse-coded.",
    "conditions": [
     "Control",
-    "Video 12",
-    "Video 15",
-    "Video 20",
-    "Comparison video"
+    "Science in everyday life video"
    ],
    "status": "proposed",
    "built_at": null,
@@ -853,36 +829,63 @@
    "svg": "extensions/generalizability_conditional.svg",
    "text": "extensions/generalizability_conditional.txt",
    "addresses": []
+  },
+  {
+   "id": "theoretical_debate",
+   "kind": "alternative",
+   "label": "Theoretical debate",
+   "brief_id": "theoretical_debate",
+   "mode": "survey_experiment",
+   "debate": "D1",
+   "why": "Addresses design confounding. It tests whether the small gains reflect content or merely an attention cue, which discriminates between the brief-messages-work and beliefs-resist positions.",
+   "title": "Format versus content: separating persuasion from salience",
+   "hypothesis": "If content drives the effect (position a), only the two science-framing cells raise trust relative to control and neutral cells. If salience or format alone drives it, neutral cells also move trust. If beliefs resist (position b), all contrasts are near zero.",
+   "primary_outcome": "Post-treatment trust in science (mean of the 6 items, items 4-6 reverse-coded), adjusted for pre-trust.",
+   "conditions": [
+    "Control",
+    "Science video",
+    "Science text",
+    "Neutral video",
+    "Neutral text"
+   ],
+   "status": "proposed",
+   "built_at": null,
+   "qsf": "extensions/theoretical_debate.qsf",
+   "svg": "extensions/theoretical_debate.svg",
+   "text": "extensions/theoretical_debate.txt",
+   "addresses": []
   }
  ],
  "potential": {
-  "verdict": "A follow-up is worth running, but narrowly. Only the 'Can You Trust Science Too Much?' video backfire (-0.17, p=0.0002) is robust to multiplicity. The three +0.06 effects are fragile, and the pipeline's completers check added no evidence. The retrieved literature is reporting-standards material, so no live empirical debate is visible and none is invented. Run the backfire decomposition first, since it has the largest effect and an explicit mechanism. Then run the larger replication of the positive videos, with stimulus documentation (the data brief) done in parallel at little cost.",
+  "verdict": "A follow-up is worth running, but a narrow one. The study's main result is that most messages do nothing detectable. Only the 'Can You Trust Science Too Much?' video survives multiplicity, and its negative effect (-0.171) is more credible than the gains of about 0.06. Run the replication of the two student videos with a delayed and a behavioural outcome first, because it tests the only consistent positive signal at adequate power. Then run the format-versus-content test and the partisanship moderation test. The literature retrieved is thin, so the debate is only loosely anchored.",
   "causes": [
    "power",
    "analysis",
-   "design",
    "measurement",
-   "analysis"
+   "design",
+   "missing_moderator"
   ],
-  "debates": [],
+  "debates": [
+   "Can brief messages move trust in science?"
+  ],
   "briefs": [
    {
     "id": "advance_design",
     "mode": "survey_experiment",
-    "title": "Decomposing the 'trust science too much' backfire",
+    "title": "Replicating the short student videos with a delayed follow-up and a behavioural outcome",
+    "needs_qsf": true
+   },
+   {
+    "id": "theoretical_debate",
+    "mode": "survey_experiment",
+    "title": "Format versus content: separating persuasion from salience",
     "needs_qsf": true
    },
    {
     "id": "generalizability_conditional",
     "mode": "survey_experiment",
-    "title": "Do the small positive videos replicate across samples and baseline trust?",
+    "title": "Does partisanship moderate the student-video effect?",
     "needs_qsf": true
-   },
-   {
-    "id": "data_to_collect",
-    "mode": "data_collection",
-    "title": "Archive stimuli and arm-level assignment data",
-    "needs_qsf": false
    }
   ]
  },
@@ -892,7 +895,7 @@
   "total": 11,
   "open_analytical": 0,
   "on_revised_text": true,
-  "corrected": 2
+  "corrected": 4
  },
  "review_round": 1,
  "review_rounds": 1,
@@ -907,7 +910,7 @@
   {
    "name": "review",
    "label": "review",
-   "value": "light pass · 2 corrected · 11/11 claims supported",
+   "value": "light pass · 4 corrected · 11/11 claims supported",
    "color": "green",
    "href": null
   },
@@ -942,7 +945,7 @@
   {
    "name": "cost",
    "label": "model calls",
-   "value": "$0.78",
+   "value": "$0.71",
    "color": "slate",
    "href": null
   }

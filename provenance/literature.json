@@ -1,95 +1,77 @@
 {
- "text": "The retrieved set contains little work that speaks directly to the study's hypothesis, which concerns the effect of 32 distinct messages on trust in science relative to a pure control. The closest material concerns how interventions and trials are described and reported, as in the TIDieR checklist, which argues that incomplete intervention descriptions hinder replication and implementation (Hoffmann et al., 2014), and the SPIRIT 2013 guidance on trial protocol completeness (Chan et al., 2013). These works address reporting standards rather than the effects of messages on trust, so they bear on how the 32 message conditions should be specified and documented rather than on the direction or size of any effect. No retrieved work reports an effect of science-related messaging on trust in science, so the search offers no finding that clearly agrees or disagrees with an expected effect. The remaining on-topic items are methodological: CONSORT's pilot-and-feasibility extension (Eldridge et al., 2016) and the CFIR update (Damschroder et al., 2022) concern trial reporting and implementation context. The study's design, a multi-arm randomised comparison against a single control, can speak to the reporting concerns these works raise, but the retrieved set does not establish a live empirical dispute about messaging effects.",
+ "text": "The retrieved literature on the hypothesis is thin. Van Bavel et al. (2020) argue that social and behavioural science should inform the COVID-19 pandemic response, which gives general backing to testing whether brief messages can shape public attitudes toward science. Ecker et al. (2022) review the psychological drivers of misinformation belief and its resistance to correction, which bears on whether any single message can move trust in science relative to a pure control. Berinsky et al. (2012) assess the internal and external validity of experiments run on Amazon Mechanical Turk, a relevant reference for an online randomised design. The main tension is between the expectation that messages can shift trust and Ecker et al.'s account of how resistant beliefs are to correction. Van Bavel et al. take the policy case for behavioural interventions as given, while Ecker et al. suggest that changing entrenched beliefs is hard. A design with 32 messages against a pure control can test whether any message departs from control, which speaks directly to this disagreement. Berinsky et al.'s validity concerns mean that any such effects would need to be read with the sample's limits in mind.",
  "works": [
   {
-   "id": "https://openalex.org/W2145555293",
-   "title": "Better reporting of interventions: template for intervention description and replication (TIDieR) checklist and guide",
+   "id": "https://openalex.org/W3016902371",
+   "title": "Using social and behavioural science to support COVID-19 pandemic response",
    "authors": [
-    "Tammy Hoffmann",
-    "Paul Glasziou",
-    "Isabelle Boutron",
-    "Ruairidh Milne"
+    "Jay Joseph Van Bavel",
+    "Katherine Baicker",
+    "Paulo S. Boggio",
+    "Valerio Capraro"
    ],
-   "year": 2014,
-   "doi": "10.1136/bmj.g1687",
-   "venue": "BMJ",
-   "cited_by": 10440,
-   "abstract": "Without a complete published description of interventions, clinicians and patients cannot reliably implement interventions that are shown to be useful, and other researchers cannot replicate or build on research findings. The quality of description of interventions in publications, however, is remarkably poor. To improve the completeness of reporting, and ultimately the replicability, of intervent",
+   "year": 2020,
+   "doi": "10.1038/s41562-020-0884-z",
+   "venue": "Nature Human Behaviour",
+   "cited_by": 5035,
+   "abstract": "",
    "stance": "supporting",
-   "query": "trust in science messaging intervention"
+   "query": "trust in science persuasive messages experiment"
   },
   {
-   "id": "https://openalex.org/W2171811563",
-   "title": "SPIRIT 2013 explanation and elaboration: guidance for protocols of clinical trials",
+   "id": "https://openalex.org/W2119298903",
+   "title": "Evaluating Online Labor Markets for Experimental Research: Amazon.com's Mechanical Turk",
    "authors": [
-    "A.-W. Chan",
-    "Jennifer Tetzlaff",
-    "Peter Christian Gøtzsche",
-    "Douglas G. Altman"
+    "Adam J. Berinsky",
+    "Gregory A. Huber",
+    "Gabriel S. Lenz"
    ],
-   "year": 2013,
-   "doi": "10.1136/bmj.e7586",
-   "venue": "BMJ",
-   "cited_by": 6276,
-   "abstract": "High quality protocols facilitate proper conduct, reporting, and external review of clinical trials. However, the completeness of trial protocols is often inadequate. To help improve the content and quality of protocols, an international group of stakeholders developed the SPIRIT 2013 Statement (Standard Protocol Items: Recommendations for Interventional Trials). The SPIRIT Statement provides guid",
-   "stance": "contesting",
-   "query": "null effects of trust in science interventions"
+   "year": 2012,
+   "doi": "10.1093/pan/mpr057",
+   "venue": "Political Analysis",
+   "cited_by": 4077,
+   "abstract": "We examine the trade-offs associated with using Amazon.com 's Mechanical Turk (MTurk) interface for subject recruitment. We first describe MTurk and its promise as a vehicle for performing low-cost and easy-to-field experiments. We then assess the internal and external validity of experiments performed using MTurk, employing a framework that can be used to evaluate other subject pools. We first in",
+   "stance": "supporting",
+   "query": "trust in science persuasive messages experiment"
   },
   {
-   "id": "https://openalex.org/W4307846395",
-   "title": "The updated Consolidated Framework for Implementation Research based on user feedback",
+   "id": "https://openalex.org/W4206236567",
+   "title": "The psychological drivers of misinformation belief and its resistance to correction",
    "authors": [
-    "Laura J. Damschroder",
-    "Caitlin Marie Reardon",
-    "Marilla A. Opra Widerquist",
-    "Julie C. Lowery"
+    "Ullrich K. H. Ecker",
+    "Stephan Lewandowsky",
+    "John Cook",
+    "Philipp Schmid"
    ],
    "year": 2022,
-   "doi": "10.1186/s13012-022-01245-0",
-   "venue": "Implementation Science",
-   "cited_by": 4135,
-   "abstract": "BACKGROUND: Many implementation efforts fail, even with highly developed plans for execution, because contextual factors can be powerful forces working against implementation in the real world. The Consolidated Framework for Implementation Research (CFIR) is one of the most commonly used determinant frameworks to assess these contextual factors; however, it has been over 10 years since publication",
-   "stance": "citing",
-   "query": "cites:W2145555293"
-  },
-  {
-   "id": "https://openalex.org/W3162993738",
-   "title": "CONSORT 2010 statement: extension to randomised pilot and feasibility trials",
-   "authors": [
-    "Sandra M Eldridge",
-    "Claire L Chan",
-    "Michael Joseph Campbell",
-    "Christine M. Bond"
-   ],
-   "year": 2016,
-   "doi": "10.1136/bmj.i5239",
-   "venue": "BMJ",
-   "cited_by": 3378,
-   "abstract": "The Consolidated Standards of Reporting Trials (CONSORT) statement is a guideline designed to improve the transparency and quality of the reporting of randomised controlled trials (RCTs). In this article we present an extension to that statement for randomised pilot and feasibility trials conducted in advance of a future definitive RCT. The checklist applies to any randomised study in which a futu",
-   "stance": "citing",
-   "query": "cites:W2145555293"
+   "doi": "10.1038/s44159-021-00006-y",
+   "venue": "Nature Reviews Psychology",
+   "cited_by": 1357,
+   "abstract": "",
+   "stance": "contesting",
+   "query": "backfire effect corrective messages science skepticism"
   }
  ],
  "queries": [
-  "trust in science messaging intervention",
-  "persuasive messages improve trust in science vaccines",
-  "null effects of trust in science interventions",
-  "backfire effect corrective messages vaccine trust",
-  "adaptive multi-arm experiment message testing trust in science"
+  "trust in science persuasive messages experiment",
+  "science messaging intervention improves trust vaccine",
+  "trust in science interventions null effects",
+  "backfire effect corrective messages science skepticism",
+  "adaptive multi-arm bandit survey experiment messaging"
  ],
  "query_sets": {
   "supporting": [
-   "trust in science messaging intervention",
-   "persuasive messages improve trust in science vaccines"
+   "trust in science persuasive messages experiment",
+   "science messaging intervention improves trust vaccine"
   ],
   "contesting": [
-   "null effects of trust in science interventions",
-   "backfire effect corrective messages vaccine trust"
+   "trust in science interventions null effects",
+   "backfire effect corrective messages science skepticism"
   ],
   "method": [
-   "adaptive multi-arm experiment message testing trust in science"
+   "adaptive multi-arm bandit survey experiment messaging"
   ]
  },
- "debate_hint": "",
+ "debate_hint": "Whether brief messages can shift trust in science at all, given evidence that beliefs resist correction (Ecker et al., 2022) and the policy case for behavioural interventions (Van Bavel et al., 2020).",
  "degraded": null
 }

@@ -1,52 +1,46 @@
 {
  "id": "advance_design",
  "kind": "mechanism",
- "title": "Decomposing the 'trust science too much' backfire",
- "rationale": "In the source study the 'Can You Trust Science Too Much?' video lowered trust by 0.17 points (SE 0.046, p<0.001), but it bundles fallibility framing, video format and a particular source (vlogbrothers). Other arms were small (about 120 respondents in some), so the cause of the drop cannot be isolated. This design manipulates each feature directly and adds a one-week re-measure.",
- "contribution": "Identifies whether fallibility content, video format or source drives the one robust negative effect on trust in science, and whether it persists.",
+ "title": "Replicating the short student videos with a delayed follow-up and a behavioural outcome",
+ "rationale": "In the source study, Science through the day (about 0.06, SE 0.025) and Science in everyday life (0.063, SE 0.025) were near the threshold among 32 uncorrected tests. The peer-review video had 0.064 (p=0.034). Only immediate trust was measured, so durability and behavioural carry-over are unknown. This confirmatory test concentrates the sample on those three videos plus control and adds a 7-day and a behavioural outcome.",
+ "contribution": "Provides a Holm-corrected confirmatory test of whether short science videos raise trust, whether any effect lasts 7 days, and whether it changes a behavioural choice.",
  "limitations": [
-  "Transcript changes format and also the source cue, so format and source are only partly separable.",
-  "A version without the fallibility segment must be edited from the original and may differ in other ways.",
-  "Attrition at the one-week follow-up may be differential across arms.",
-  "Lucid US online panel limits generalisation."
+  "Behavioural choice is a hypothetical or low-stakes proxy.",
+  "Attrition in the delayed wave may be differential by arm.",
+  "Videos differ in content and format, so the design cannot isolate which feature matters.",
+  "Online panel sample may not generalise."
  ],
  "design": {
-  "title": "Decomposing the 'trust science too much' backfire",
-  "overview": "US adults complete pre-treatment trust items, are randomised to one of five arms, then answer the trust scale immediately and again after about one week.",
-  "hypothesis": "The original video lowers trust relative to control, and the drop is mainly due to the fallibility segment: the no-fallibility video and the neutral video will not lower trust, and the transcript will lower trust by a similar amount to the video.",
-  "primaryOutcome": "Post-treatment trust in science: mean of the 6-item scale (items 4-6 reverse-coded), 5-point.",
-  "comparison": "Each arm versus pure control, adjusting for pre-treatment trust; original video versus no-fallibility video (fallibility effect); original video versus transcript (format effect); no-fallibility video versus neutral video (source/other content); one-week outcome analysed the same way.",
-  "population": "US adults from an online panel (Lucid), same exclusions as the source study (screeners).",
+  "title": "Short student videos: confirmatory test with 7-day follow-up and behavioural choice",
+  "overview": "US adults complete pre-treatment trust items, are randomised to one of three videos or a control page, then report immediate trust and make a behavioural choice. A week later they complete trust again.",
+  "hypothesis": "Each video raises immediate trust relative to control (position a). Under position b, contrasts are near zero after Holm correction. Effects at 7 days are smaller than or equal to immediate effects.",
+  "primaryOutcome": "Immediate post-treatment trust in science (mean of 6 items, items 4-6 reverse-coded), with 7-day trust and the behavioural choice as secondary outcomes.",
+  "comparison": "Each of the three videos against control, with Holm correction across the three contrasts, covariate-adjusted for pre-treatment trust.",
+  "population": "US adults from an online panel such as Lucid, quota-matched to the adult population.",
   "conditions": [
-   {
-    "id": "c_video",
-    "title": "Original video",
-    "description": "Full 'Can You Trust Science Too Much?' video.",
-    "nodeId": "arm_video"
-   },
-   {
-    "id": "c_text",
-    "title": "Transcript",
-    "description": "Text transcript of the original video.",
-    "nodeId": "arm_text"
-   },
-   {
-    "id": "c_nofall",
-    "title": "No fallibility segment",
-    "description": "Original video with the fallibility segment removed.",
-    "nodeId": "arm_nofall"
-   },
-   {
-    "id": "c_neutral",
-    "title": "Neutral video",
-    "description": "Length-matched neutral video unrelated to science trust.",
-    "nodeId": "arm_neutral"
-   },
    {
     "id": "c_control",
     "title": "Control",
-    "description": "Please continue to the next page.",
+    "description": "Sees only a page asking them to continue.",
     "nodeId": "arm_control"
+   },
+   {
+    "id": "c_day",
+    "title": "Science through the day",
+    "description": "Student video on how people interact with science and technology over a day.",
+    "nodeId": "arm_day"
+   },
+   {
+    "id": "c_everyday",
+    "title": "Science in everyday life",
+    "description": "Short student video (29 s) on science and technology in our lives.",
+    "nodeId": "arm_everyday"
+   },
+   {
+    "id": "c_peer",
+    "title": "Peer review video",
+    "description": "Student video 'Why should we trust science?' on peer review and expert credentials.",
+    "nodeId": "arm_peer"
    }
   ],
   "blocks": [
@@ -57,7 +51,7 @@
      {
       "id": "q_consent",
       "type": "MC",
-      "text": "You are invited to take part in a research survey about attitudes toward science. It takes about 10 minutes and there is a short follow-up in about one week. Participation is voluntary. Do you consent to participate?",
+      "text": "This is a research survey in two parts, today and about one week later. You will be invited to the second part by message. Participation is voluntary. Do you consent to take part?",
       "tag": "consent",
       "multiple": false,
       "required": true,
@@ -80,12 +74,12 @@
    },
    {
     "id": "b_pre",
-    "title": "Pre-treatment",
+    "title": "Pre-treatment trust",
     "questions": [
      {
-      "id": "q_pre1",
+      "id": "q_pre",
       "type": "Matrix",
-      "text": "How much do you agree with each statement?",
+      "text": "How much do you agree with each statement? (Items 4-6 are negatively worded and reverse-coded in analysis.)",
       "tag": "pre_trust_items",
       "multiple": false,
       "required": true,
@@ -119,98 +113,30 @@
       "rows": [
        {
         "id": "r1",
-        "text": "I trust scientists to tell the truth about their findings."
+        "text": "Item 1 of the registered trust-in-science scale"
        },
        {
         "id": "r2",
-        "text": "Science benefits society."
+        "text": "Item 2 of the registered trust-in-science scale"
        },
        {
         "id": "r3",
-        "text": "I have confidence in scientific research."
+        "text": "Item 3 of the registered trust-in-science scale"
        },
        {
         "id": "r4",
-        "text": "Scientists often cannot be trusted."
+        "text": "Item 4 of the registered trust-in-science scale (negative)"
        },
        {
         "id": "r5",
-        "text": "Science does more harm than good."
+        "text": "Item 5 of the registered trust-in-science scale (negative)"
        },
        {
         "id": "r6",
-        "text": "I am skeptical of scientific claims."
+        "text": "Item 6 of the registered trust-in-science scale (negative)"
        }
       ],
-      "sourceQuestionId": "pre_trust"
-     }
-    ]
-   },
-   {
-    "id": "b_video",
-    "title": "Original video",
-    "questions": [
-     {
-      "id": "q_v",
-      "type": "DB",
-      "text": "Please watch this video in full. {{ed:vid1}}",
-      "tag": "stim_video",
-      "multiple": false,
-      "required": false,
-      "choices": [],
-      "rows": [],
-      "sourceQuestionId": ""
-     }
-    ]
-   },
-   {
-    "id": "b_text",
-    "title": "Transcript",
-    "questions": [
-     {
-      "id": "q_t",
-      "type": "DB",
-      "text": "Please read this text carefully. {{ed:txt1}}",
-      "tag": "stim_text",
-      "multiple": false,
-      "required": false,
-      "choices": [],
-      "rows": [],
-      "sourceQuestionId": ""
-     }
-    ]
-   },
-   {
-    "id": "b_nofall",
-    "title": "No fallibility video",
-    "questions": [
-     {
-      "id": "q_nf",
-      "type": "DB",
-      "text": "Please watch this video in full. {{ed:vid2}}",
-      "tag": "stim_nofall",
-      "multiple": false,
-      "required": false,
-      "choices": [],
-      "rows": [],
-      "sourceQuestionId": ""
-     }
-    ]
-   },
-   {
-    "id": "b_neutral",
-    "title": "Neutral video",
-    "questions": [
-     {
-      "id": "q_n",
-      "type": "DB",
-      "text": "Please watch this video in full. {{ed:vid3}}",
-      "tag": "stim_neutral",
-      "multiple": false,
-      "required": false,
-      "choices": [],
-      "rows": [],
-      "sourceQuestionId": ""
+      "sourceQuestionId": "pre_science_1"
      }
     ]
    },
@@ -219,10 +145,10 @@
     "title": "Control",
     "questions": [
      {
-      "id": "q_c",
+      "id": "q_ctrl",
       "type": "DB",
       "text": "Please continue to the next page.",
-      "tag": "stim_control",
+      "tag": "control_text",
       "multiple": false,
       "required": false,
       "choices": [],
@@ -232,8 +158,59 @@
     ]
    },
    {
-    "id": "b_post",
-    "title": "Outcome",
+    "id": "b_day",
+    "title": "Science through the day",
+    "questions": [
+     {
+      "id": "q_day",
+      "type": "DB",
+      "text": "Please watch this video. {{ed:video_day}}",
+      "tag": "video_day_show",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_everyday",
+    "title": "Science in everyday life",
+    "questions": [
+     {
+      "id": "q_everyday",
+      "type": "DB",
+      "text": "Please watch this video. {{ed:video_everyday}}",
+      "tag": "video_everyday_show",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_peer",
+    "title": "Peer review",
+    "questions": [
+     {
+      "id": "q_peer",
+      "type": "DB",
+      "text": "Please watch this video. {{ed:video_peer}}",
+      "tag": "video_peer_show",
+      "multiple": false,
+      "required": false,
+      "choices": [],
+      "rows": [],
+      "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_out",
+    "title": "Immediate outcomes",
     "questions": [
      {
       "id": "q_post",
@@ -272,30 +249,74 @@
       "rows": [
        {
         "id": "r1",
-        "text": "I trust scientists to tell the truth about their findings."
+        "text": "Item 1 of the registered trust-in-science scale"
        },
        {
         "id": "r2",
-        "text": "Science benefits society."
+        "text": "Item 2 of the registered trust-in-science scale"
        },
        {
         "id": "r3",
-        "text": "I have confidence in scientific research."
+        "text": "Item 3 of the registered trust-in-science scale"
        },
        {
         "id": "r4",
-        "text": "Scientists often cannot be trusted."
+        "text": "Item 4 of the registered trust-in-science scale (negative)"
        },
        {
         "id": "r5",
-        "text": "Science does more harm than good."
+        "text": "Item 5 of the registered trust-in-science scale (negative)"
        },
        {
         "id": "r6",
-        "text": "I am skeptical of scientific claims."
+        "text": "Item 6 of the registered trust-in-science scale (negative)"
        }
       ],
-      "sourceQuestionId": "post_trust"
+      "sourceQuestionId": "post_science_1"
+     },
+     {
+      "id": "q_beh",
+      "type": "MC",
+      "text": "You will receive a bonus of $1 for finishing. Would you like to donate it to a science organisation that supports science education, or keep it?",
+      "tag": "behaviour_donate",
+      "multiple": false,
+      "required": true,
+      "choices": [
+       {
+        "id": "donate",
+        "text": "Donate the $1",
+        "recode": "1"
+       },
+       {
+        "id": "keep",
+        "text": "Keep the $1",
+        "recode": "0"
+       }
+      ],
+      "rows": [],
+      "sourceQuestionId": ""
+     },
+     {
+      "id": "q_news",
+      "type": "MC",
+      "text": "Which article would you like to read next?",
+      "tag": "behaviour_article",
+      "multiple": false,
+      "required": true,
+      "choices": [
+       {
+        "id": "sci",
+        "text": "A science-based news article",
+        "recode": "1"
+       },
+       {
+        "id": "other",
+        "text": "A sports or entertainment article",
+        "recode": "0"
+       }
+      ],
+      "rows": [],
+      "sourceQuestionId": ""
      }
     ]
    },
@@ -306,13 +327,81 @@
      {
       "id": "q_debrief",
       "type": "DB",
-      "text": "Thank you. This study examined how different kinds of messages affect views of science. The videos and text presented real, general discussions of science; none was meant to mislead. You will be invited to a brief follow-up in about one week.",
+      "text": "Thank you. This study tested whether short videos affect trust in science. The control group saw no video. We will invite you to a short follow-up in about one week. Donations will be made as described.",
       "tag": "debrief",
       "multiple": false,
       "required": false,
       "choices": [],
       "rows": [],
       "sourceQuestionId": ""
+     }
+    ]
+   },
+   {
+    "id": "b_w2",
+    "title": "Seven-day follow-up",
+    "questions": [
+     {
+      "id": "q_w2",
+      "type": "Matrix",
+      "text": "How much do you agree with each statement?",
+      "tag": "trust_day7_items",
+      "multiple": false,
+      "required": true,
+      "choices": [
+       {
+        "id": "s1",
+        "text": "Strongly disagree",
+        "recode": "1"
+       },
+       {
+        "id": "s2",
+        "text": "Disagree",
+        "recode": "2"
+       },
+       {
+        "id": "s3",
+        "text": "Neither",
+        "recode": "3"
+       },
+       {
+        "id": "s4",
+        "text": "Agree",
+        "recode": "4"
+       },
+       {
+        "id": "s5",
+        "text": "Strongly agree",
+        "recode": "5"
+       }
+      ],
+      "rows": [
+       {
+        "id": "r1",
+        "text": "Item 1 of the registered trust-in-science scale"
+       },
+       {
+        "id": "r2",
+        "text": "Item 2 of the registered trust-in-science scale"
+       },
+       {
+        "id": "r3",
+        "text": "Item 3 of the registered trust-in-science scale"
+       },
+       {
+        "id": "r4",
+        "text": "Item 4 of the registered trust-in-science scale (negative)"
+       },
+       {
+        "id": "r5",
+        "text": "Item 5 of the registered trust-in-science scale (negative)"
+       },
+       {
+        "id": "r6",
+        "text": "Item 6 of the registered trust-in-science scale (negative)"
+       }
+      ],
+      "sourceQuestionId": "post_science_1"
      }
     ]
    }
@@ -331,7 +420,7 @@
     "operator": "equals"
    },
    {
-    "id": "n_br",
+    "id": "n_branch",
     "type": "branch",
     "label": "No consent",
     "children": [
@@ -373,221 +462,12 @@
     "type": "randomizer",
     "label": "Arms",
     "children": [
-     "arm_video",
-     "arm_text",
-     "arm_nofall",
-     "arm_neutral",
-     "arm_control"
+     "arm_control",
+     "arm_day",
+     "arm_everyday",
+     "arm_peer"
     ],
     "blockId": "",
-    "field": "",
-    "value": "",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "arm_video",
-    "type": "group",
-    "label": "Video",
-    "children": [
-     "e_cv",
-     "e_v1",
-     "n_bv"
-    ],
-    "blockId": "",
-    "field": "",
-    "value": "",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "e_cv",
-    "type": "embedded",
-    "label": "condition",
-    "children": [],
-    "blockId": "",
-    "field": "condition",
-    "value": "video",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "e_v1",
-    "type": "embedded",
-    "label": "vid1",
-    "children": [],
-    "blockId": "",
-    "field": "vid1",
-    "value": "[VIDEO: vlogbrothers 'Can You Trust Science Too Much?', full video, about 10 minutes]",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "n_bv",
-    "type": "block",
-    "label": "Video",
-    "children": [],
-    "blockId": "b_video",
-    "field": "",
-    "value": "",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "arm_text",
-    "type": "group",
-    "label": "Text",
-    "children": [
-     "e_ct",
-     "e_t1",
-     "n_bt"
-    ],
-    "blockId": "",
-    "field": "",
-    "value": "",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "e_ct",
-    "type": "embedded",
-    "label": "condition",
-    "children": [],
-    "blockId": "",
-    "field": "condition",
-    "value": "transcript",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "e_t1",
-    "type": "embedded",
-    "label": "txt1",
-    "children": [],
-    "blockId": "",
-    "field": "txt1",
-    "value": "[IMAGE: full text transcript of the video, plain text on a white page]",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "n_bt",
-    "type": "block",
-    "label": "Text",
-    "children": [],
-    "blockId": "b_text",
-    "field": "",
-    "value": "",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "arm_nofall",
-    "type": "group",
-    "label": "No fallibility",
-    "children": [
-     "e_cn",
-     "e_v2",
-     "n_bn"
-    ],
-    "blockId": "",
-    "field": "",
-    "value": "",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "e_cn",
-    "type": "embedded",
-    "label": "condition",
-    "children": [],
-    "blockId": "",
-    "field": "condition",
-    "value": "nofall",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "e_v2",
-    "type": "embedded",
-    "label": "vid2",
-    "children": [],
-    "blockId": "",
-    "field": "vid2",
-    "value": "[VIDEO: same video with the fallibility segment cut, shorter, same speaker]",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "n_bn",
-    "type": "block",
-    "label": "NoFall",
-    "children": [],
-    "blockId": "b_nofall",
-    "field": "",
-    "value": "",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "arm_neutral",
-    "type": "group",
-    "label": "Neutral",
-    "children": [
-     "e_cu",
-     "e_v3",
-     "n_bu"
-    ],
-    "blockId": "",
-    "field": "",
-    "value": "",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "e_cu",
-    "type": "embedded",
-    "label": "condition",
-    "children": [],
-    "blockId": "",
-    "field": "condition",
-    "value": "neutral",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "e_v3",
-    "type": "embedded",
-    "label": "vid3",
-    "children": [],
-    "blockId": "",
-    "field": "vid3",
-    "value": "[VIDEO: neutral explainer about an unrelated everyday topic, length matched to the original]",
-    "questionId": "",
-    "choiceId": "",
-    "operator": "equals"
-   },
-   {
-    "id": "n_bu",
-    "type": "block",
-    "label": "Neutral",
-    "children": [],
-    "blockId": "b_neutral",
     "field": "",
     "value": "",
     "questionId": "",
@@ -599,8 +479,8 @@
     "type": "group",
     "label": "Control",
     "children": [
-     "e_cc",
-     "n_bc"
+     "set_control",
+     "n_control"
     ],
     "blockId": "",
     "field": "",
@@ -610,9 +490,9 @@
     "operator": "equals"
    },
    {
-    "id": "e_cc",
+    "id": "set_control",
     "type": "embedded",
-    "label": "condition",
+    "label": "cond",
     "children": [],
     "blockId": "",
     "field": "condition",
@@ -622,7 +502,7 @@
     "operator": "equals"
    },
    {
-    "id": "n_bc",
+    "id": "n_control",
     "type": "block",
     "label": "Control",
     "children": [],
@@ -634,11 +514,15 @@
     "operator": "equals"
    },
    {
-    "id": "n_post",
-    "type": "block",
-    "label": "Post",
-    "children": [],
-    "blockId": "b_post",
+    "id": "arm_day",
+    "type": "group",
+    "label": "Day",
+    "children": [
+     "set_day",
+     "set_vday",
+     "n_day"
+    ],
+    "blockId": "",
     "field": "",
     "value": "",
     "questionId": "",
@@ -646,7 +530,159 @@
     "operator": "equals"
    },
    {
-    "id": "n_deb",
+    "id": "set_day",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "day",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "set_vday",
+    "type": "embedded",
+    "label": "video",
+    "children": [],
+    "blockId": "",
+    "field": "video_day",
+    "value": "[VIDEO: student-made video showing how people interact with science and technology over the course of their day, about 30 seconds]",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_day",
+    "type": "block",
+    "label": "Day",
+    "children": [],
+    "blockId": "b_day",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "arm_everyday",
+    "type": "group",
+    "label": "Everyday",
+    "children": [
+     "set_everyday",
+     "set_veveryday",
+     "n_everyday"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "set_everyday",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "everyday",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "set_veveryday",
+    "type": "embedded",
+    "label": "video",
+    "children": [],
+    "blockId": "",
+    "field": "video_everyday",
+    "value": "[VIDEO: student-made video on science and technology always present in our lives, 29 seconds]",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_everyday",
+    "type": "block",
+    "label": "Everyday",
+    "children": [],
+    "blockId": "b_everyday",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "arm_peer",
+    "type": "group",
+    "label": "Peer",
+    "children": [
+     "set_peer",
+     "set_vpeer",
+     "n_peer"
+    ],
+    "blockId": "",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "set_peer",
+    "type": "embedded",
+    "label": "cond",
+    "children": [],
+    "blockId": "",
+    "field": "condition",
+    "value": "peer",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "set_vpeer",
+    "type": "embedded",
+    "label": "video",
+    "children": [],
+    "blockId": "",
+    "field": "video_peer",
+    "value": "[VIDEO: student-made video 'Why should we trust science?' on peer review and expert credentials over a PubMed screen recording, about 2 minutes]",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_peer",
+    "type": "block",
+    "label": "Peer",
+    "children": [],
+    "blockId": "b_peer",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_out",
+    "type": "block",
+    "label": "Outcomes",
+    "children": [],
+    "blockId": "b_out",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
+   },
+   {
+    "id": "n_debrief",
     "type": "block",
     "label": "Debrief",
     "children": [],
@@ -656,30 +692,43 @@
     "questionId": "",
     "choiceId": "",
     "operator": "equals"
+   },
+   {
+    "id": "n_w2",
+    "type": "block",
+    "label": "Wave 2",
+    "children": [],
+    "blockId": "b_w2",
+    "field": "",
+    "value": "",
+    "questionId": "",
+    "choiceId": "",
+    "operator": "equals"
    }
   ],
   "roots": [
    "n_consent",
-   "n_br",
+   "n_branch",
    "n_pre",
    "r1",
-   "n_post",
-   "n_deb"
+   "n_out",
+   "n_debrief",
+   "n_w2"
   ],
   "assumptions": [
-   "About 560 per arm (2,800 total) to detect 0.12 points at 80% power, alpha .05 two-sided, pooled SD about 0.9 (implied by source SEs); 0.12 allows for shrinkage from the observed -0.17.",
-   "Pre-treatment trust used as a covariate.",
-   "Delayed re-measure after about one week uses the same scale; expect attrition so recruit extra.",
-   "Platform: Lucid with the same exclusions as the source; compensation per panel norms."
+   "Sample about 4000 per arm (16,000 total) to detect 0.03 points at 80% power after Holm correction; the source observed 0.063 (SE 0.025 at n=853-921), and a back-of-envelope estimate gives about 1,000 per arm for 80% power at 0.063. 4,000 per arm gives headroom for effects about half that size and for attrition in the delayed wave.",
+   "Equal fixed allocation, no adaptive assignment.",
+   "Follow-up sent 7 days after wave 1 with reminders; analysis registered, with Holm correction across three contrasts.",
+   "Donation of the $1 bonus is actually paid to a science education organisation."
   ],
   "unresolved": [
-   "Actual video files, edited no-fallibility cut, transcript and neutral video must be supplied by the research team.",
-   "Delayed one-week follow-up wave must be fielded separately; its instrument repeats the post-trust items.",
-   "IRB number and compensation."
+   "Video files and hosting must be supplied by the research team.",
+   "IRB number, compensation and bonus funding are to be set by the research team.",
+   "Choice of donation recipient organisation."
   ],
   "evidence": [
    {
-    "id": "ev1",
+    "id": "e1",
     "title": "Source study package",
     "url": "https://github.com/yrvelez/scientific-trust-messages",
     "claim": "the source study this extension builds on",
@@ -687,7 +736,7 @@
     "origin": "supplied"
    },
    {
-    "id": "ev2",
+    "id": "e2",
     "title": "Pre-registration of the source study",
     "url": "https://osf.io/5yvh9",
     "claim": "the registered design and outcomes",

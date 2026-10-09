@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" width="100%" role="img" aria-labelledby="fd-title fd-desc"><title id="fd-title">Proposed follow-up: Decomposing the &#x27;trust science too much&#x27; backfire</title><desc id="fd-desc">Decomposing the &#x27;trust science too much&#x27; backfire. 5 conditions: Original video, Transcript, No fallibility segment, Neutral video, Control. Primary outcome: Post-treatment trust in science: mean of the 6-item scale (items 4-6 reverse-coded), 5-point.. Population: US adults from an online panel (Lucid), same exclusions as the source study (screeners).</desc><style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 395" width="100%" role="img" aria-labelledby="fd-title fd-desc"><title id="fd-title">Proposed follow-up: Replicating the short student videos with a delayed follow-up and a behavioural outcome</title><desc id="fd-desc">Replicating the short student videos with a delayed follow-up and a behavioural outcome. 4 conditions: Control, Science through the day, Science in everyday life, Peer review video. Primary outcome: Immediate post-treatment trust in science (mean of 6 items, items 4-6 reverse-coded), with 7-day trust and the behavioural choice as secondary outcomes.. Population: US adults from an online panel such as Lucid, quota-matched to the adult population.</desc><style>
 :root{--fd-ink:#1c1b19;--fd-muted:#8a877f;--fd-rule:#d9d5cc;--fd-accent:#8b1e2d;--fd-bg:#ffffff}
 @media (prefers-color-scheme: dark){:root{--fd-ink:#ecebe6;--fd-muted:#b4b1a9;--fd-rule:#4a4a52;--fd-accent:#e08a96;--fd-bg:#1d1d23}}
 .box{fill:var(--fd-bg,#fff);stroke:var(--fd-ink,#1c1b19);stroke-width:1.2}
@@ -11,56 +11,50 @@ text{font-family:Inter,Helvetica,Arial,sans-serif;fill:var(--fd-ink,#1c1b19);fon
 .assoc{stroke-dasharray:5 4}
 #fd-arrow path{fill:var(--fd-ink,#1c1b19)}
 </style>
-<defs><marker id="fd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs><text class="kicker" x="20" y="16">Proposed follow-up: Decomposing the &#x27;trust science too much&#x27; backfire</text>
+<defs><marker id="fd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs><text class="kicker" x="20" y="16">Proposed follow-up: Replicating the short student videos with a delayed follow-up and a behavioural outcome</text>
 <g>
-<rect class="box" x="20" y="210.0" width="200" height="60" rx="6"/>
-<text class="kicker" x="32" y="232.0">Population</text>
-<text x="32" y="250.0">US adults from an</text>
-<text x="32" y="268.0">online panel (Lucid),</text>
-<text x="32" y="286.0">same exclusions as the</text>
-<text x="32" y="304.0">source study</text>
+<rect class="box" x="20" y="172.5" width="200" height="60" rx="6"/>
+<text class="kicker" x="32" y="194.5">Population</text>
+<text x="32" y="212.5">US adults from an</text>
+<text x="32" y="230.5">online panel such as</text>
+<text x="32" y="248.5">Lucid, quota-matched</text>
+<text x="32" y="266.5">to the adult</text>
 </g>
-<polygon class="box" points="280,216.0 316,240.0 280,264.0 244,240.0"/>
-<path class="edge" d="M220,240.0 L242,240.0"/><text class="cap" x="231.0" y="234.0" text-anchor="middle">randomized</text>
-<g id="arm-c_video" data-text="Full &#x27;Can You Trust Science Too Much?&#x27; video.">
-<rect class="arm" x="360" y="30" width="300" height="78" rx="6"/>
-<text x="372" y="52">Original video</text>
-<text class="cap" x="372" y="70">Full &#x27;Can You Trust Science Too Much?&#x27;</text>
-<text class="cap" x="372" y="85">video.</text>
+<polygon class="box" points="280,178.5 316,202.5 280,226.5 244,202.5"/>
+<path class="edge" d="M220,202.5 L242,202.5"/><text class="cap" x="231.0" y="196.5" text-anchor="middle">randomized</text>
+<g id="arm-c_control" data-text="Sees only a page asking them to continue.">
+<rect class="arm" x="360" y="30" width="300" height="63" rx="6"/>
+<text x="372" y="52">Control</text>
+<text class="cap" x="372" y="70">Sees only a page asking them to continue.</text>
 </g>
-<path class="edge" d="M318,240.0 L356,69.0"/>
-<g id="arm-c_text" data-text="Text transcript of the original video.">
-<rect class="arm" x="360" y="120" width="300" height="63" rx="6"/>
-<text x="372" y="142">Transcript</text>
-<text class="cap" x="372" y="160">Text transcript of the original video.</text>
+<path class="edge" d="M318,202.5 L356,61.5"/>
+<g id="arm-c_day" data-text="Student video on how people interact with science and technology over a day.">
+<rect class="arm" x="360" y="105" width="300" height="78" rx="6"/>
+<text x="372" y="127">Science through the day</text>
+<text class="cap" x="372" y="145">Student video on how people interact with</text>
+<text class="cap" x="372" y="160">science and technology over a day.</text>
 </g>
-<path class="edge" d="M318,240.0 L356,151.5"/>
-<g id="arm-c_nofall" data-text="Original video with the fallibility segment removed.">
+<path class="edge" d="M318,202.5 L356,144.0"/>
+<g id="arm-c_everyday" data-text="Short student video (29 s) on science and technology in our lives.">
 <rect class="arm" x="360" y="195" width="300" height="78" rx="6"/>
-<text x="372" y="217">No fallibility segment</text>
-<text class="cap" x="372" y="235">Original video with the fallibility</text>
-<text class="cap" x="372" y="250">segment removed.</text>
+<text x="372" y="217">Science in everyday life</text>
+<text class="cap" x="372" y="235">Short student video (29 s) on science and</text>
+<text class="cap" x="372" y="250">technology in our lives.</text>
 </g>
-<path class="edge" d="M318,240.0 L356,234.0"/>
-<g id="arm-c_neutral" data-text="Length-matched neutral video unrelated to science trust.">
+<path class="edge" d="M318,202.5 L356,234.0"/>
+<g id="arm-c_peer" data-text="Student video &#x27;Why should we trust science?&#x27; on peer review and expert credentials.">
 <rect class="arm" x="360" y="285" width="300" height="78" rx="6"/>
-<text x="372" y="307">Neutral video</text>
-<text class="cap" x="372" y="325">Length-matched neutral video unrelated to</text>
-<text class="cap" x="372" y="340">science trust.</text>
+<text x="372" y="307">Peer review video</text>
+<text class="cap" x="372" y="325">Student video &#x27;Why should we trust</text>
+<text class="cap" x="372" y="340">science?&#x27; on peer review and expert</text>
 </g>
-<path class="edge" d="M318,240.0 L356,324.0"/>
-<g id="arm-c_control" data-text="Please continue to the next page.">
-<rect class="arm" x="360" y="375" width="300" height="63" rx="6"/>
-<text x="372" y="397">Control</text>
-<text class="cap" x="372" y="415">Please continue to the next page.</text>
-</g>
-<path class="edge" d="M318,240.0 L356,406.5"/>
+<path class="edge" d="M318,202.5 L356,324.0"/>
 <g>
-<rect class="box" x="700" y="180.0" width="240" height="120" rx="6"/>
-<text class="kicker" x="712" y="202.0">Primary outcome</text>
-<text x="712" y="220.0">Post-treatment trust in</text>
-<text x="712" y="238.0">science: mean of the 6-item</text>
-<text x="712" y="256.0">scale (items 4-6 reverse-</text>
-<text x="712" y="274.0">coded), 5-point.</text>
+<rect class="box" x="700" y="142.5" width="240" height="120" rx="6"/>
+<text class="kicker" x="712" y="164.5">Primary outcome</text>
+<text x="712" y="182.5">Immediate post-treatment</text>
+<text x="712" y="200.5">trust in science (mean of 6</text>
+<text x="712" y="218.5">items, items 4-6 reverse-</text>
+<text x="712" y="236.5">coded), with 7-day trust</text>
 </g>
-<path class="edge" d="M660,240.0 L696,240.0"/></svg>
+<path class="edge" d="M660,202.5 L696,202.5"/></svg>

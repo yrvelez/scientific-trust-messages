@@ -1,63 +1,49 @@
 import importlib.util, pathlib
-import numpy as np
 import pandas as pd
+import numpy as np
 
 _spec = importlib.util.spec_from_file_location('reg', pathlib.Path(__file__).with_name('03_registered.py'))
 reg = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(reg)
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-RES = ROOT / 'results'
-RES.mkdir(exist_ok=True)
+root = pathlib.Path(__file__).resolve().parent.parent
+pathlib.Path(root / 'results').mkdir(exist_ok=True)
 
-d = pd.read_csv(ROOT / 'data' / 'clean.csv', low_memory=False)
-for c in ['Finished', 'gender', 'post_science_1', 'post_trust', 'pre_trust']:
+d = pd.read_csv(root / 'data' / 'clean.csv')
+for c in ['Finished', 'rep', 'dem', 'post_trust', 'pre_trust']:
     d[c] = pd.to_numeric(d[c], errors='coerce')
 
-H1 = [h for h in reg.HYPOTHESES if h['id'] == 'H1'][0]
+h1 = reg.HYPOTHESES[0]
 
+# E1: robustness of the planned H1 estimates to dropping unfinished responses
+orig = reg.reestimate(h1, d)
+fin = d[d['Finished'] == 1]
+alt = reg.reestimate(h1, fin)
+m = orig[['term', 'arm', 'estimate', 'std_error', 'p_value', 'n']].merge(
+    alt[['arm', 'estimate', 'std_error', 'p_value', 'n']],
+    on='arm', suffixes=('_original', '_finished_only'))
+m = m[m['arm'].notna()].copy()
+m['se_ratio'] = m['std_error_finished_only'] / m['std_error_original']
+sample_change = 1 - len(fin) / len(d)
+if (m['se_ratio'].max() > 2 or m['se_ratio'].min() < 0.5) and sample_change < 0.10:
+    print('E1 dropped: standard errors changed by more than a factor of two')
+else:
+    m.to_csv(root / 'results' / 'E1_finished_only.csv', index=False)
+    r = np.corrcoef(m['estimate_original'], m['estimate_finished_only'])[0, 1]
+    nsig_o = int((m['p_value_original'] < 0.05).sum())
+    nsig_a = int((m['p_value_finished_only'] < 0.05).sum())
+    print(f"E1 Planned H1 with unfinished responses dropped: {len(m)} arm estimates; "
+          f"correlation of arm estimates with the original {r:.3f}; "
+          f"{nsig_o} arms significant at p<0.05 originally versus {nsig_a} after dropping "
+          f"{sample_change*100:.1f}% of rows; median SE ratio {m['se_ratio'].median():.2f}")
 
-def n_sig(df, pcol='p_value'):
-    return int((pd.to_numeric(df[pcol], errors='coerce') < 0.05).sum())
-
-
-# E1: robustness to dropping respondents who did not finish the survey
-try:
-    orig = reg.reestimate(H1, d)
-    sub = d[d['Finished'] == 1]
-    rob = reg.reestimate(H1, sub)
-    keep = ['term', 'arm', 'estimate', 'std_error', 'p_value', 'conf_low', 'conf_high', 'n']
-    o = orig[keep].rename(columns={c: f'orig_{c}' for c in keep if c not in ('term', 'arm')})
-    r = rob[keep].rename(columns={c: f'compl_{c}' for c in keep if c not in ('term', 'arm')})
-    t = o.merge(r, on=['term', 'arm'], how='outer')
-    t.insert(0, 'analysis', 'E1')
-    t.to_csv(RES / 'E1_completers_robustness.csv', index=False)
-    ratio = (t['compl_std_error'] / t['orig_std_error']).dropna()
-    nchg = 1 - len(sub) / len(d)
-    print(f"E1 Robustness to finishers-only sample: {n_sig(rob)} of {len(rob)} arm estimates p<0.05 "
-          f"(original {n_sig(orig)}); sample change {nchg:.1%}, SE ratio range {ratio.min():.2f}-{ratio.max():.2f}")
-except Exception as e:
-    print(f"E1 Robustness to finishers-only sample: failed ({e})")
-
-# E2: heterogeneity by the gender column (0/1 coded: 1 = first code, 2 = second code)
-try:
-    d['gender_second'] = (d['gender'] == 2).astype(int)
-    het = reg.reestimate(H1, d, moderator='gender_second')
-    het.insert(0, 'analysis', 'E2')
-    het.to_csv(RES / 'E2_gender_heterogeneity.csv', index=False)
-    print(f"E2 Heterogeneity by gender column: {n_sig(het)} of {len(het)} arm-by-group interactions p<0.05 "
-          f"across 32 arms tested (no correction)")
-except Exception as e:
-    print(f"E2 Heterogeneity by gender column: failed ({e})")
-
-# E3: component item post_science_1 as outcome, same registered specification
-try:
-    h = dict(H1, outcome='post_science_1')
-    comp = reg.reestimate(h, d)
-    comp.insert(0, 'analysis', 'E3')
-    comp.to_csv(RES / 'E3_component_post_science_1.csv', index=False)
-    tr = comp[comp['term'].astype(str).str.contains('T\\.')]
-    print(f"E3 Component item post_science_1: {n_sig(tr)} of {len(tr)} arm estimates p<0.05 "
-          f"(mean estimate {pd.to_numeric(tr['estimate'], errors='coerce').mean():.3f})")
-except Exception as e:
-    print(f"E3 Component item post_science_1: failed ({e})")
+# E2: heterogeneity of the planned H1 effects by Republican party identification
+het = reg.reestimate(h1, d, moderator='rep')
+het = het[het['arm'].notna()].copy() if 'arm' in het.columns else het
+het.to_csv(root / 'results' / 'E2_party_interaction.csv', index=False)
+pcol = 'p_value' if 'p_value' in het.columns else het.columns[-1]
+n_tot = len(het)
+n_sig = int((het[pcol] < 0.05).sum())
+print(f"E2 Arm-by-Republican interactions on trust in science: {n_sig} of {n_tot} "
+      f"interaction estimates have p<0.05, about what chance alone would give at 5% "
+      f"(planned H1 arm contrasts only, no further tests)")

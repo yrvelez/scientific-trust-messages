@@ -22,8 +22,8 @@ covariate imbalance. Registered sample: 8,000 respondents in 8 batches.
 
 Batches (`batch`) correspond to the Qualtrics surveys fielded in sequence: "Scientific Trust Messages (Final)"
 (batch 1, the equal-probability burn-in, from 2021-11-21), "(Batches 2+)" (2), "(Batch 3)" through "(Batch 7)"
-(3-7). Two earlier surveys, "Scientific Trust Messages" and "(Abbreviated)", predate the registration and are not
-part of the registered study.
+(3-7). Two earlier surveys, "Scientific Trust Messages" and "(Abbreviated)", were pilots fielded before the registration
+and are not part of the registered study.
 
 ## Outcome
 

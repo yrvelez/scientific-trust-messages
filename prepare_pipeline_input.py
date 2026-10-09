@@ -22,7 +22,7 @@ HERE = Path(__file__).parent
 RAW = HERE / "inputs" / "raw"
 # Qualtrics survey -> batch. "Final" is the equal-probability burn-in that opened the registered study
 # (osf.io/5yvh9, registered 2021-11-20); the earlier "Scientific Trust Messages" and "(Abbreviated)" surveys
-# predate the registration and are not part of it.
+# were pilots fielded before the registration and are not part of it.
 BATCHES = [("stm_final.csv", 1), ("stm_batches2plus.csv", 2), ("stm_batch3.csv", 3), ("stm_batch4.csv", 4),
            ("stm_batch5.csv", 5), ("stm_batch6.csv", 6), ("stm_batch7.csv", 7)]
 DROP = ["IPAddress", "RecipientLastName", "RecipientFirstName", "RecipientEmail", "ExternalReference",
